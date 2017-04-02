@@ -1,0 +1,90 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'MainWindowQt5.ui'
+#
+# Created by: PyQt5 UI code generator 5.7
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.setWindowModality(QtCore.Qt.NonModal)
+        MainWindow.resize(1280, 720)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
+        MainWindow.setSizePolicy(sizePolicy)
+        MainWindow.setMinimumSize(QtCore.QSize(1280, 720))
+        self.Centralwidget = QtWidgets.QWidget(MainWindow)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.Centralwidget.sizePolicy().hasHeightForWidth())
+        self.Centralwidget.setSizePolicy(sizePolicy)
+        self.Centralwidget.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        self.Centralwidget.setObjectName("Centralwidget")
+        self.gridLayout = QtWidgets.QGridLayout(self.Centralwidget)
+        self.gridLayout.setObjectName("gridLayout")
+        self.stackedWidget = QtWidgets.QStackedWidget(self.Centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.stackedWidget.sizePolicy().hasHeightForWidth())
+        self.stackedWidget.setSizePolicy(sizePolicy)
+        self.stackedWidget.setObjectName("stackedWidget")
+        self.Principal = QtWidgets.QWidget()
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.Principal.sizePolicy().hasHeightForWidth())
+        self.Principal.setSizePolicy(sizePolicy)
+        self.Principal.setObjectName("Principal")
+        self.gridLayout_2 = QtWidgets.QGridLayout(self.Principal)
+        self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_2.addItem(spacerItem, 0, 1, 1, 1)
+        self.button_StartGame = QtWidgets.QPushButton(self.Principal)
+        self.button_StartGame.setCheckable(False)
+        self.button_StartGame.setAutoDefault(True)
+        self.button_StartGame.setDefault(False)
+        self.button_StartGame.setFlat(False)
+        self.button_StartGame.setObjectName("button_StartGame")
+        self.gridLayout_2.addWidget(self.button_StartGame, 1, 2, 1, 1)
+        self.button_ConfigureDrum = QtWidgets.QPushButton(self.Principal)
+        self.button_ConfigureDrum.setAutoDefault(True)
+        self.button_ConfigureDrum.setObjectName("button_ConfigureDrum")
+        self.gridLayout_2.addWidget(self.button_ConfigureDrum, 2, 2, 1, 1)
+        spacerItem1 = QtWidgets.QSpacerItem(546, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_2.addItem(spacerItem1, 3, 0, 1, 1)
+        self.button_ConfigureDTX = QtWidgets.QPushButton(self.Principal)
+        self.button_ConfigureDTX.setAutoDefault(True)
+        self.button_ConfigureDTX.setObjectName("button_ConfigureDTX")
+        self.gridLayout_2.addWidget(self.button_ConfigureDTX, 3, 2, 1, 1)
+        spacerItem2 = QtWidgets.QSpacerItem(545, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_2.addItem(spacerItem2, 3, 3, 1, 1)
+        self.button_Quit = QtWidgets.QPushButton(self.Principal)
+        self.button_Quit.setAutoDefault(True)
+        self.button_Quit.setObjectName("button_Quit")
+        self.gridLayout_2.addWidget(self.button_Quit, 4, 2, 1, 1)
+        spacerItem3 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_2.addItem(spacerItem3, 5, 2, 1, 1)
+        self.stackedWidget.addWidget(self.Principal)
+        self.gridLayout.addWidget(self.stackedWidget, 0, 0, 1, 1)
+        MainWindow.setCentralWidget(self.Centralwidget)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "pyDTX"))
+        self.button_StartGame.setText(_translate("MainWindow", "Start Game"))
+        self.button_ConfigureDrum.setText(_translate("MainWindow", "Configure Drum"))
+        self.button_ConfigureDTX.setText(_translate("MainWindow", "Configure DTX"))
+        self.button_Quit.setText(_translate("MainWindow", "Quit"))
+

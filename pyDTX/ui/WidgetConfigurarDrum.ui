@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WidgetConfigurarDrum</class>
+ <widget class="QWidget" name="WidgetConfigurarDrum">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>1035</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="4" column="7">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="0">
+    <widget class="QPushButton" name="saveConfigurationButton">
+     <property name="text">
+      <string>Save configuration</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QPushButton" name="exitButton">
+     <property name="text">
+      <string>Exit configuration</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="portsConnectedButton">
+     <property name="text">
+      <string>Ports connected</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QPlainTextEdit" name="portsConnectedTextEdit">
+     <property name="tabChangesFocus">
+      <bool>false</bool>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLabel" name="midiPort_Label">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>Selected Port MIDI</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2">
+    <widget class="QSpinBox" name="portMidiSpinBox"/>
+   </item>
+   <item row="3" column="4">
+    <widget class="QLabel" name="midi1_Label">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>Note MIDI</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="5">
+    <widget class="QLabel" name="midi2_Label">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>or Note MIDI</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="6">
+    <widget class="QLabel" name="key_Label">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>Key</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLabel" name="lane1A_Label">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>Left Cymbal</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="5">
+    <widget class="QSpinBox" name="midi2_lane1A_SpinBox">
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2">
+    <widget class="QCheckBox" name="auto_lane1A_CheckBox">
+     <property name="text">
+      <string>Auto</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="4">
+    <widget class="QSpinBox" name="midi1_lane1A_SpinBox">
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="6">
+    <widget class="QLineEdit" name="key_lane_1A_LineEdit"/>
+   </item>
+   <item row="8" column="6">
+    <widget class="QLineEdit" name="key_lane_1B_LineEdit"/>
+   </item>
+   <item row="5" column="4">
+    <widget class="QSpinBox" name="midi1_lane11_SpinBox">
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QLabel" name="lane11_Label">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>Hi Hat Close</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="5">
+    <widget class="QSpinBox" name="midi2_lane11_SpinBox">
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2">
+    <widget class="QCheckBox" name="auto_lane11_CheckBox">
+     <property name="text">
+      <string>Auto</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="6">
+    <widget class="QLineEdit" name="key_lane_11_LineEdit"/>
+   </item>
+   <item row="6" column="1">
+    <widget class="QLabel" name="lane18_Label">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>Hi Hat Open</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="5">
+    <widget class="QSpinBox" name="midi2_lane18_SpinBox">
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="2">
+    <widget class="QCheckBox" name="auto_lane18_CheckBox">
+     <property name="text">
+      <string>Auto</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="6">
+    <widget class="QLineEdit" name="key_lane_18_LineEdit"/>
+   </item>
+   <item row="6" column="4">
+    <widget class="QSpinBox" name="midi1_lane18_SpinBox">
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="4">
+    <widget class="QSpinBox" name="midi1_lane1C_SpinBox">
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QLabel" name="lane1C_Label">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>Left Bass Drum</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="5">
+    <widget class="QSpinBox" name="midi2_lane1C_SpinBox">
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="2">
+    <widget class="QCheckBox" name="auto_lane1C_CheckBox">
+     <property name="text">
+      <string>Auto</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="6">
+    <widget class="QLineEdit" name="key_lane_1C_LineEdit"/>
+   </item>
+   <item row="8" column="4">
+    <widget class="QSpinBox" name="midi1_lane1B_SpinBox">
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1">
+    <widget class="QLabel" name="lane1B_Label">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>Hi Hat Foot</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="5">
+    <widget class="QSpinBox" name="midi2_lane1B_SpinBox">
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="2">
+    <widget class="QCheckBox" name="auto_lane1B_CheckBox">
+     <property name="text">
+      <string>Auto</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="4">
+    <widget class="QSpinBox" name="midi1_lane16_SpinBox">
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="6">
+    <widget class="QLineEdit" name="key_lane_16_LineEdit"/>
+   </item>
+   <item row="9" column="4">
+    <widget class="QSpinBox" name="midi1_lane12_SpinBox">
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="1">
+    <widget class="QLabel" name="lane12_Label">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>Snare</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="5">
+    <widget class="QSpinBox" name="midi2_lane12_SpinBox">
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="2">
+    <widget class="QCheckBox" name="auto_lane12_CheckBox">
+     <property name="text">
+      <string>Auto</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="6">
+    <widget class="QLineEdit" name="key_lane_12_LineEdit"/>
+   </item>
+   <item row="10" column="4">
+    <widget class="QSpinBox" name="midi1_lane14_SpinBox">
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="1">
+    <widget class="QLabel" name="lane14_Label">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>High Tom</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="5">
+    <widget class="QSpinBox" name="midi2_lane14_SpinBox">
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="2">
+    <widget class="QCheckBox" name="auto_lane14_CheckBox">
+     <property name="text">
+      <string>Auto</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="6">
+    <widget class="QLineEdit" name="key_lane_14_LineEdit"/>
+   </item>
+   <item row="11" column="4">
+    <widget class="QSpinBox" name="midi1_lane13_SpinBox">
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="1">
+    <widget class="QLabel" name="lane13_Label">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>Right Bass Drum</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="5">
+    <widget class="QSpinBox" name="midi2_lane13_SpinBox">
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="2">
+    <widget class="QCheckBox" name="auto_lane13_CheckBox">
+     <property name="text">
+      <string>Auto</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="6">
+    <widget class="QLineEdit" name="key_lane_13_LineEdit"/>
+   </item>
+   <item row="12" column="4">
+    <widget class="QSpinBox" name="midi1_lane15_SpinBox">
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="1">
+    <widget class="QLabel" name="lane15_Label">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>Low Tom</string>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="5">
+    <widget class="QSpinBox" name="midi2_lane15_SpinBox">
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="2">
+    <widget class="QCheckBox" name="auto_lane15_CheckBox">
+     <property name="text">
+      <string>Auto</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="6">
+    <widget class="QLineEdit" name="key_lane_15_LineEdit"/>
+   </item>
+   <item row="13" column="4">
+    <widget class="QSpinBox" name="midi1_lane17_SpinBox">
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="1">
+    <widget class="QLabel" name="lane17_Label">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>Floor Tom</string>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="5">
+    <widget class="QSpinBox" name="midi2_lane17_SpinBox">
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="2">
+    <widget class="QCheckBox" name="auto_lane17_CheckBox">
+     <property name="text">
+      <string>Auto</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="6">
+    <widget class="QLineEdit" name="key_lane_17_LineEdit">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="1">
+    <widget class="QLabel" name="lane16_Label">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>Cymbal</string>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="5">
+    <widget class="QSpinBox" name="midi2_lane16_SpinBox">
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="2">
+    <widget class="QCheckBox" name="auto_lane16_CheckBox">
+     <property name="text">
+      <string>Auto</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="15" column="1">
+    <widget class="QLabel" name="lane19_Label">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>Ryde Cymbal</string>
+     </property>
+    </widget>
+   </item>
+   <item row="15" column="4">
+    <widget class="QSpinBox" name="midi1_lane19_SpinBox">
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="15" column="5">
+    <widget class="QSpinBox" name="midi2_lane19_SpinBox">
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="15" column="2">
+    <widget class="QCheckBox" name="auto_lane19_CheckBox">
+     <property name="text">
+      <string>Auto</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="15" column="6">
+    <widget class="QLineEdit" name="key_lane_19_LineEdit"/>
+   </item>
+   <item row="1" column="4">
+    <widget class="QPushButton" name="viewNotesButton">
+     <property name="text">
+      <string>View Notes on Port Selected</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="5">
+    <widget class="QLineEdit" name="viewNotesLineEdit"/>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>saveConfigurationButton</tabstop>
+  <tabstop>exitButton</tabstop>
+  <tabstop>portsConnectedButton</tabstop>
+  <tabstop>portsConnectedTextEdit</tabstop>
+  <tabstop>portMidiSpinBox</tabstop>
+  <tabstop>auto_lane1A_CheckBox</tabstop>
+  <tabstop>midi1_lane1A_SpinBox</tabstop>
+  <tabstop>midi2_lane1A_SpinBox</tabstop>
+  <tabstop>key_lane_1A_LineEdit</tabstop>
+  <tabstop>auto_lane11_CheckBox</tabstop>
+  <tabstop>midi1_lane11_SpinBox</tabstop>
+  <tabstop>midi2_lane11_SpinBox</tabstop>
+  <tabstop>key_lane_11_LineEdit</tabstop>
+  <tabstop>auto_lane18_CheckBox</tabstop>
+  <tabstop>midi1_lane18_SpinBox</tabstop>
+  <tabstop>midi2_lane18_SpinBox</tabstop>
+  <tabstop>key_lane_18_LineEdit</tabstop>
+  <tabstop>auto_lane1C_CheckBox</tabstop>
+  <tabstop>midi1_lane1C_SpinBox</tabstop>
+  <tabstop>midi2_lane1C_SpinBox</tabstop>
+  <tabstop>key_lane_1C_LineEdit</tabstop>
+  <tabstop>auto_lane1B_CheckBox</tabstop>
+  <tabstop>midi1_lane1B_SpinBox</tabstop>
+  <tabstop>midi2_lane1B_SpinBox</tabstop>
+  <tabstop>key_lane_1B_LineEdit</tabstop>
+  <tabstop>auto_lane12_CheckBox</tabstop>
+  <tabstop>midi1_lane12_SpinBox</tabstop>
+  <tabstop>midi2_lane12_SpinBox</tabstop>
+  <tabstop>key_lane_12_LineEdit</tabstop>
+  <tabstop>auto_lane14_CheckBox</tabstop>
+  <tabstop>midi1_lane14_SpinBox</tabstop>
+  <tabstop>midi2_lane14_SpinBox</tabstop>
+  <tabstop>key_lane_14_LineEdit</tabstop>
+  <tabstop>auto_lane13_CheckBox</tabstop>
+  <tabstop>midi1_lane13_SpinBox</tabstop>
+  <tabstop>midi2_lane13_SpinBox</tabstop>
+  <tabstop>key_lane_13_LineEdit</tabstop>
+  <tabstop>auto_lane15_CheckBox</tabstop>
+  <tabstop>midi1_lane15_SpinBox</tabstop>
+  <tabstop>midi2_lane15_SpinBox</tabstop>
+  <tabstop>key_lane_15_LineEdit</tabstop>
+  <tabstop>auto_lane17_CheckBox</tabstop>
+  <tabstop>midi1_lane17_SpinBox</tabstop>
+  <tabstop>midi2_lane17_SpinBox</tabstop>
+  <tabstop>key_lane_17_LineEdit</tabstop>
+  <tabstop>auto_lane16_CheckBox</tabstop>
+  <tabstop>midi1_lane16_SpinBox</tabstop>
+  <tabstop>midi2_lane16_SpinBox</tabstop>
+  <tabstop>key_lane_16_LineEdit</tabstop>
+  <tabstop>auto_lane19_CheckBox</tabstop>
+  <tabstop>midi1_lane19_SpinBox</tabstop>
+  <tabstop>midi2_lane19_SpinBox</tabstop>
+  <tabstop>key_lane_19_LineEdit</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

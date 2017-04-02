@@ -1,0 +1,86 @@
+@GD{epub,
+word       = {epub},
+definition = { El .epub o formato OEBPS es un estandar abierto para libros digitales creado por International Digital Publishing Forum (IDPF). Él combina tres IDPF estandars abiertos:
+
+\begin{enumerate}
+\item Open Publication Structure (OPS) 2.0, que describe el contenido marcado (o en XHTML o en Daisy DTBook)
+\item Open Packaging Format (OPF) 2.0, que describe la estructura de un .epub en XMLItem 2
+\item OEBPS Container Format (OCF) 1.0, que juntan los ficheros en uno (es un ZIP renombrado)
+\end{enumerate}
+}
+}
+
+@GD{pdf,
+word = {pdf},
+definition = { (del inglés Portable Document Format, Formato de Documento Portátil) es un formato de almacenamiento de documentos, desarrollado por la empresa Adobe Systems. Está especialmente ideado para documentos susceptibles de ser impresos, ya que especifica toda la información necesaria para la presentación final del documento, determinando todos los detalles de cómo va a quedar, no requiriéndose procesos anteriores de ajuste ni de maquetación. Cada vez se utiliza más también como especificación de visualización, gracias a la gran calidad de las fuentes utilizadas y a las facilidades que ofrece para el manejo del documento, como búsquedas, hiperenlaces, etc.
+
+Recientemente pasó a ser un estándar ISO 32000.}
+}
+
+@GD{html,
+word = {html},
+definition = { siglas de HyperText Markup Language (Lenguaje de Marcas de Hipertexto), es el lenguaje de marcado predominante para la construcción de páginas web. Es usado para describir la estructura y el contenido en forma de texto, así como para complementar el texto con objetos tales como imágenes. HTML se escribe en forma de etiquetas, rodeadas por corchetes angulares . HTML también puede describir, hasta un cierto punto, la apariencia de un documento, y puede incluir un script (por ejemplo Javascript), el cual puede afectar el comportamiento de navegadores web y otros procesadores de HTML.
+
+HTML también es usado para referirse al contenido del tipo de MIME text/html o todavía más ampliamente como un término genérico para el HTML, ya sea en forma descendida del XML (como XHTML 1.0 y posteriores) o en forma descendida directamente de SGML (como HTML 4.01 y anteriores).
+
+Por convención, los archivos de formato HTML usan la extensión .htm o .html.}
+}
+
+@GD{DRM,
+word = {DRM},
+definition ={La Gestión de derechos digitales (abreviado en inglés DRM, de Digital Rights Management) es un término genérico que se refiere a las tecnologías de control de acceso usada por editoriales y dueños de derechos de autor para limitar el uso de medios o dispositivos digitales. También se puede referir a las restricciones asociadas a instancias específicas de obras digitales o dispositivos. Los DRM se traslapan con la protección de copia de software hasta cierto punto, aunque, el término DRM es generalmente aplicado a medios creativos (música, películas, etc.) mientras que el término "protección de copia" tiende a referirse a los mecanismos de protección de copia en software computacional.}
+}
+
+@GD{libro-juego,
+word = {libro-juego},
+definition = {Un libro juego es una obra literaria escrita en la que el autor pretende involucrar al lector en el seno de la historia permitiéndole decidir sobre el curso de esta.
+
+Los libro juegos no se leen de principio a fin sino que llegados a determinados puntos ofrecen al lector opciones sobre las acciones que puede realizar el personaje que encarnan (suelen estar escritos en segunda persona), cada opción mostrada indica un número de página por donde la historia continúa acorde con la acción escogida.
+
+Conceptualmente los libro juegos pueden verse como estructuras en árbol, donde cada página estarían representadas por las hojas y las opciones por las ramas.}
+}
+
+@GD{e-ink,
+word = {e-ink},
+definition = {La tinta electronica o e-paper es un tipo de papel electronico, el cual emulando al papel, hace que no se canse tanto la vista como una pantalla por que no utiliza ningún tipo de luz, para generar la imagen, con la ventaja añadida de un muy bajo consumo ya que una vez que se ha hecho un cambio de página la tecnologia usada no consume nada. Los únicos inconvenientes que tiene actualmente es el precio, que no se dispone de colores lo más habitual son una pequeña 4 o 16 escala de grises, y que el cambio entre pantallas no es automatico por lo que no es viable todavia poner animaciones.}
+}
+
+@GD{SCUMM,
+word = {SCUMM},
+definition = {SCUMM (Script Creation Utility for Maniac Mansion, inglés, utilidad de creación de guiones para Maniac Mansion) se encuentra a medio camino entre un lenguaje y un motor para videojuegos para aventuras gráficas. SCUMM fue creado por LucasArts y desarrollado por Aric Wilmunder y Ron Gilbert para su videojuego Maniac Mansion en 1988, considerada como una de las primeras aventuras gráficas de la historia de los videojuegos. A pesar de esto, el primero en usar este motor fue el Zak McKracken, que salió a la luz meses antes.
+
+SCUMM permitía a los diseñadores de juegos crear lugares, objetos y secuencias de diálogos sin necesidad de escribir en el mismo lenguaje con el que se había escrito el código fuente del juego.}
+}
+
+@GD{LaTeX,
+word = {LaTeX},
+definition = {LaTeX es un lenguaje de marcado para documentos, y un sistema de preparación de documentos, formado por un gran conjunto de macros de TeX, escritas inicialmente por Leslie Lamport (LamportTeX) en 1984, con la intención de facilitar el uso del lenguaje de composición tipográfica creado por Donald Knuth. Es muy utilizado para la composición de artículos académicos, tesis y libros técnicos, dado que la calidad tipográfica de los documentos realizados con LaTeX es comparable a la de una editorial científica de primera línea. LaTeX es software libre bajo licencia LPPL.}
+}
+
+@GD{WACOM,
+word = {WACOM},
+definition = {Nombre de la empresa más famosa que fabrica tabletas gráficas, es un periférico que permite al usuario introducir gráficos o dibujos a mano, tal como lo haría con lápiz y papel. También permite apuntar y señalar los objetos que se encuentran en la pantalla. Consiste en una superficie plana sobre la que el usuario puede dibujar una imagen utilizando el lapicero que viene junto a la tableta. La imagen no aparece en la tableta sino que se muestra en la pantalla de la computadora. Algunas tabletas digitalizadoras están diseñadas para ser utilizadas reemplazando al ratón como el dispositivo apuntador principal.
+Las tabletas digitalizadoras, debido a su interfaz basada en un lapicero y la habilidad de detector presión, ángulo y otras propiedades del lápiz y su interacción con la tableta, son utilizados ampliamente para crear gráficos por computadora, especialmente gráficos en dos dimensiones.}
+}
+
+@GD{IDE,
+word = {IDE},
+definition = {Un entorno de desarrollo integrado o en inglés Integrated Development Environment (IDE) es un programa compuesto por un conjunto de herramientas para un programador.
+Puede dedicarse en exclusiva a un sólo lenguaje de programación o bien, poder utilizarse para varios.
+Un IDE es un entorno de programación que ha sido empaquetado como un programa de aplicación, es decir, consiste en un editor de código, un compilador, un depurador y un constructor de interfaz gráfica GUI. Los IDEs pueden ser aplicaciones por si solas o pueden ser parte de aplicaciones existentes. El lenguaje Visual Basic por ejemplo puede ser usado dentro de las aplicaciones de Microsoft Office, lo que hace posible escribir sentencias Visual Basic en forma de macros para Microsoft Word.
+Los IDEs proveen un marco de trabajo amigable para la mayoría de los lenguajes de programación tales como C++, Python, Java, Delphi, Visual Basic, etc. En algunos lenguajes, un IDE puede funcionar como un sistema en tiempo de ejecución, en donde se permite utilizar el lenguaje de programación en forma interactiva, sin necesidad de trabajo orientado a archivos de texto, como es el caso de Smalltalk u Objective-C.}
+}
+
+@GD{nltk,
+word={nltk},
+definition= {Natural Language Toolkit o más comúnmente NLTK es un conjunto de librerias y programas para el  procesado del lenguaje natural simbolico y estadistico (NLP) para el lenguaje de programación Python. NLTK incluye demostraciones y datos de ejemplo, esta acompañado de mucha documentación incluyendo un libro que explica los problemas subyacentes detrás de el procesado del lenguaje que hacen el NLTK. 
+
+NLTK esta ideal para estudiantes que estan aprendiendo NLP o investigando NLP o áreas relacionadas incluidos lenguajes empiricos, ciencia cognitiva, inteligencia artifical, busqueda de información y aprendizaje de las maquinas.NLTL ha sido usado satisfactoriamente como una herramienta de enseñanza, una herramienta de estudio individual y como una plataforma de prototipado/creación de sistemas experimentales. El proyecto NTLK esta dirigido por Steven Bird}
+}
+
+@GD{css,
+word = {css},
+definition = {Las hojas de estilo en cascada (en inglés Cascading Style Sheets), CSS es un lenguaje usado para definir la presentación de un documento estructurado escrito en HTML o XML (y por extensión en XHTML). El W3C (World Wide Web Consortium) es el encargado de formular la especificación de las hojas de estilo que servirán de estándar para los agentes de usuario o navegadores.
+
+La idea que se encuentra detrás del desarrollo de CSS es separar la estructura de un documento de su presentación.}
+}
