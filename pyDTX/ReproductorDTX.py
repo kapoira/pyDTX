@@ -238,7 +238,7 @@ class ReproductorDTX(QtWidgets.QGraphicsView):
         self.dict_lanes_auto['62'] = lane_auto
 
         #Analizar el fichero .dtx para tener todos los datos
-        print ("-----Analizando dtx para reproduccion-----")
+        print ("-----Analizing .dtx to play-----")
 
         #Crear lanes según configuración
         #pensar en el Hihat dos lanes misma columna y dos platillos derecha
@@ -274,8 +274,9 @@ class ReproductorDTX(QtWidgets.QGraphicsView):
             if not linea:
                 break
             #Limpiamos caracteres raros en la linea
-            linea = linea.rstrip('\r\n\t')
             linea = linea.split(";")
+            linea = linea.rstrip('\r\n\t')
+            linea = linea.replace("\t", "")
             campos = linea[0].split()
             primer_espacio = linea[0].find(" ")
             orden = linea[0][:primer_espacio]
@@ -286,7 +287,7 @@ class ReproductorDTX(QtWidgets.QGraphicsView):
                         self.title = linea[0][primer_espacio + 1:]
                     elif orden == "#PANEL:":
                         #PANEL:
-                        print("TODO orden", orden)
+                        self.title = linea[0][primer_espacio + 1:]
                     elif orden[0:4] == "#BPM":
                         if orden[4] == ":":
                             #BMP:
@@ -315,10 +316,9 @@ class ReproductorDTX(QtWidgets.QGraphicsView):
                             banco = QSoundEffect()
                             banco.setSource(url)
                         self.dict_wav[canal] = banco
-                    elif orden[0:7] == "#VOLUME":
-                        #VOLUME:
-                        canal = str(campos[0][7:9])
-                        print ("TODO orden ", orden)
+                    elif orden == "#DLEVEL:":
+                        orden = ""
+                        #Orden no tenemos que hacer nada en cuando reproducimos
                     else:
                         print ("ORDEN .dtx no implementada :", orden)
                 else:
@@ -475,7 +475,7 @@ class ReproductorDTX(QtWidgets.QGraphicsView):
         #Juntamos el midi a la funcion de entrada
         self.midi_in.callback = midi_handler
 
-        print ("Ya he analizado la canción")
+        print ("Starting the song")
 
         #Iniciamos el timer inicial para tener control del tiempo que llevamos
         self.timer = QtCore.QElapsedTimer()

@@ -1,300 +1,322 @@
 \select@language {spanish}
-\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{8}{chapter.1}
-\contentsline {section}{\numberline {1.1}Idea General}{8}{section.1.1}
-\contentsline {section}{\numberline {1.2}Estado del arte e idea del proyecto}{8}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Historia de los principales juegos musicales}{8}{subsection.1.2.1}
-\contentsline {subsubsection}{Guitar Hero}{8}{section*.4}
-\contentsline {subsubsection}{Rock Band}{10}{section*.5}
-\contentsline {subsubsection}{Frets on fire}{11}{section*.6}
-\contentsline {subsubsection}{FoFiX}{12}{section*.7}
-\contentsline {subsubsection}{Dance Dance Revolution}{12}{section*.8}
-\contentsline {subsubsection}{Stepmania}{14}{section*.9}
-\contentsline {subsubsection}{Drum Mania}{14}{section*.10}
-\contentsline {subsubsection}{Drum Mania XG / Gitadora}{16}{section*.11}
-\contentsline {subsubsection}{DTXMania}{16}{section*.12}
-\contentsline {subsubsection}{DTXManiaHD}{17}{section*.13}
-\contentsline {subsection}{\numberline {1.2.2}Historia composici\IeC {\'o}n musical mediante ordenador}{17}{subsection.1.2.2}
-\contentsline {subsubsection}{Formatos sin comprimir WAV}{19}{section*.14}
-\contentsline {subsubsection}{Formato con compresi\IeC {\'o}n Mp3}{19}{section*.15}
-\contentsline {subsubsection}{Formato MIDI}{21}{section*.16}
-\contentsline {paragraph}{El desarrollo del MIDI}{21}{section*.17}
-\contentsline {paragraph}{El impacto del MIDI en la industria de la m\IeC {\'u}sica}{22}{section*.18}
-\contentsline {paragraph}{Control de instrumentos}{22}{section*.19}
-\contentsline {paragraph}{Composici\IeC {\'o}n}{23}{section*.20}
-\contentsline {paragraph}{MIDI y los ordenadores}{23}{section*.21}
-\contentsline {paragraph}{Dispositivos MIDI}{25}{section*.22}
-\contentsline {paragraph}{Controladores}{26}{section*.23}
-\contentsline {paragraph}{Instrumentos}{27}{section*.24}
-\contentsline {paragraph}{Especificaciones t\IeC {\'e}cnicas}{28}{section*.25}
-\contentsline {paragraph}{Hardwares alternativos de transporte}{29}{section*.26}
-\contentsline {paragraph}{Versiones de MIDI}{29}{section*.27}
-\contentsline {subsection}{\numberline {1.2.3}Baterias-MIDI y proyectos en entornos libre}{30}{subsection.1.2.3}
-\contentsline {subsubsection}{Arduino}{30}{section*.28}
-\contentsline {subsubsection}{Bater\IeC {\'\i }as-MIDI}{31}{section*.29}
-\contentsline {subsubsection}{Bater\IeC {\'\i }as-MIDI profesionales}{31}{section*.30}
-\contentsline {paragraph}{Bater\IeC {\'\i }as de entrada}{31}{section*.31}
-\contentsline {paragraph}{Bater\IeC {\'\i }as semiprofesionales}{32}{section*.32}
-\contentsline {paragraph}{Bater\IeC {\'\i }as profesionales}{33}{section*.33}
-\contentsline {paragraph}{Conclusiones}{34}{section*.34}
-\contentsline {subsection}{\numberline {1.2.4}Reproductores DTXMania en entornos libres}{34}{subsection.1.2.4}
-\contentsline {subsubsection}{Problemas con los otros juegos musicales similares}{35}{section*.35}
-\contentsline {subsection}{\numberline {1.2.5}Raspberry}{36}{subsection.1.2.5}
-\contentsline {subsubsection}{Historia}{37}{section*.36}
-\contentsline {subsubsection}{Hardware}{38}{section*.37}
-\contentsline {subsubsection}{Software}{39}{section*.38}
-\contentsline {subsubsection}{Accesorios}{40}{section*.39}
-\contentsline {paragraph}{C\IeC {\'a}mara}{40}{section*.40}
-\contentsline {paragraph}{Gertboard}{40}{section*.41}
-\contentsline {paragraph}{C\IeC {\'a}mara de infrarojos}{40}{section*.42}
-\contentsline {paragraph}{HAT}{40}{section*.43}
-\contentsline {paragraph}{DAC}{40}{section*.44}
-\contentsline {paragraph}{PianoHAT}{41}{section*.45}
-\contentsline {paragraph}{DrumHAT}{41}{section*.46}
-\contentsline {subsubsection}{Comunidad}{42}{section*.47}
-\contentsline {subsubsection}{Recepci\IeC {\'o}n e influencia}{43}{section*.48}
-\contentsline {subsubsection}{SonicPi}{43}{section*.49}
-\contentsline {subsubsection}{Usos}{43}{section*.50}
-\contentsline {chapter}{\numberline {2}Proyecto de canciones DTXMANIA entorno libre}{44}{chapter.2}
-\contentsline {section}{\numberline {2.1}Idea Inicial}{44}{section.2.1}
-\contentsline {subsubsection}{Entorno de desarrollo}{45}{section*.51}
-\contentsline {subsubsection}{Parte f\IeC {\'\i }sica}{45}{section*.52}
-\contentsline {subsubsection}{Python3}{45}{section*.53}
-\contentsline {subsubsection}{Ninja-IDE}{46}{section*.54}
-\contentsline {subsection}{\numberline {2.1.1}Comparaciones funcionales Stepmania/DTXMania}{46}{subsection.2.1.1}
-\contentsline {subsubsection}{DDR/Drummania}{46}{section*.55}
-\contentsline {paragraph}{Similitudes generales en los dos juegos}{46}{section*.56}
-\contentsline {paragraph}{Diferencias en los dos juegos}{46}{section*.57}
-\contentsline {subsubsection}{StepMania/DTXMania}{47}{section*.58}
-\contentsline {subsection}{\numberline {2.1.2}pydance}{47}{subsection.2.1.2}
-\contentsline {subsubsection}{Pygame}{47}{section*.59}
-\contentsline {subsubsection}{libsdl}{47}{section*.60}
-\contentsline {subsubsection}{Ogg Vorbis}{48}{section*.61}
-\contentsline {subsubsection}{C\IeC {\'o}digo de pydance}{48}{section*.62}
-\contentsline {subsection}{\numberline {2.1.3}DTXMania}{49}{subsection.2.1.3}
-\contentsline {subsubsection}{Configuraciones}{49}{section*.63}
-\contentsline {subsubsection}{Men\IeC {\'u}s fuera de la parte de tocar la bater\IeC {\'\i }a}{50}{section*.64}
-\contentsline {subsubsection}{Men\IeC {\'u}s en el juego}{51}{section*.65}
-\contentsline {section}{\numberline {2.2}Formatos a nivel b\IeC {\'a}sico de las canciones en juegos musicales}{51}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}FoFiX / PhaseShift}{51}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}MIDI}{53}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}pyDance}{54}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}DTXMania}{56}{subsection.2.2.4}
-\contentsline {chapter}{\numberline {3}Posibles configuraciones en el DTXMania}{60}{chapter.3}
-\contentsline {section}{\numberline {3.1}Configuraciones de Interfaz a implementar}{60}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}DARK}{60}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Autoplay}{61}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}ScrollSpeed}{61}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}Tight}{61}{subsection.3.1.4}
-\contentsline {subsection}{\numberline {3.1.5}InputAdjust}{61}{subsection.3.1.5}
-\contentsline {subsection}{\numberline {3.1.6}PreviewSoundWait}{61}{subsection.3.1.6}
-\contentsline {subsection}{\numberline {3.1.7}Fullscreen}{61}{subsection.3.1.7}
-\contentsline {section}{\numberline {3.2}Configuraciones de Interfaz interesantes para un futuro}{61}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Sudden}{61}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Hiden}{61}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Configuraciones de Interfaz que se escapan al proyecto}{62}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}ComboPosition}{62}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Reverse}{62}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Position}{62}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Guitar/Bass}{62}{subsection.3.3.4}
-\contentsline {section}{\numberline {3.4}Configuraciones de uso a implementar}{62}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Drums Key Assign}{62}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}HH Group}{62}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}HH Priority}{63}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}FT Group}{63}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}FT Priority}{64}{subsection.3.4.5}
-\contentsline {subsection}{\numberline {3.4.6}CY Group}{64}{subsection.3.4.6}
-\contentsline {subsection}{\numberline {3.4.7}CY Priority}{64}{subsection.3.4.7}
-\contentsline {section}{\numberline {3.5}Configuraciones de uso para un futuro}{64}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}BGA}{64}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}FillIn}{64}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}DebugInfo}{65}{subsection.3.5.3}
-\contentsline {subsection}{\numberline {3.5.4}HitSound}{65}{subsection.3.5.4}
-\contentsline {subsection}{\numberline {3.5.5}SaveScore}{65}{subsection.3.5.5}
-\contentsline {subsection}{\numberline {3.5.6}D-MinCombo}{65}{subsection.3.5.6}
-\contentsline {section}{\numberline {3.6}Configuraciones de uso que no se implementaran}{65}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}AVI}{65}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}Guitar/Bass}{65}{subsection.3.6.2}
-\contentsline {subsection}{\numberline {3.6.3}StageFailed}{65}{subsection.3.6.3}
-\contentsline {subsection}{\numberline {3.6.4}BGMSound}{66}{subsection.3.6.4}
-\contentsline {section}{\numberline {3.7}Otras configuraciones}{66}{section.3.7}
-\contentsline {chapter}{\numberline {4}Formato xa}{67}{chapter.4}
-\contentsline {section}{\numberline {4.1}Problemas}{67}{section.4.1}
-\contentsline {section}{\numberline {4.2}Soluci\IeC {\'o}n aportada al proyecto}{69}{section.4.2}
-\contentsline {chapter}{\numberline {5}Formato DTXMania al completo}{70}{chapter.5}
-\contentsline {section}{\numberline {5.1}Estructura b\IeC {\'a}sica}{70}{section.5.1}
-\contentsline {section}{\numberline {5.2}Cabecera}{71}{section.5.2}
-\contentsline {section}{\numberline {5.3}Comandos en cabecera a implementar}{71}{section.5.3}
-\contentsline {subsubsection}{\#TITLE}{71}{section*.66}
-\contentsline {subsubsection}{\#PANEL}{71}{section*.67}
-\contentsline {subsubsection}{\#DLEVEL}{71}{section*.68}
-\contentsline {subsubsection}{\#BPM}{71}{section*.69}
-\contentsline {subsubsection}{\#BPMzz}{71}{section*.70}
-\contentsline {subsubsection}{\#BASEBPM}{71}{section*.71}
-\contentsline {subsubsection}{\#PREIMAGE}{71}{section*.72}
-\contentsline {subsubsection}{\#WAVzz}{72}{section*.73}
-\contentsline {section}{\numberline {5.4}Comandos en cabecera para un futuro}{72}{section.5.4}
-\contentsline {subsubsection}{\#ARTIST}{72}{section*.74}
-\contentsline {subsubsection}{\#GENRE}{72}{section*.75}
-\contentsline {subsubsection}{\#COMMENT}{72}{section*.76}
-\contentsline {subsubsection}{\#STAGEFILE}{72}{section*.77}
-\contentsline {subsubsection}{\#BACKGROUND}{72}{section*.78}
-\contentsline {subsubsection}{\#WALL}{72}{section*.79}
-\contentsline {subsubsection}{\#PREVIEW}{72}{section*.80}
-\contentsline {subsubsection}{\#BMP}{73}{section*.81}
-\contentsline {subsubsection}{\#SOUND\_NOWLOADING}{73}{section*.82}
-\contentsline {subsubsection}{\#SOUND\_STAGEFAILED}{73}{section*.83}
-\contentsline {subsubsection}{\#SOUND\_FULLCOMBO}{73}{section*.84}
-\contentsline {subsubsection}{\#RESULTIMAGE}{73}{section*.85}
-\contentsline {subsubsection}{\#RESULTIMAGE\_xx}{73}{section*.86}
-\contentsline {subsubsection}{\#RESULTSOUND}{73}{section*.87}
-\contentsline {subsubsection}{\#RESULTSOUND\_xx}{74}{section*.88}
-\contentsline {subsubsection}{\#VOLUMEzz}{74}{section*.89}
-\contentsline {subsubsection}{\#PANzz}{74}{section*.90}
-\contentsline {subsubsection}{\#SIZEzz}{74}{section*.91}
-\contentsline {subsubsection}{\#BMPzz}{74}{section*.92}
-\contentsline {section}{\numberline {5.5}Comandos en cabecera que no se implementaran}{74}{section.5.5}
-\contentsline {subsubsection}{\#GLEVEL}{74}{section*.93}
-\contentsline {subsubsection}{\#BLEVEL}{74}{section*.94}
-\contentsline {subsubsection}{\#PREMOVIE}{74}{section*.95}
-\contentsline {subsubsection}{\#HIDDENLEVEL ON}{75}{section*.96}
-\contentsline {subsubsection}{\#BACKGROUND\_GD}{75}{section*.97}
-\contentsline {subsubsection}{\#RESULTMOVIE}{75}{section*.98}
-\contentsline {subsubsection}{\#RESULTMOVIE\_xx}{75}{section*.99}
-\contentsline {subsubsection}{\#MIDINOTE}{75}{section*.100}
-\contentsline {section}{\numberline {5.6}Objetos}{75}{section.5.6}
-\contentsline {subsubsection}{\#nnncc object list}{75}{section*.101}
-\contentsline {subsubsection}{Formato de lista de objetos}{76}{section*.102}
-\contentsline {section}{\numberline {5.7}Canales definidos por el DTXMania}{77}{section.5.7}
-\contentsline {section}{\numberline {5.8}Canales a implementar}{77}{section.5.8}
-\contentsline {subsection}{\numberline {5.8.1}01 - BGM Back chorus}{77}{subsection.5.8.1}
-\contentsline {subsection}{\numberline {5.8.2}03 - BPM}{78}{subsection.5.8.2}
-\contentsline {subsection}{\numberline {5.8.3}08 - Extended tempo(BPM)}{78}{subsection.5.8.3}
-\contentsline {subsection}{\numberline {5.8.4}11-1A - Notas de la bater\IeC {\'\i }a}{78}{subsection.5.8.4}
-\contentsline {subsection}{\numberline {5.8.5}61-62- Sonidos en autoplay}{79}{subsection.5.8.5}
-\contentsline {section}{\numberline {5.9}Canales a implementar en un futuro}{79}{section.5.9}
-\contentsline {subsection}{\numberline {5.9.1}02 - BAR length}{79}{subsection.5.9.1}
-\contentsline {subsection}{\numberline {5.9.2}04 - BGA}{80}{subsection.5.9.2}
-\contentsline {subsection}{\numberline {5.9.3}07 - BGA/ 2 capa}{80}{subsection.5.9.3}
-\contentsline {subsection}{\numberline {5.9.4}31-3A - Drums invible object}{80}{subsection.5.9.4}
-\contentsline {subsection}{\numberline {5.9.5}50 - BAR line}{80}{subsection.5.9.5}
-\contentsline {subsection}{\numberline {5.9.6}51 - Beat Line}{81}{subsection.5.9.6}
-\contentsline {subsection}{\numberline {5.9.7}53 - Fill in}{81}{subsection.5.9.7}
-\contentsline {subsection}{\numberline {5.9.8}55-59,60 - BGA / capas}{81}{subsection.5.9.8}
-\contentsline {subsection}{\numberline {5.9.9}63-69, 70-79,80-89,90-92 - Sonidos en autoplay}{81}{subsection.5.9.9}
-\contentsline {subsection}{\numberline {5.9.10}B1-B9, BC No-chip default sound}{81}{subsection.5.9.10}
-\contentsline {subsection}{\numberline {5.9.11}C1 [BEAT-line shifting]}{81}{subsection.5.9.11}
-\contentsline {subsection}{\numberline {5.9.12}C2 [hide BEAT/BAR lines]}{81}{subsection.5.9.12}
-\contentsline {subsection}{\numberline {5.9.13}C4, C7, D5-D9, E0 [Swapping BGA bitmap] }{82}{subsection.5.9.13}
-\contentsline {section}{\numberline {5.10}Canales que no se implementaran}{82}{section.5.10}
-\contentsline {subsection}{\numberline {5.10.1}00}{82}{subsection.5.10.1}
-\contentsline {subsection}{\numberline {5.10.2}05 - Extend object}{82}{subsection.5.10.2}
-\contentsline {subsection}{\numberline {5.10.3}06 - Cambiar la animaci\IeC {\'o}n de MISS}{82}{subsection.5.10.3}
-\contentsline {subsection}{\numberline {5.10.4}09-10 - Reservados por BMS}{82}{subsection.5.10.4}
-\contentsline {subsection}{\numberline {5.10.5}20-29 y 2F- Notas de la guitarra}{82}{subsection.5.10.5}
-\contentsline {subsection}{\numberline {5.10.6}30 - flow-speed drums}{82}{subsection.5.10.6}
-\contentsline {subsection}{\numberline {5.10.7}40 - Reservado por BMS}{82}{subsection.5.10.7}
-\contentsline {subsection}{\numberline {5.10.8}41-46 Invisible object for the 2nd player}{82}{subsection.5.10.8}
-\contentsline {subsection}{\numberline {5.10.9}47-49 - Reservado por BMS}{82}{subsection.5.10.9}
-\contentsline {subsection}{\numberline {5.10.10}52 - MIDI drum chorus}{82}{subsection.5.10.10}
-\contentsline {subsection}{\numberline {5.10.11}54 - Playback movie}{83}{subsection.5.10.11}
-\contentsline {subsection}{\numberline {5.10.12}93-99 - Reservados}{83}{subsection.5.10.12}
-\contentsline {subsection}{\numberline {5.10.13}A0-A7 - Bass notes}{83}{subsection.5.10.13}
-\contentsline {subsection}{\numberline {5.10.14}A8 - Wailing (Bass)}{83}{subsection.5.10.14}
-\contentsline {subsection}{\numberline {5.10.15}AF - Wailing sound (Bass)}{83}{subsection.5.10.15}
-\contentsline {subsection}{\numberline {5.10.16}BA - No chip default sound (guitar)}{83}{subsection.5.10.16}
-\contentsline {subsection}{\numberline {5.10.17}BB - No chip default sound (bass)}{83}{subsection.5.10.17}
-\contentsline {section}{\numberline {5.11}Comentarios sobre el proyecto}{83}{section.5.11}
-\contentsline {chapter}{\numberline {6}Especificaciones generales de dise\IeC {\~n}o}{84}{chapter.6}
-\contentsline {section}{\numberline {6.1}Consideraciones generales a python3}{84}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Configuraciones en disco duro}{85}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Cython y rtmidi2}{85}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}Gr\IeC {\'a}ficos en qt5}{85}{section.6.2}
-\contentsline {section}{\numberline {6.3}Animaciones en qt5}{86}{section.6.3}
-\contentsline {section}{\numberline {6.4}Sonidos en qt5}{86}{section.6.4}
-\contentsline {chapter}{\numberline {7}pyDTX}{87}{chapter.7}
-\contentsline {section}{\numberline {7.1}Ideas generales}{87}{section.7.1}
-\contentsline {section}{\numberline {7.2}Pantalla principal}{87}{section.7.2}
-\contentsline {section}{\numberline {7.3}Pantalla Inicial}{87}{section.7.3}
-\contentsline {section}{\numberline {7.4}Pantalla configuraci\IeC {\'o}n bater\IeC {\'\i }a-MIDI}{88}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}MIDI}{88}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Configuraci\IeC {\'o}n MIDI en pyDTX}{89}{subsection.7.4.2}
-\contentsline {subsection}{\numberline {7.4.3}Bater\IeC {\'\i }as-MIDI y Lanes}{89}{subsection.7.4.3}
-\contentsline {subsubsection}{Pocos Pads para muchos lanes}{90}{section*.103}
-\contentsline {subsubsection}{Muchos Pads para pocos lanes}{90}{section*.104}
-\contentsline {subsubsection}{Casos especiales por respetar los dos al mismo tiempo}{91}{section*.105}
-\contentsline {section}{\numberline {7.5}Pantalla configuraci\IeC {\'o}n pyDTX}{91}{section.7.5}
-\contentsline {section}{\numberline {7.6}Pantalla Navegaci\IeC {\'o}n}{92}{section.7.6}
-\contentsline {subsubsection}{Informaci\IeC {\'o}n de la canci\IeC {\'o}n}{92}{section*.106}
-\contentsline {subsubsection}{Lista de las canciones y directorios actuales}{92}{section*.107}
-\contentsline {subsubsection}{Botonera para cambio de directorios o seleccionar canciones}{93}{section*.108}
-\contentsline {section}{\numberline {7.7}Reproducci\IeC {\'o}n de la canci\IeC {\'o}n}{94}{section.7.7}
-\contentsline {subsection}{\numberline {7.7.1}Inicializaci\IeC {\'o}n b\IeC {\'a}sica y detalles de Qt5}{94}{subsection.7.7.1}
-\contentsline {subsection}{\numberline {7.7.2}Inicializaci\IeC {\'o}n con una canci\IeC {\'o}n}{94}{subsection.7.7.2}
-\contentsline {subsection}{\numberline {7.7.3}Teclado}{94}{subsection.7.7.3}
-\contentsline {subsubsection}{Configurar teclado}{94}{section*.109}
-\contentsline {subsubsection}{evento de teclado}{94}{section*.110}
-\contentsline {subsection}{\numberline {7.7.4}MIDI}{95}{subsection.7.7.4}
-\contentsline {subsubsection}{Configurar MIDI}{95}{section*.111}
-\contentsline {subsubsection}{Evento MIDI}{95}{section*.112}
-\contentsline {subsection}{\numberline {7.7.5}Lanes}{95}{subsection.7.7.5}
-\contentsline {subsection}{\numberline {7.7.6}Ideas b\IeC {\'a}sicas de los lanes}{95}{subsection.7.7.6}
-\contentsline {subsubsection}{Chips Auto}{95}{section*.113}
-\contentsline {subsubsection}{Chips Visuales}{96}{section*.114}
-\contentsline {subsubsection}{Lanes Auto}{96}{section*.115}
-\contentsline {subsubsection}{Lanes visuales}{96}{section*.116}
-\contentsline {subsubsection}{Reproducir una canci\IeC {\'o}n}{97}{section*.117}
-\contentsline {subsubsection}{Puntuaci\IeC {\'o}n}{97}{section*.118}
-\contentsline {subsubsection}{Continuamos actualizando los compases}{98}{section*.119}
-\contentsline {subsubsection}{Animar un comp\IeC {\'a}s}{98}{section*.120}
-\contentsline {subsubsection}{Bucle principal de la reproducci\IeC {\'o}n}{99}{section*.121}
-\contentsline {chapter}{\numberline {8}Implementaci\IeC {\'o}n}{100}{chapter.8}
-\contentsline {section}{\numberline {8.1}Transformar .dtx a .dtx libre}{100}{section.8.1}
-\contentsline {section}{\numberline {8.2}DRUM-HAT MIDI}{100}{section.8.2}
-\contentsline {section}{\numberline {8.3}pyDTX}{100}{section.8.3}
-\contentsline {section}{\numberline {8.4}Instalaci\IeC {\'o}n}{100}{section.8.4}
-\contentsline {chapter}{\numberline {9}Posibles mejoras en el futuro}{102}{chapter.9}
-\contentsline {chapter}{\numberline {A}C\IeC {\'o}digo fuente}{104}{appendix.Alph1}
-\contentsline {section}{\numberline {A.1}Transformar .dtx a .dtx libre}{104}{section.Alph1.1}
-\contentsline {section}{\numberline {A.2}DRUMHAT en instrumento midi}{104}{section.Alph1.2}
-\contentsline {section}{\numberline {A.3}pyDTX}{105}{section.Alph1.3}
-\contentsline {subsection}{\numberline {A.3.1}ChipAuto.py}{105}{subsection.Alph1.3.1}
-\contentsline {subsection}{\numberline {A.3.2}Chip.py}{106}{subsection.Alph1.3.2}
-\contentsline {subsection}{\numberline {A.3.3}LaneAuto.py}{108}{subsection.Alph1.3.3}
-\contentsline {subsection}{\numberline {A.3.4}LaneVisual.py}{109}{subsection.Alph1.3.4}
-\contentsline {subsection}{\numberline {A.3.5}main.py}{111}{subsection.Alph1.3.5}
-\contentsline {subsection}{\numberline {A.3.6}UtilidadesDTX.py}{112}{subsection.Alph1.3.6}
-\contentsline {subsection}{\numberline {A.3.7}MyMainWindowQt5.py}{116}{subsection.Alph1.3.7}
-\contentsline {subsection}{\numberline {A.3.8}MyWidgetConfigurarDrum.py}{117}{subsection.Alph1.3.8}
-\contentsline {subsection}{\numberline {A.3.9}MyWidgetConfigurarDTX.py}{123}{subsection.Alph1.3.9}
-\contentsline {subsection}{\numberline {A.3.10}MyWidgetNavegacion.py}{125}{subsection.Alph1.3.10}
-\contentsline {subsection}{\numberline {A.3.11}MyWidgetPuntuacion.py}{130}{subsection.Alph1.3.11}
-\contentsline {subsection}{\numberline {A.3.12}ReproductorDTX.py}{133}{subsection.Alph1.3.12}
-\contentsline {chapter}{\numberline {B}Gu\IeC {\'\i }a de estilo python}{145}{appendix.Alph2}
-\contentsline {section}{\numberline {B.1}Formateo del c\IeC {\'o}digo}{145}{section.Alph2.1}
-\contentsline {subsection}{\numberline {B.1.1}Indentaci\IeC {\'o}n}{145}{subsection.Alph2.1.1}
-\contentsline {subsection}{\numberline {B.1.2}Tama\IeC {\~n}o m\IeC {\'a}ximo de l\IeC {\'\i }nea}{145}{subsection.Alph2.1.2}
-\contentsline {subsection}{\numberline {B.1.3}L\IeC {\'\i }neas en blanco}{146}{subsection.Alph2.1.3}
-\contentsline {subsection}{\numberline {B.1.4}Codificaci\IeC {\'o}n de caracteres}{146}{subsection.Alph2.1.4}
-\contentsline {subsection}{\numberline {B.1.5}Imports}{146}{subsection.Alph2.1.5}
-\contentsline {subsection}{\numberline {B.1.6}Espacios en blanco en expresiones y sentencias}{147}{subsection.Alph2.1.6}
-\contentsline {subsection}{\numberline {B.1.7}Otras Recomendaciones}{148}{subsection.Alph2.1.7}
-\contentsline {section}{\numberline {B.2}Comentarios}{149}{section.Alph2.2}
-\contentsline {subsection}{\numberline {B.2.1}Comentarios de bloque}{149}{subsection.Alph2.2.1}
-\contentsline {subsection}{\numberline {B.2.2}Comentarios en l\IeC {\'\i }nea}{150}{subsection.Alph2.2.2}
-\contentsline {section}{\numberline {B.3}Cadenas de Documentaci\IeC {\'o}n}{150}{section.Alph2.3}
-\contentsline {section}{\numberline {B.4}Convenciones de nombres}{150}{section.Alph2.4}
-\contentsline {subsection}{\numberline {B.4.1}Descriptivo: Estilos de Nombrado}{150}{subsection.Alph2.4.1}
-\contentsline {subsection}{\numberline {B.4.2}Prescriptivo: Convenciones de Nombrado}{152}{subsection.Alph2.4.2}
-\contentsline {subsubsection}{Nombres a Evitar}{152}{section*.122}
-\contentsline {subsubsection}{Nombres de Paquetes y M\IeC {\'o}dulos}{152}{section*.123}
-\contentsline {subsubsection}{Nombres de Clases}{152}{section*.124}
-\contentsline {subsubsection}{Nombres de Excepciones}{152}{section*.125}
-\contentsline {subsubsection}{Nombres de Variables Globales}{152}{section*.126}
-\contentsline {subsubsection}{Nombres de Funciones}{153}{section*.127}
-\contentsline {subsubsection}{Argumentos de funciones y m\IeC {\'e}todos}{153}{section*.128}
-\contentsline {subsubsection}{Nombres de m\IeC {\'e}todos y variables de instancia}{153}{section*.129}
-\contentsline {subsubsection}{Dise\IeC {\~n}ar para la herencia}{153}{section*.130}
-\contentsline {section}{\numberline {B.5}Recomendaciones para la programaci\IeC {\'o}n}{154}{section.Alph2.5}
-\contentsline {chapter}{\numberline {C}GNU GENERAL PUBLIC LICENSE}{158}{appendix.Alph3}
-\contentsline {chapter}{Glosario}{159}{section*.131}
-\contentsline {chapter}{\numberline {D}Bibliograf\IeC {\'\i }a}{160}{appendix.Alph4}
+\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{13}{chapter.1}
+\contentsline {section}{\numberline {1.1}El proyecto DTXMANIA en el contexto actual}{13}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Historia de los principales juegos musicales}{14}{subsection.1.1.1}
+\contentsline {subsubsection}{Guitar Hero}{14}{section*.4}
+\contentsline {subsubsection}{Rock Band}{15}{section*.5}
+\contentsline {subsubsection}{Frets on fire}{17}{section*.6}
+\contentsline {subsubsection}{FoFiX}{17}{section*.7}
+\contentsline {subsubsection}{Dance Dance Revolution}{18}{section*.8}
+\contentsline {subsubsection}{Stepmania}{19}{section*.9}
+\contentsline {subsubsection}{Drum Mania}{20}{section*.10}
+\contentsline {subsubsection}{Drum Mania XG / Gitadora}{22}{section*.11}
+\contentsline {subsubsection}{DTXMania}{22}{section*.12}
+\contentsline {subsubsection}{DTXManiaHD}{24}{section*.13}
+\contentsline {subsection}{\numberline {1.1.2}Historia. Composici\IeC {\'o}n musical mediante ordenador}{24}{subsection.1.1.2}
+\contentsline {subsubsection}{Formatos sin comprimir WAV}{26}{section*.14}
+\contentsline {subsubsection}{Formato con compresi\IeC {\'o}n Mp3}{27}{section*.15}
+\contentsline {subsubsection}{Formato MIDI}{28}{section*.16}
+\contentsline {paragraph}{El desarrollo del MIDI}{29}{section*.17}
+\contentsline {paragraph}{El impacto del MIDI en la industria de la m\IeC {\'u}sica}{30}{section*.18}
+\contentsline {paragraph}{Control de instrumentos}{30}{section*.19}
+\contentsline {paragraph}{Composici\IeC {\'o}n}{31}{section*.20}
+\contentsline {paragraph}{MIDI y los ordenadores}{31}{section*.21}
+\contentsline {paragraph}{Archivos MIDI est\IeC {\'a}ndar}{32}{section*.22}
+\contentsline {paragraph}{Intercambio de archivos}{32}{section*.23}
+\contentsline {paragraph}{Software MIDI}{33}{section*.24}
+\contentsline {paragraph}{Secuenciadores}{33}{section*.25}
+\contentsline {paragraph}{Dispositivos MIDI}{34}{section*.26}
+\contentsline {paragraph}{Conector cl\IeC {\'a}sico MIDI}{34}{section*.27}
+\contentsline {paragraph}{Interfaces}{34}{section*.28}
+\contentsline {paragraph}{Controladores}{35}{section*.29}
+\contentsline {paragraph}{Controladores para performance}{35}{section*.30}
+\contentsline {paragraph}{Teclados}{35}{section*.31}
+\contentsline {paragraph}{Bater\IeC {\'\i }as y controladores de percusi\IeC {\'o}n}{35}{section*.32}
+\contentsline {paragraph}{Instrumentos}{36}{section*.33}
+\contentsline {paragraph}{Sintetizadores}{36}{section*.34}
+\contentsline {paragraph}{Samplers}{36}{section*.35}
+\contentsline {paragraph}{Cajas de ritmos}{37}{section*.36}
+\contentsline {paragraph}{Especificaciones t\IeC {\'e}cnicas}{37}{section*.37}
+\contentsline {paragraph}{Hardwares alternativos de transporte}{37}{section*.38}
+\contentsline {paragraph}{USB y FireWire}{38}{section*.39}
+\contentsline {paragraph}{Ethernet}{38}{section*.40}
+\contentsline {paragraph}{Versiones de MIDI}{38}{section*.41}
+\contentsline {subsection}{\numberline {1.1.3}Bater\IeC {\'\i }as-MIDI y proyectos en entornos libre}{39}{subsection.1.1.3}
+\contentsline {subsubsection}{Arduino}{39}{section*.42}
+\contentsline {subsubsection}{Bater\IeC {\'\i }as-MIDI}{40}{section*.43}
+\contentsline {subsubsection}{Bater\IeC {\'\i }as-MIDI profesionales}{41}{section*.44}
+\contentsline {paragraph}{Bater\IeC {\'\i }as profesionales de entrada}{41}{section*.45}
+\contentsline {paragraph}{Bater\IeC {\'\i }as semiprofesionales}{43}{section*.46}
+\contentsline {paragraph}{Bater\IeC {\'\i }as profesionales}{44}{section*.47}
+\contentsline {paragraph}{Conclusiones}{44}{section*.48}
+\contentsline {subsection}{\numberline {1.1.4}Actualidad de Reproductores DTXMania en entornos libres}{45}{subsection.1.1.4}
+\contentsline {subsubsection}{Otros juegos musicales}{46}{section*.49}
+\contentsline {subsection}{\numberline {1.1.5}Raspberry}{47}{subsection.1.1.5}
+\contentsline {subsubsection}{Historia}{48}{section*.50}
+\contentsline {subsubsection}{Hardware}{50}{section*.51}
+\contentsline {subsubsection}{Software}{51}{section*.52}
+\contentsline {subsubsection}{Accesorios}{53}{section*.53}
+\contentsline {paragraph}{C\IeC {\'a}mara}{53}{section*.54}
+\contentsline {paragraph}{Gertboard}{53}{section*.55}
+\contentsline {paragraph}{C\IeC {\'a}mara de infrarojos}{53}{section*.56}
+\contentsline {paragraph}{HAT}{53}{section*.57}
+\contentsline {paragraph}{DAC}{53}{section*.58}
+\contentsline {paragraph}{PianoHAT}{54}{section*.59}
+\contentsline {paragraph}{DrumHAT}{54}{section*.60}
+\contentsline {subsubsection}{Comunidad}{55}{section*.61}
+\contentsline {subsubsection}{Recepci\IeC {\'o}n e influencia}{56}{section*.62}
+\contentsline {subsubsection}{SonicPi}{56}{section*.63}
+\contentsline {subsubsection}{Usos}{57}{section*.64}
+\contentsline {chapter}{\numberline {2}Proyecto de canciones DTXMANIA entorno libre}{58}{chapter.2}
+\contentsline {section}{\numberline {2.1}Planteamiento general}{58}{section.2.1}
+\contentsline {subsubsection}{Entorno de desarrollo}{60}{section*.65}
+\contentsline {subsubsection}{Parte f\IeC {\'\i }sica}{60}{section*.66}
+\contentsline {subsubsection}{Python3}{60}{section*.67}
+\contentsline {subsubsection}{Ninja-IDE}{61}{section*.68}
+\contentsline {subsection}{\numberline {2.1.1}Comparaciones funcionales Stepmania/DTXMania}{61}{subsection.2.1.1}
+\contentsline {subsubsection}{DDR/Drummania}{61}{section*.69}
+\contentsline {paragraph}{Similitudes generales en los dos juegos}{61}{section*.70}
+\contentsline {paragraph}{Diferencias en los dos juegos}{61}{section*.71}
+\contentsline {subsubsection}{StepMania/DTXMania}{62}{section*.72}
+\contentsline {subsection}{\numberline {2.1.2}pydance}{63}{subsection.2.1.2}
+\contentsline {subsubsection}{Pygame}{63}{section*.73}
+\contentsline {subsubsection}{libsdl}{63}{section*.74}
+\contentsline {subsubsection}{Ogg Vorbis}{64}{section*.75}
+\contentsline {subsubsection}{C\IeC {\'o}digo de pydance}{64}{section*.76}
+\contentsline {subsection}{\numberline {2.1.3}DTXMania}{65}{subsection.2.1.3}
+\contentsline {subsubsection}{Configuraciones}{65}{section*.77}
+\contentsline {subsubsection}{Men\IeC {\'u}s fuera de la parte de tocar la bater\IeC {\'\i }a}{67}{section*.78}
+\contentsline {section}{\numberline {2.2}Formatos a nivel b\IeC {\'a}sico de las canciones en juegos musicales}{68}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}FoFiX / PhaseShift}{68}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}MIDI}{70}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}pyDance}{72}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}DTXMania}{74}{subsection.2.2.4}
+\contentsline {chapter}{\numberline {3}Posibles configuraciones en el DTXMania}{78}{chapter.3}
+\contentsline {section}{\numberline {3.1}Configuraciones de Interfaz a implementar}{79}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}DARK}{79}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Autoplay}{79}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}ScrollSpeed}{79}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Tight}{79}{subsection.3.1.4}
+\contentsline {section}{\numberline {3.2}Configuraciones de Interfaz interesantes para un futuro}{80}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}InputAdjust}{80}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}PreviewSoundWait}{80}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Fullscreen}{80}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Sudden}{80}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Hiden}{80}{subsection.3.2.5}
+\contentsline {section}{\numberline {3.3}Configuraciones de Interfaz que se escapan al proyecto}{81}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}ComboPosition}{81}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Reverse}{81}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Position}{81}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Guitar/Bass}{81}{subsection.3.3.4}
+\contentsline {section}{\numberline {3.4}Configuraciones de uso a implementar}{81}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Drums Key Assign}{81}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}HH Group}{82}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}HH Priority}{82}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}FT Group}{82}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}FT Priority}{83}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {3.4.6}CY Group}{83}{subsection.3.4.6}
+\contentsline {subsection}{\numberline {3.4.7}CY Priority}{84}{subsection.3.4.7}
+\contentsline {section}{\numberline {3.5}Configuraciones de uso para un futuro}{84}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}BGA}{84}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}FillIn}{84}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}DebugInfo}{84}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.4}HitSound}{85}{subsection.3.5.4}
+\contentsline {subsection}{\numberline {3.5.5}SaveScore}{85}{subsection.3.5.5}
+\contentsline {subsection}{\numberline {3.5.6}D-MinCombo}{85}{subsection.3.5.6}
+\contentsline {section}{\numberline {3.6}Configuraciones de uso que no se implementaran}{85}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}AVI}{85}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Guitar/Bass}{85}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.3}StageFailed}{85}{subsection.3.6.3}
+\contentsline {subsection}{\numberline {3.6.4}BGMSound}{86}{subsection.3.6.4}
+\contentsline {section}{\numberline {3.7}Otras configuraciones}{86}{section.3.7}
+\contentsline {chapter}{\numberline {4}Formato xa}{88}{chapter.4}
+\contentsline {section}{\numberline {4.1}Problemas}{89}{section.4.1}
+\contentsline {section}{\numberline {4.2}Soluci\IeC {\'o}n aportada al proyecto}{90}{section.4.2}
+\contentsline {chapter}{\numberline {5}Formato DTXMania al completo}{92}{chapter.5}
+\contentsline {section}{\numberline {5.1}Estructura b\IeC {\'a}sica}{92}{section.5.1}
+\contentsline {section}{\numberline {5.2}Cabecera}{93}{section.5.2}
+\contentsline {section}{\numberline {5.3}Comandos en cabecera a implementar}{93}{section.5.3}
+\contentsline {subsubsection}{\#TITLE}{93}{section*.79}
+\contentsline {subsubsection}{\#PANEL}{93}{section*.80}
+\contentsline {subsubsection}{\#DLEVEL}{94}{section*.81}
+\contentsline {subsubsection}{\#BPM}{94}{section*.82}
+\contentsline {subsubsection}{\#BPMzz}{94}{section*.83}
+\contentsline {subsubsection}{\#BASEBPM}{94}{section*.84}
+\contentsline {subsubsection}{\#PREIMAGE}{94}{section*.85}
+\contentsline {subsubsection}{\#WAVzz}{95}{section*.86}
+\contentsline {section}{\numberline {5.4}Comandos en cabecera para un futuro}{95}{section.5.4}
+\contentsline {subsubsection}{\#ARTIST}{95}{section*.87}
+\contentsline {subsubsection}{\#GENRE}{95}{section*.88}
+\contentsline {subsubsection}{\#COMMENT}{95}{section*.89}
+\contentsline {subsubsection}{\#STAGEFILE}{96}{section*.90}
+\contentsline {subsubsection}{\#BACKGROUND}{96}{section*.91}
+\contentsline {subsubsection}{\#WALL}{96}{section*.92}
+\contentsline {subsubsection}{\#PREVIEW}{96}{section*.93}
+\contentsline {subsubsection}{\#BMP}{96}{section*.94}
+\contentsline {subsubsection}{\#SOUND\_NOWLOADING}{96}{section*.95}
+\contentsline {subsubsection}{\#SOUND\_STAGEFAILED}{97}{section*.96}
+\contentsline {subsubsection}{\#SOUND\_FULLCOMBO}{97}{section*.97}
+\contentsline {subsubsection}{\#RESULTIMAGE}{97}{section*.98}
+\contentsline {subsubsection}{\#RESULTIMAGE\_xx}{97}{section*.99}
+\contentsline {subsubsection}{\#RESULTSOUND}{98}{section*.100}
+\contentsline {subsubsection}{\#RESULTSOUND\_xx}{98}{section*.101}
+\contentsline {subsubsection}{\#VOLUMEzz}{98}{section*.102}
+\contentsline {subsubsection}{\#PANzz}{98}{section*.103}
+\contentsline {subsubsection}{\#SIZEzz}{98}{section*.104}
+\contentsline {subsubsection}{\#BMPzz}{99}{section*.105}
+\contentsline {section}{\numberline {5.5}Comandos en cabecera que no se implementaran}{99}{section.5.5}
+\contentsline {subsubsection}{\#GLEVEL}{99}{section*.106}
+\contentsline {subsubsection}{\#BLEVEL}{99}{section*.107}
+\contentsline {subsubsection}{\#PREMOVIE}{99}{section*.108}
+\contentsline {subsubsection}{\#HIDDENLEVEL ON}{99}{section*.109}
+\contentsline {subsubsection}{\#BACKGROUND\_GD}{100}{section*.110}
+\contentsline {subsubsection}{\#RESULTMOVIE}{100}{section*.111}
+\contentsline {subsubsection}{\#RESULTMOVIE\_xx}{100}{section*.112}
+\contentsline {subsubsection}{\#MIDINOTE}{100}{section*.113}
+\contentsline {section}{\numberline {5.6}Objetos}{100}{section.5.6}
+\contentsline {subsubsection}{\#nnncc object list}{100}{section*.114}
+\contentsline {subsubsection}{Formato de lista de objetos}{101}{section*.115}
+\contentsline {section}{\numberline {5.7}Canales definidos por el DTXMania}{103}{section.5.7}
+\contentsline {section}{\numberline {5.8}Canales a implementar}{103}{section.5.8}
+\contentsline {subsection}{\numberline {5.8.1}01 - BGM Back chorus}{103}{subsection.5.8.1}
+\contentsline {subsection}{\numberline {5.8.2}03 - BPM}{103}{subsection.5.8.2}
+\contentsline {subsection}{\numberline {5.8.3}08 - Extended tempo(BPM)}{104}{subsection.5.8.3}
+\contentsline {subsection}{\numberline {5.8.4}11-1A - Notas de la bater\IeC {\'\i }a}{104}{subsection.5.8.4}
+\contentsline {subsection}{\numberline {5.8.5}61-62- Sonidos en autoplay}{105}{subsection.5.8.5}
+\contentsline {section}{\numberline {5.9}Canales a implementar en un futuro}{105}{section.5.9}
+\contentsline {subsection}{\numberline {5.9.1}02 - BAR length}{105}{subsection.5.9.1}
+\contentsline {subsection}{\numberline {5.9.2}04 - BGA}{106}{subsection.5.9.2}
+\contentsline {subsection}{\numberline {5.9.3}07 - BGA/ 2 capa}{106}{subsection.5.9.3}
+\contentsline {subsection}{\numberline {5.9.4}31-3A - Drums invible object}{106}{subsection.5.9.4}
+\contentsline {subsection}{\numberline {5.9.5}50 - BAR line}{107}{subsection.5.9.5}
+\contentsline {subsection}{\numberline {5.9.6}51 - Beat Line}{107}{subsection.5.9.6}
+\contentsline {subsection}{\numberline {5.9.7}53 - Fill in}{107}{subsection.5.9.7}
+\contentsline {subsection}{\numberline {5.9.8}55-59,60 - BGA / capas}{107}{subsection.5.9.8}
+\contentsline {subsection}{\numberline {5.9.9}63-69, 70-79,80-89,90-92 - Sonidos en autoplay}{107}{subsection.5.9.9}
+\contentsline {subsection}{\numberline {5.9.10}B1-B9, BC No-chip default sound}{108}{subsection.5.9.10}
+\contentsline {subsection}{\numberline {5.9.11}C1 [BEAT-line shifting]}{108}{subsection.5.9.11}
+\contentsline {subsection}{\numberline {5.9.12}C2 [hide BEAT/BAR lines]}{108}{subsection.5.9.12}
+\contentsline {subsection}{\numberline {5.9.13}C4, C7, D5-D9, E0 [Swapping BGA bitmap] }{108}{subsection.5.9.13}
+\contentsline {section}{\numberline {5.10}Canales que no se implementaran}{109}{section.5.10}
+\contentsline {subsection}{\numberline {5.10.1}00}{109}{subsection.5.10.1}
+\contentsline {subsection}{\numberline {5.10.2}05 - Extend object}{109}{subsection.5.10.2}
+\contentsline {subsection}{\numberline {5.10.3}06 - Cambiar la animaci\IeC {\'o}n de MISS}{109}{subsection.5.10.3}
+\contentsline {subsection}{\numberline {5.10.4}09-10 - Reservados por BMS}{109}{subsection.5.10.4}
+\contentsline {subsection}{\numberline {5.10.5}20-29 y 2F- Notas de la guitarra}{109}{subsection.5.10.5}
+\contentsline {subsection}{\numberline {5.10.6}30 - flow-speed drums}{109}{subsection.5.10.6}
+\contentsline {subsection}{\numberline {5.10.7}40 - Reservado por BMS}{109}{subsection.5.10.7}
+\contentsline {subsection}{\numberline {5.10.8}41-46 Invisible object for the 2nd player}{110}{subsection.5.10.8}
+\contentsline {subsection}{\numberline {5.10.9}47-49 - Reservado por BMS}{110}{subsection.5.10.9}
+\contentsline {subsection}{\numberline {5.10.10}52 - MIDI drum chorus}{110}{subsection.5.10.10}
+\contentsline {subsection}{\numberline {5.10.11}54 - Playback movie}{110}{subsection.5.10.11}
+\contentsline {subsection}{\numberline {5.10.12}93-99 - Reservados}{110}{subsection.5.10.12}
+\contentsline {subsection}{\numberline {5.10.13}A0-A7 - Bass notes}{110}{subsection.5.10.13}
+\contentsline {subsection}{\numberline {5.10.14}A8 - Wailing (Bass)}{110}{subsection.5.10.14}
+\contentsline {subsection}{\numberline {5.10.15}AF - Wailing sound (Bass)}{110}{subsection.5.10.15}
+\contentsline {subsection}{\numberline {5.10.16}BA - No chip default sound (guitar)}{111}{subsection.5.10.16}
+\contentsline {subsection}{\numberline {5.10.17}BB - No chip default sound (bass)}{111}{subsection.5.10.17}
+\contentsline {section}{\numberline {5.11}Comentarios sobre el proyecto}{111}{section.5.11}
+\contentsline {chapter}{\numberline {6}Especificaciones generales de dise\IeC {\~n}o}{112}{chapter.6}
+\contentsline {section}{\numberline {6.1}Consideraciones generales a python3}{112}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Configuraciones en disco duro}{113}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Cython y rtmidi2}{113}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Gr\IeC {\'a}ficos en qt5}{114}{section.6.2}
+\contentsline {section}{\numberline {6.3}Animaciones en qt5}{114}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Ning\IeC {\'u}n timer, una gran animaci\IeC {\'o}n}{115}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Todas las notas con su timer}{115}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Un timer para el siguiente comp\IeC {\'a}s}{116}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}Un timer \IeC {\'u}nico para el control del tiempo}{116}{subsection.6.3.4}
+\contentsline {section}{\numberline {6.4}Sonidos en qt5}{117}{section.6.4}
+\contentsline {chapter}{\numberline {7}pyDTX}{118}{chapter.7}
+\contentsline {section}{\numberline {7.1}Ideas generales}{118}{section.7.1}
+\contentsline {section}{\numberline {7.2}Pantalla principal}{118}{section.7.2}
+\contentsline {section}{\numberline {7.3}Pantalla Inicial}{119}{section.7.3}
+\contentsline {section}{\numberline {7.4}Pantalla configuraci\IeC {\'o}n bater\IeC {\'\i }a-MIDI}{119}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}MIDI}{121}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Configuraci\IeC {\'o}n MIDI en pyDTX}{121}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.3}Bater\IeC {\'\i }as-MIDI y Lanes}{122}{subsection.7.4.3}
+\contentsline {subsubsection}{Pocos Pads para muchos lanes}{123}{section*.116}
+\contentsline {subsubsection}{Muchos Pads para pocos lanes}{124}{section*.117}
+\contentsline {subsubsection}{Casos especiales por respetar los dos al mismo tiempo}{124}{section*.118}
+\contentsline {section}{\numberline {7.5}Pantalla configuraci\IeC {\'o}n pyDTX}{125}{section.7.5}
+\contentsline {section}{\numberline {7.6}Pantalla Navegaci\IeC {\'o}n}{126}{section.7.6}
+\contentsline {subsubsection}{Informaci\IeC {\'o}n de la canci\IeC {\'o}n}{126}{section*.119}
+\contentsline {subsubsection}{Lista de las canciones y directorios actuales}{127}{section*.120}
+\contentsline {subsubsection}{Botonera para cambio de directorios o seleccionar canciones}{127}{section*.121}
+\contentsline {section}{\numberline {7.7}Reproducci\IeC {\'o}n de la canci\IeC {\'o}n}{129}{section.7.7}
+\contentsline {subsection}{\numberline {7.7.1}Inicializaci\IeC {\'o}n b\IeC {\'a}sica y detalles de Qt5}{129}{subsection.7.7.1}
+\contentsline {subsection}{\numberline {7.7.2}Inicializaci\IeC {\'o}n con una canci\IeC {\'o}n}{129}{subsection.7.7.2}
+\contentsline {subsection}{\numberline {7.7.3}Teclado}{129}{subsection.7.7.3}
+\contentsline {subsubsection}{Configurar teclado}{129}{section*.122}
+\contentsline {subsubsection}{Evento de teclado}{130}{section*.123}
+\contentsline {subsection}{\numberline {7.7.4}MIDI}{130}{subsection.7.7.4}
+\contentsline {subsubsection}{Configurar MIDI}{130}{section*.124}
+\contentsline {subsubsection}{Evento MIDI}{130}{section*.125}
+\contentsline {subsection}{\numberline {7.7.5}Lanes}{131}{subsection.7.7.5}
+\contentsline {subsection}{\numberline {7.7.6}Ideas b\IeC {\'a}sicas de los lanes}{131}{subsection.7.7.6}
+\contentsline {subsubsection}{Chips Auto}{131}{section*.126}
+\contentsline {subsubsection}{Chips Visuales}{131}{section*.127}
+\contentsline {subsubsection}{Lanes Auto}{132}{section*.128}
+\contentsline {subsubsection}{Lanes visuales}{132}{section*.129}
+\contentsline {subsubsection}{Reproducir una canci\IeC {\'o}n}{133}{section*.130}
+\contentsline {subsubsection}{Puntuaci\IeC {\'o}n}{134}{section*.131}
+\contentsline {subsubsection}{Continuamos actualizando los compases}{135}{section*.132}
+\contentsline {subsubsection}{Animar un comp\IeC {\'a}s}{136}{section*.133}
+\contentsline {subsubsection}{Bucle principal de la reproducci\IeC {\'o}n}{136}{section*.134}
+\contentsline {chapter}{\numberline {8}Detalles de implementaci\IeC {\'o}n}{138}{chapter.8}
+\contentsline {section}{\numberline {8.1}Transformar .dtx a .dtx libre}{138}{section.8.1}
+\contentsline {section}{\numberline {8.2}DRUM-HAT MIDI}{138}{section.8.2}
+\contentsline {section}{\numberline {8.3}pyDTX}{139}{section.8.3}
+\contentsline {section}{\numberline {8.4}Instalaci\IeC {\'o}n}{139}{section.8.4}
+\contentsline {subsection}{\numberline {8.4.1}Fedora 25 - x86 64bits}{139}{subsection.8.4.1}
+\contentsline {subsection}{\numberline {8.4.2}Raspberry3 - armv7}{140}{subsection.8.4.2}
+\contentsline {subsection}{\numberline {8.4.3}Conseguir el c\IeC {\'o}digo fuente}{140}{subsection.8.4.3}
+\contentsline {subsection}{\numberline {8.4.4}Problemas encontrados con .dtx de internet}{141}{subsection.8.4.4}
+\contentsline {subsection}{\numberline {8.4.5}Comentarios finales en la Raspberry}{141}{subsection.8.4.5}
+\contentsline {subsection}{\numberline {8.4.6}Comentarios finales al proyecto}{142}{subsection.8.4.6}
+\contentsline {chapter}{\numberline {9}Posibles mejoras en el futuro}{144}{chapter.9}
+\contentsline {chapter}{\numberline {A}C\IeC {\'o}digo fuente}{146}{appendix.Alph1}
+\contentsline {section}{\numberline {A.1}Transformar .dtx a .dtx libre}{146}{section.Alph1.1}
+\contentsline {section}{\numberline {A.2}DRUMHAT en instrumento midi}{146}{section.Alph1.2}
+\contentsline {section}{\numberline {A.3}pyDTX}{148}{section.Alph1.3}
+\contentsline {subsection}{\numberline {A.3.1}ChipAuto.py}{148}{subsection.Alph1.3.1}
+\contentsline {subsection}{\numberline {A.3.2}Chip.py}{148}{subsection.Alph1.3.2}
+\contentsline {subsection}{\numberline {A.3.3}LaneAuto.py}{150}{subsection.Alph1.3.3}
+\contentsline {subsection}{\numberline {A.3.4}LaneVisual.py}{151}{subsection.Alph1.3.4}
+\contentsline {subsection}{\numberline {A.3.5}main.py}{153}{subsection.Alph1.3.5}
+\contentsline {subsection}{\numberline {A.3.6}UtilidadesDTX.py}{154}{subsection.Alph1.3.6}
+\contentsline {subsection}{\numberline {A.3.7}MyMainWindowQt5.py}{158}{subsection.Alph1.3.7}
+\contentsline {subsection}{\numberline {A.3.8}MyWidgetConfigurarDrum.py}{160}{subsection.Alph1.3.8}
+\contentsline {subsection}{\numberline {A.3.9}MyWidgetConfigurarDTX.py}{165}{subsection.Alph1.3.9}
+\contentsline {subsection}{\numberline {A.3.10}MyWidgetNavegacion.py}{167}{subsection.Alph1.3.10}
+\contentsline {subsection}{\numberline {A.3.11}MyWidgetPuntuacion.py}{173}{subsection.Alph1.3.11}
+\contentsline {subsection}{\numberline {A.3.12}ReproductorDTX.py}{176}{subsection.Alph1.3.12}
+\contentsline {chapter}{\numberline {B}Gu\IeC {\'\i }a de estilo python}{188}{appendix.Alph2}
+\contentsline {section}{\numberline {B.1}Formateo del c\IeC {\'o}digo}{189}{section.Alph2.1}
+\contentsline {subsection}{\numberline {B.1.1}Indentaci\IeC {\'o}n}{189}{subsection.Alph2.1.1}
+\contentsline {subsection}{\numberline {B.1.2}Tama\IeC {\~n}o m\IeC {\'a}ximo de l\IeC {\'\i }nea}{189}{subsection.Alph2.1.2}
+\contentsline {subsection}{\numberline {B.1.3}L\IeC {\'\i }neas en blanco}{189}{subsection.Alph2.1.3}
+\contentsline {subsection}{\numberline {B.1.4}Codificaci\IeC {\'o}n de caracteres}{189}{subsection.Alph2.1.4}
+\contentsline {subsection}{\numberline {B.1.5}Imports}{189}{subsection.Alph2.1.5}
+\contentsline {subsection}{\numberline {B.1.6}Espacios en blanco en expresiones y sentencias}{190}{subsection.Alph2.1.6}
+\contentsline {subsection}{\numberline {B.1.7}Otras Recomendaciones}{191}{subsection.Alph2.1.7}
+\contentsline {section}{\numberline {B.2}Comentarios}{193}{section.Alph2.2}
+\contentsline {subsection}{\numberline {B.2.1}Comentarios de bloque}{193}{subsection.Alph2.2.1}
+\contentsline {subsection}{\numberline {B.2.2}Comentarios en l\IeC {\'\i }nea}{193}{subsection.Alph2.2.2}
+\contentsline {section}{\numberline {B.3}Cadenas de Documentaci\IeC {\'o}n}{194}{section.Alph2.3}
+\contentsline {section}{\numberline {B.4}Convenciones de nombres}{194}{section.Alph2.4}
+\contentsline {subsection}{\numberline {B.4.1}Descriptivo: Estilos de Nombrado}{194}{subsection.Alph2.4.1}
+\contentsline {subsection}{\numberline {B.4.2}Prescriptivo: Convenciones de Nombrado}{196}{subsection.Alph2.4.2}
+\contentsline {subsubsection}{Nombres a Evitar}{196}{section*.135}
+\contentsline {subsubsection}{Nombres de Paquetes y M\IeC {\'o}dulos}{196}{section*.136}
+\contentsline {subsubsection}{Nombres de Clases}{196}{section*.137}
+\contentsline {subsubsection}{Nombres de Excepciones}{197}{section*.138}
+\contentsline {subsubsection}{Nombres de Variables Globales}{197}{section*.139}
+\contentsline {subsubsection}{Nombres de Funciones}{197}{section*.140}
+\contentsline {subsubsection}{Argumentos de funciones y m\IeC {\'e}todos}{197}{section*.141}
+\contentsline {subsubsection}{Nombres de m\IeC {\'e}todos y variables de instancia}{198}{section*.142}
+\contentsline {subsubsection}{Dise\IeC {\~n}ar para la herencia}{198}{section*.143}
+\contentsline {section}{\numberline {B.5}Recomendaciones para la programaci\IeC {\'o}n}{199}{section.Alph2.5}
+\contentsline {chapter}{\numberline {C}GNU GENERAL PUBLIC LICENSE}{203}{appendix.Alph3}
+\contentsline {chapter}{Glosario}{204}{section*.144}
+\contentsline {chapter}{\numberline {D}Bibliograf\IeC {\'\i }a}{205}{appendix.Alph4}
