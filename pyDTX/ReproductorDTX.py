@@ -160,11 +160,11 @@ class ReproductorDTX(QtWidgets.QGraphicsView):
         """
         self.analizando_compas = None
         self.lista_compas = []
-        self.dict_bmp = {}
+        self.dict_bpm = {}
         self.dict_wav = {}
         self.dict_lanes_auto = {}
         self.dict_lanes_visual = {}
-        self.bmp = 0
+        self.bpm = 0
         self.base_bmp = 0
         self.title = ""
 
@@ -274,9 +274,9 @@ class ReproductorDTX(QtWidgets.QGraphicsView):
             if not linea:
                 break
             #Limpiamos caracteres raros en la linea
-            linea = linea.split(";")
-            linea = linea.rstrip('\r\n\t')
             linea = linea.replace("\t", "")
+            linea = linea.rstrip('\r\n')
+            linea = linea.split(";")
             campos = linea[0].split()
             primer_espacio = linea[0].find(" ")
             orden = linea[0][:primer_espacio]
@@ -290,13 +290,13 @@ class ReproductorDTX(QtWidgets.QGraphicsView):
                         self.title = linea[0][primer_espacio + 1:]
                     elif orden[0:4] == "#BPM":
                         if orden[4] == ":":
-                            #BMP:
-                            self.base_bmp = float(campos[1])
-                            self.bmp = float(campos[1])
+                            #BPM:
+                            self.base_bpm = float(campos[1])
+                            self.bpm = float(campos[1])
                         else:
-                            #BMPzz:
+                            #BPMzz:
                             canal = str(orden[4:6])
-                            self.dict_bmp[canal] = float(campos[1])
+                            self.dict_bpm[canal] = float(campos[1])
                     elif orden[0:4] == "#WAV":
                         #WAVzz
                         canal = str(orden[4:6])
@@ -363,42 +363,42 @@ class ReproductorDTX(QtWidgets.QGraphicsView):
             compas['start'] = tiempo
             lanes = compas['lanes']
             if lanes.get('03'):
-                #LANE 03 es un cambio de BMP pero usando sumas y restas
-                #Cambio de bmp para el compas actual
+                #LANE 03 es un cambio de bpm pero usando sumas y restas
+                #Cambio de bpm para el compas actual
                 if len(lanes['03']) == 1:
-                    self.bmp = self.base_bmp + int(lanes['03'][0], 16)
-                    compas['bmp'] = self.bmp
-                    tiempo_compas = (60.0 * 4.0 / self.bmp) * 1000
+                    self.bpm = self.base_bpm + int(lanes['03'][0], 16)
+                    compas['bpm'] = self.bpm
+                    tiempo_compas = (60.0 * 4.0 / self.bpm) * 1000
                     tiempo_final = tiempo + tiempo_compas
                 else:
                     #Supongo que es un cambio para el compas siguiente
-                    compas['bmp'] = self.bmp
-                    tiempo_compas = (60.0 * 4.0 / self.bmp) * 1000
+                    compas['bpm'] = self.bpm
+                    tiempo_compas = (60.0 * 4.0 / self.bpm) * 1000
                     tiempo_final = tiempo + tiempo_compas
-                    self.bmp = self.base_bmp + int(lanes['03'][0], 16)
+                    self.bpm = self.base_bpm + int(lanes['03'][0], 16)
             elif lanes.get('08'):
-                #LANE 08 es un cambio de BMP pero usando BMP totales
+                #LANE 08 es un cambio de bpm pero usando bpm totales
                 if len(lanes['08']) == 1:
                     #Cambio para el compas actual
-                    self.bmp = self.dict_bmp[lanes['08'][0]]
-                    compas['bmp'] = self.bmp
-                    tiempo_compas = (60.0 * 4.0 / self.bmp) * 1000
+                    self.bpm = self.dict_bpm[lanes['08'][0]]
+                    compas['bpm'] = self.bpm
+                    tiempo_compas = (60.0 * 4.0 / self.bpm) * 1000
                     tiempo_final = tiempo + tiempo_compas
                 else:
                     #Supongo que es un cambio para el compas siguiente
-                    compas['bmp'] = self.bmp
-                    tiempo_compas = (60.0 * 4.0 / self.bmp) * 1000
+                    compas['bpm'] = self.bpm
+                    tiempo_compas = (60.0 * 4.0 / self.bpm) * 1000
                     tiempo_final = tiempo + tiempo_compas
-                    self.bmp = self.dict_bmp[lanes['08'][-1]]
+                    self.bpm = self.dict_bpm[lanes['08'][-1]]
             else:
-                #No hay cambio de bmp
-                compas['bmp'] = self.bmp
-                tiempo_compas = (60.0 * 4.0 / self.bmp) * 1000
+                #No hay cambio de bpm
+                compas['bpm'] = self.bpm
+                tiempo_compas = (60.0 * 4.0 / self.bpm) * 1000
                 tiempo_final = tiempo + tiempo_compas
             tiempo = tiempo_final
             compas['tiempo'] = tiempo_compas
 
-        #Ahora que tenemos el tiempo y cambios de bmp podemos poner el
+        #Ahora que tenemos el tiempo y cambios de bpm podemos poner el
         #tiempo en las notas y quitando las notas no existentes '00'
         for compas in self.lista_compas:
             tiempo = compas['tiempo']
