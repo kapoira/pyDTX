@@ -105,77 +105,78 @@
 \BOOKMARK [1][-]{section.5.11}{Comentarios sobre el proyecto}{chapter.5}% 105
 \BOOKMARK [0][-]{chapter.6}{Especificaciones generales de dise\361o}{}% 106
 \BOOKMARK [1][-]{section.6.1}{Consideraciones generales a python3}{chapter.6}% 107
-\BOOKMARK [2][-]{subsection.6.1.1}{Configuraciones en disco duro}{section.6.1}% 108
-\BOOKMARK [2][-]{subsection.6.1.2}{Cython y rtmidi2}{section.6.1}% 109
-\BOOKMARK [1][-]{section.6.2}{Gr\341ficos en qt5}{chapter.6}% 110
-\BOOKMARK [1][-]{section.6.3}{Animaciones en qt5}{chapter.6}% 111
-\BOOKMARK [2][-]{subsection.6.3.1}{Ning\372n timer, una gran animaci\363n}{section.6.3}% 112
-\BOOKMARK [2][-]{subsection.6.3.2}{Todas las notas con su timer}{section.6.3}% 113
-\BOOKMARK [2][-]{subsection.6.3.3}{Un timer para el siguiente comp\341s}{section.6.3}% 114
-\BOOKMARK [2][-]{subsection.6.3.4}{Un timer \372nico para el control del tiempo}{section.6.3}% 115
-\BOOKMARK [1][-]{section.6.4}{Sonidos en qt5}{chapter.6}% 116
-\BOOKMARK [0][-]{chapter.7}{pyDTX}{}% 117
-\BOOKMARK [1][-]{section.7.1}{Ideas generales}{chapter.7}% 118
-\BOOKMARK [1][-]{section.7.2}{Pantalla principal}{chapter.7}% 119
-\BOOKMARK [1][-]{section.7.3}{Pantalla Inicial}{chapter.7}% 120
-\BOOKMARK [1][-]{section.7.4}{Pantalla configuraci\363n bater\355a-MIDI}{chapter.7}% 121
-\BOOKMARK [2][-]{subsection.7.4.1}{MIDI}{section.7.4}% 122
-\BOOKMARK [2][-]{subsection.7.4.2}{Configuraci\363n MIDI en pyDTX}{section.7.4}% 123
-\BOOKMARK [2][-]{subsection.7.4.3}{Bater\355as-MIDI y Lanes}{section.7.4}% 124
-\BOOKMARK [1][-]{section.7.5}{Pantalla configuraci\363n pyDTX}{chapter.7}% 125
-\BOOKMARK [1][-]{section.7.6}{Pantalla Navegaci\363n}{chapter.7}% 126
-\BOOKMARK [1][-]{section.7.7}{Reproducci\363n de la canci\363n}{chapter.7}% 127
-\BOOKMARK [2][-]{subsection.7.7.1}{Inicializaci\363n b\341sica y detalles de Qt5}{section.7.7}% 128
-\BOOKMARK [2][-]{subsection.7.7.2}{Inicializaci\363n con una canci\363n}{section.7.7}% 129
-\BOOKMARK [2][-]{subsection.7.7.3}{Teclado}{section.7.7}% 130
-\BOOKMARK [2][-]{subsection.7.7.4}{MIDI}{section.7.7}% 131
-\BOOKMARK [2][-]{subsection.7.7.5}{Lanes}{section.7.7}% 132
-\BOOKMARK [2][-]{subsection.7.7.6}{Ideas b\341sicas de los lanes}{section.7.7}% 133
-\BOOKMARK [0][-]{chapter.8}{Detalles de implementaci\363n}{}% 134
-\BOOKMARK [1][-]{section.8.1}{Transformar .dtx a .dtx libre}{chapter.8}% 135
-\BOOKMARK [1][-]{section.8.2}{DRUM-HAT MIDI}{chapter.8}% 136
-\BOOKMARK [1][-]{section.8.3}{pyDTX}{chapter.8}% 137
-\BOOKMARK [1][-]{section.8.4}{Instalaci\363n}{chapter.8}% 138
-\BOOKMARK [2][-]{subsection.8.4.1}{Fedora 25 - x86 64bits}{section.8.4}% 139
-\BOOKMARK [2][-]{subsection.8.4.2}{Raspberry3 - armv7}{section.8.4}% 140
-\BOOKMARK [2][-]{subsection.8.4.3}{Conseguir el c\363digo fuente}{section.8.4}% 141
-\BOOKMARK [2][-]{subsection.8.4.4}{Problemas encontrados con .dtx de internet}{section.8.4}% 142
-\BOOKMARK [2][-]{subsection.8.4.5}{Comentarios finales en la Raspberry}{section.8.4}% 143
-\BOOKMARK [2][-]{subsection.8.4.6}{Comentarios finales al proyecto}{section.8.4}% 144
-\BOOKMARK [0][-]{chapter.9}{Posibles mejoras en el futuro}{}% 145
-\BOOKMARK [0][-]{appendix.Alph1}{C\363digo fuente}{}% 146
-\BOOKMARK [1][-]{section.Alph1.1}{Transformar .dtx a .dtx libre}{appendix.Alph1}% 147
-\BOOKMARK [1][-]{section.Alph1.2}{DRUMHAT en instrumento midi}{appendix.Alph1}% 148
-\BOOKMARK [1][-]{section.Alph1.3}{pyDTX}{appendix.Alph1}% 149
-\BOOKMARK [2][-]{subsection.Alph1.3.1}{ChipAuto.py}{section.Alph1.3}% 150
-\BOOKMARK [2][-]{subsection.Alph1.3.2}{Chip.py}{section.Alph1.3}% 151
-\BOOKMARK [2][-]{subsection.Alph1.3.3}{LaneAuto.py}{section.Alph1.3}% 152
-\BOOKMARK [2][-]{subsection.Alph1.3.4}{LaneVisual.py}{section.Alph1.3}% 153
-\BOOKMARK [2][-]{subsection.Alph1.3.5}{main.py}{section.Alph1.3}% 154
-\BOOKMARK [2][-]{subsection.Alph1.3.6}{UtilidadesDTX.py}{section.Alph1.3}% 155
-\BOOKMARK [2][-]{subsection.Alph1.3.7}{MyMainWindowQt5.py}{section.Alph1.3}% 156
-\BOOKMARK [2][-]{subsection.Alph1.3.8}{MyWidgetConfigurarDrum.py}{section.Alph1.3}% 157
-\BOOKMARK [2][-]{subsection.Alph1.3.9}{MyWidgetConfigurarDTX.py}{section.Alph1.3}% 158
-\BOOKMARK [2][-]{subsection.Alph1.3.10}{MyWidgetNavegacion.py}{section.Alph1.3}% 159
-\BOOKMARK [2][-]{subsection.Alph1.3.11}{MyWidgetPuntuacion.py}{section.Alph1.3}% 160
-\BOOKMARK [2][-]{subsection.Alph1.3.12}{ReproductorDTX.py}{section.Alph1.3}% 161
-\BOOKMARK [0][-]{appendix.Alph2}{Gu\355a de estilo python}{}% 162
-\BOOKMARK [1][-]{section.Alph2.1}{Formateo del c\363digo}{appendix.Alph2}% 163
-\BOOKMARK [2][-]{subsection.Alph2.1.1}{Indentaci\363n}{section.Alph2.1}% 164
-\BOOKMARK [2][-]{subsection.Alph2.1.2}{Tama\361o m\341ximo de l\355nea}{section.Alph2.1}% 165
-\BOOKMARK [2][-]{subsection.Alph2.1.3}{L\355neas en blanco}{section.Alph2.1}% 166
-\BOOKMARK [2][-]{subsection.Alph2.1.4}{Codificaci\363n de caracteres}{section.Alph2.1}% 167
-\BOOKMARK [2][-]{subsection.Alph2.1.5}{Imports}{section.Alph2.1}% 168
-\BOOKMARK [2][-]{subsection.Alph2.1.6}{Espacios en blanco en expresiones y sentencias}{section.Alph2.1}% 169
-\BOOKMARK [2][-]{subsection.Alph2.1.7}{Otras Recomendaciones}{section.Alph2.1}% 170
-\BOOKMARK [1][-]{section.Alph2.2}{Comentarios}{appendix.Alph2}% 171
-\BOOKMARK [2][-]{subsection.Alph2.2.1}{Comentarios de bloque}{section.Alph2.2}% 172
-\BOOKMARK [2][-]{subsection.Alph2.2.2}{Comentarios en l\355nea}{section.Alph2.2}% 173
-\BOOKMARK [1][-]{section.Alph2.3}{Cadenas de Documentaci\363n}{appendix.Alph2}% 174
-\BOOKMARK [1][-]{section.Alph2.4}{Convenciones de nombres}{appendix.Alph2}% 175
-\BOOKMARK [2][-]{subsection.Alph2.4.1}{Descriptivo: Estilos de Nombrado}{section.Alph2.4}% 176
-\BOOKMARK [2][-]{subsection.Alph2.4.2}{Prescriptivo: Convenciones de Nombrado}{section.Alph2.4}% 177
-\BOOKMARK [1][-]{section.Alph2.5}{Recomendaciones para la programaci\363n}{appendix.Alph2}% 178
-\BOOKMARK [0][-]{appendix.Alph3}{GNU GENERAL PUBLIC LICENSE}{}% 179
-\BOOKMARK [0][-]{section*.144}{Glosario}{}% 180
-\BOOKMARK [0][-]{appendix.Alph4}{Bibliograf\355a}{}% 181
+\BOOKMARK [2][-]{subsection.6.1.1}{Posibles librer\355as gr\341ficas y de sonido: pygame / tkinter / Qt5}{section.6.1}% 108
+\BOOKMARK [2][-]{subsection.6.1.2}{Configuraciones en disco duro: configparser}{section.6.1}% 109
+\BOOKMARK [2][-]{subsection.6.1.3}{MIDI: pygame / Cython y rtmidi2}{section.6.1}% 110
+\BOOKMARK [1][-]{section.6.2}{Gr\341ficos en qt5}{chapter.6}% 111
+\BOOKMARK [1][-]{section.6.3}{Animaciones en qt5}{chapter.6}% 112
+\BOOKMARK [2][-]{subsection.6.3.1}{Ning\372n timer, una gran animaci\363n}{section.6.3}% 113
+\BOOKMARK [2][-]{subsection.6.3.2}{Todas las notas con su timer}{section.6.3}% 114
+\BOOKMARK [2][-]{subsection.6.3.3}{Un timer para el siguiente comp\341s}{section.6.3}% 115
+\BOOKMARK [2][-]{subsection.6.3.4}{Un timer \372nico para el control del tiempo}{section.6.3}% 116
+\BOOKMARK [1][-]{section.6.4}{Sonidos en qt5}{chapter.6}% 117
+\BOOKMARK [0][-]{chapter.7}{pyDTX}{}% 118
+\BOOKMARK [1][-]{section.7.1}{Ideas generales}{chapter.7}% 119
+\BOOKMARK [1][-]{section.7.2}{Pantalla principal}{chapter.7}% 120
+\BOOKMARK [1][-]{section.7.3}{Pantalla Inicial}{chapter.7}% 121
+\BOOKMARK [1][-]{section.7.4}{Pantalla configuraci\363n bater\355a-MIDI}{chapter.7}% 122
+\BOOKMARK [2][-]{subsection.7.4.1}{MIDI}{section.7.4}% 123
+\BOOKMARK [2][-]{subsection.7.4.2}{Configuraci\363n MIDI en pyDTX}{section.7.4}% 124
+\BOOKMARK [2][-]{subsection.7.4.3}{Bater\355as-MIDI y Lanes}{section.7.4}% 125
+\BOOKMARK [1][-]{section.7.5}{Pantalla configuraci\363n pyDTX}{chapter.7}% 126
+\BOOKMARK [1][-]{section.7.6}{Pantalla Navegaci\363n}{chapter.7}% 127
+\BOOKMARK [1][-]{section.7.7}{Reproducci\363n de la canci\363n}{chapter.7}% 128
+\BOOKMARK [2][-]{subsection.7.7.1}{Inicializaci\363n b\341sica y detalles de Qt5}{section.7.7}% 129
+\BOOKMARK [2][-]{subsection.7.7.2}{Inicializaci\363n con una canci\363n}{section.7.7}% 130
+\BOOKMARK [2][-]{subsection.7.7.3}{Teclado}{section.7.7}% 131
+\BOOKMARK [2][-]{subsection.7.7.4}{MIDI}{section.7.7}% 132
+\BOOKMARK [2][-]{subsection.7.7.5}{Lanes}{section.7.7}% 133
+\BOOKMARK [2][-]{subsection.7.7.6}{Ideas b\341sicas de los lanes}{section.7.7}% 134
+\BOOKMARK [0][-]{chapter.8}{Detalles de la implementaci\363n}{}% 135
+\BOOKMARK [1][-]{section.8.1}{Transformar .dtx a .dtx libre}{chapter.8}% 136
+\BOOKMARK [1][-]{section.8.2}{DRUM-HAT MIDI}{chapter.8}% 137
+\BOOKMARK [1][-]{section.8.3}{pyDTX}{chapter.8}% 138
+\BOOKMARK [1][-]{section.8.4}{Instalaci\363n}{chapter.8}% 139
+\BOOKMARK [2][-]{subsection.8.4.1}{Fedora 25 - x86 64bits}{section.8.4}% 140
+\BOOKMARK [2][-]{subsection.8.4.2}{Raspberry3 - armv7}{section.8.4}% 141
+\BOOKMARK [2][-]{subsection.8.4.3}{Conseguir el c\363digo fuente}{section.8.4}% 142
+\BOOKMARK [2][-]{subsection.8.4.4}{Problemas encontrados con .dtx de internet}{section.8.4}% 143
+\BOOKMARK [2][-]{subsection.8.4.5}{Comentarios finales en la Raspberry}{section.8.4}% 144
+\BOOKMARK [2][-]{subsection.8.4.6}{Comentarios finales al proyecto}{section.8.4}% 145
+\BOOKMARK [0][-]{chapter.9}{Posibles mejoras en el futuro}{}% 146
+\BOOKMARK [0][-]{appendix.Alph1}{C\363digo fuente}{}% 147
+\BOOKMARK [1][-]{section.Alph1.1}{Transformar .dtx a .dtx libre}{appendix.Alph1}% 148
+\BOOKMARK [1][-]{section.Alph1.2}{DRUMHAT en instrumento midi}{appendix.Alph1}% 149
+\BOOKMARK [1][-]{section.Alph1.3}{pyDTX}{appendix.Alph1}% 150
+\BOOKMARK [2][-]{subsection.Alph1.3.1}{ChipAuto.py}{section.Alph1.3}% 151
+\BOOKMARK [2][-]{subsection.Alph1.3.2}{Chip.py}{section.Alph1.3}% 152
+\BOOKMARK [2][-]{subsection.Alph1.3.3}{LaneAuto.py}{section.Alph1.3}% 153
+\BOOKMARK [2][-]{subsection.Alph1.3.4}{LaneVisual.py}{section.Alph1.3}% 154
+\BOOKMARK [2][-]{subsection.Alph1.3.5}{main.py}{section.Alph1.3}% 155
+\BOOKMARK [2][-]{subsection.Alph1.3.6}{UtilidadesDTX.py}{section.Alph1.3}% 156
+\BOOKMARK [2][-]{subsection.Alph1.3.7}{MyMainWindowQt5.py}{section.Alph1.3}% 157
+\BOOKMARK [2][-]{subsection.Alph1.3.8}{MyWidgetConfigurarDrum.py}{section.Alph1.3}% 158
+\BOOKMARK [2][-]{subsection.Alph1.3.9}{MyWidgetConfigurarDTX.py}{section.Alph1.3}% 159
+\BOOKMARK [2][-]{subsection.Alph1.3.10}{MyWidgetNavegacion.py}{section.Alph1.3}% 160
+\BOOKMARK [2][-]{subsection.Alph1.3.11}{MyWidgetPuntuacion.py}{section.Alph1.3}% 161
+\BOOKMARK [2][-]{subsection.Alph1.3.12}{ReproductorDTX.py}{section.Alph1.3}% 162
+\BOOKMARK [0][-]{appendix.Alph2}{Gu\355a de estilo python}{}% 163
+\BOOKMARK [1][-]{section.Alph2.1}{Formateo del c\363digo}{appendix.Alph2}% 164
+\BOOKMARK [2][-]{subsection.Alph2.1.1}{Indentaci\363n}{section.Alph2.1}% 165
+\BOOKMARK [2][-]{subsection.Alph2.1.2}{Tama\361o m\341ximo de l\355nea}{section.Alph2.1}% 166
+\BOOKMARK [2][-]{subsection.Alph2.1.3}{L\355neas en blanco}{section.Alph2.1}% 167
+\BOOKMARK [2][-]{subsection.Alph2.1.4}{Codificaci\363n de caracteres}{section.Alph2.1}% 168
+\BOOKMARK [2][-]{subsection.Alph2.1.5}{Imports}{section.Alph2.1}% 169
+\BOOKMARK [2][-]{subsection.Alph2.1.6}{Espacios en blanco en expresiones y sentencias}{section.Alph2.1}% 170
+\BOOKMARK [2][-]{subsection.Alph2.1.7}{Otras Recomendaciones}{section.Alph2.1}% 171
+\BOOKMARK [1][-]{section.Alph2.2}{Comentarios}{appendix.Alph2}% 172
+\BOOKMARK [2][-]{subsection.Alph2.2.1}{Comentarios de bloque}{section.Alph2.2}% 173
+\BOOKMARK [2][-]{subsection.Alph2.2.2}{Comentarios en l\355nea}{section.Alph2.2}% 174
+\BOOKMARK [1][-]{section.Alph2.3}{Cadenas de Documentaci\363n}{appendix.Alph2}% 175
+\BOOKMARK [1][-]{section.Alph2.4}{Convenciones de nombres}{appendix.Alph2}% 176
+\BOOKMARK [2][-]{subsection.Alph2.4.1}{Descriptivo: Estilos de Nombrado}{section.Alph2.4}% 177
+\BOOKMARK [2][-]{subsection.Alph2.4.2}{Prescriptivo: Convenciones de Nombrado}{section.Alph2.4}% 178
+\BOOKMARK [1][-]{section.Alph2.5}{Recomendaciones para la programaci\363n}{appendix.Alph2}% 179
+\BOOKMARK [0][-]{appendix.Alph3}{GNU GENERAL PUBLIC LICENSE}{}% 180
+\BOOKMARK [0][-]{section*.144}{Glosario}{}% 181
+\BOOKMARK [0][-]{appendix.Alph4}{Bibliograf\355a}{}% 182

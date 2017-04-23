@@ -1098,10 +1098,10 @@ Recordar que python3 no es un lenguaje paralelo aunque tiene algunas librerías 
 
 La gran ventaja de usar un lenguaje interpretado es la rapidez de prototipado de este, ya que fácilmente se puede tener un prototipo funcional para luego más adelante ir optimizando el código.
 
-Recordar que hay implementaciones alternativas de Python3 para el código sea compilado para la plataforma en concreta (JIT), por lo que se programara todo el código de tal manera que se pudiera usar tanto el interprete de Python3 como estas implementaciones, la más famosa de ellas es PyPy (No confundir con PyPI el repositorio de paquetes de python).
+Recordar que hay implementaciones alternativas de Python3 para que el código sea compilado en tiempo de ejecución (JIT) para la plataforma en concreta, por lo que se programara todo el código de tal manera que se pudiera usar tanto el interprete de Python3 como estas implementaciones, la más famosa de ellas es PyPy (No confundir con PyPI el repositorio de paquetes de python).
 
 \subsubsection{Ninja-IDE}
-Como IDE para programar se usara el Ninja-IDE ya que además de darnos las herramientas de un IDE más o menos clásico, coloreado de syntaxis, facilidad para acceder a todos los ficheros del proyecto. 
+Como IDE para programar se usara el Ninja-IDE ya que además de darnos las herramientas de un IDE más o menos clásico, coloreado de syntaxis, facilidad para acceder a todos los ficheros del proyecto, etc.
 
 Nos ofrecerá una gran ventaja caracteristica de python ya que mostrara como warnings si no cumplimos un PEP de python (buenas maneras en el código).
 De esta manera se integrara con la Guiá de estilo python que emplearemos, esta guía esta como apéndice.
@@ -1237,7 +1237,7 @@ El problema esta cuando se coge un archivo codificado del DTXMania con doble bom
   
   La opción que tomo el programador fue comentarlo y continuar manteniendo dos programas, la idea era que la gente fuera pasando las codificaciones al DTXManiaHD.
 
-\subsubsection{Menús fuera de la parte de tocar la batería}
+\subsubsection{Menús fuera de la reproducción de las canciones}
 Una vez configurada la batería-MIDI todos los menús estaban pensados de tal manera que con los pads se podía navegar por todo el programa.
 
 
@@ -2492,40 +2492,46 @@ Para ver una película especificada en \#AVIzz.
 Reservados.
 
 \subsection{A0-A7 - Bass notes}
-Canales para el bajo, no lo tendremos en cuenta.
+Canales para el bajo, no se tendrá en cuenta para este proyecto
 
 \subsection{A8 - Wailing (Bass)}
-Canal para el bajo, no lo tendremos en cuenta.
+Canal para el bajo, no se tendrá en cuenta para este proyecto
 
 \subsection{AF - Wailing sound (Bass)}
-Canal para el bajo, no lo tendremos en cuenta.
+Canal para el bajo, no se tendrá en cuenta para este proyecto
 
 \subsection{BA - No chip default sound (guitar)}
-Canal para la guitarra, no lo tendremos en cuenta.
+Canal para la guitarra, no se tendrá en cuenta para este proyecto
 
 \subsection{BB - No chip default sound (bass)}
-Canal para el bajo, no lo tendremos en cuenta.
+Canal para el bajo, no se tendrá en cuenta para este proyecto.
 
 
 \section{Comentarios sobre el proyecto}
+Ahora que ya se tiene el concepto de que es  un .dtx y debido a todos los posibles canales se  dejara en la salida del terminal todos los objetos que no se han implementado, tanto objetos o canales de esta manera si un .dtx no suena correctamente se podrá observar que características de los .dtx se están intentando emplear y no están implementadas.
 
-----Revisado por CG
-Ahora que ya comprendemos como funciona un .dtx, en el proyecto, dejaremos en la salida del terminal todos los objetos que no se han implementado, tanto objetos o canales de esta manera si un .dtx no suena correctamente se podra observar que caracteristicas esta intentando usar y no están implementadas.
-
-Recordar que también se tendrá que mirar el formato .dtx usado en las canciones del dtxmaniahd y gitadora, ya que se ha ido ampliando el formato, y no se ha ido ampliando la documentación en ingles, ya se han implementado dos canales que no estaban en la documentación original.
+También se tendrá que mirar el formato .dtx usado en las canciones del DTXmaniahd y gitadora, ya que se ha ido ampliando el formato, y no se ha ido ampliando la documentación en ingles, se ha implementado dos canales que no estaban en la documentación original.
 
 \chapter{Especificaciones generales de diseño}
 \section{Consideraciones generales a python3}
-Se ha escogido python y la versión python3 más concretamente para este proyecto, ya que es un lenguaje interpretado y gracias a ello al sin tener que recompilar se tendrá el proyecto tanto en las plataformas x86 como en las plataformas ARM (se tendrá para otras plataformas pero no estará probado).
 
-Ya que python es un lenguaje que tiene muy buen control sobres listas y diccionarios intentaremos integrar esta control en el proyecto principalmente para dos objetivos al mismo tiempo:
+Ahora ya se tiene una idea más clara de todo lo que se tendrá que implementar en el proyecto, por lo que se pueden evaluar las posibles librerías de python a usar.
+
+Primero se detallaran unas consideraciones generales a todo el código python que se escribirá para el proyecto.
+
+El texto empleado en las pantallas estará en ingles, para un mayor acceso a la comunidad de baterías a nivel mundial.
+
+Se ha escogido python y la versión python3 más concretamente para este proyecto, ya que es un lenguaje interpretado y gracias a ello, sin tener que recompilar se tendrá el proyecto tanto en las plataformas x86 como en las plataformas ARM (se tendrá para otras plataformas pero no estará probado).
+
+Ya que python es un lenguaje que tiene muy buen control sobres listas y diccionarios se integrará este control en el proyecto, principalmente para obtener tres objetivos al mismo tiempo:
 
  \begin{itemize}
-   \item Al usar los iterators para recorrer estas listas el código es más rápido.
-   \item Lectura y mantenimiento del código se hace muy fácil.
+   \item Al usar los iterators en las listas para recorrer estas el código es más rápido.
+   \item Al usar las keys de los diccionarios para buscar la información de estos, el tiempo es optimo.
+   \item Lectura y mantenimiento del código.
  \end{itemize}
 
-  Para mantener este segundo punto de manera integrada en el proyecto, las variables de tipo lista siempre comenzaran sus nombres como:
+  Para mantener este tercer punto de manera integrada en el proyecto, las variables de tipo lista siempre comenzaran sus nombres como:
 
 \begin{lstlisting}
     list_
@@ -2538,62 +2544,91 @@ Y las variables de tipo diccionario empezaran por:
     dict_
 \end{lstlisting}
  
- Se emplearan listas cuando el orden importe, y diccionarios cuando no, de esta manera siempre tendremos las colecciones de objetos iguales colocados y para los diccionarios la llave que emplearemos sera el nombre de la lane asociada de esta manera estará optimizado para su uso.
+ Se emplearan listas cuando el orden importe, y diccionarios cuando no.
+ Para los diccionarios la llave de estos normalmente sera el nombre de la lane asociada de esta manera estará optimizado para su uso, ya que la gran mayoría de búsquedas que se harán en el código se buscara por lane.
+
+
+Se escogerá la versión de python 3.4 debido a que es la soportada en las principales distribuciones en la raspberry, por lo que no se tendrá que usar ninguna instrucción para versiones superiores.
+
+
+
+
+\subsection{Posibles librerías gráficas y de sonido: pygame / tkinter / Qt5}
+
+Este proyecto tiene una gran carga tanto en sonido como en gráficos, no por complejidad de estos si no más bien debido al tratamiento en tiempo real de estos.
+
+Recordar que en música se indica que un instrumento musical se puede tocar si tiene menos de diez milisegundos de retardo entre la acción y que suene.
+
+
+En python3 hay tres grandes librerías para tratar los gráficos de una manera rápida y cómoda.
+
+Pygame, librerías especializadas en creación de videojuegos 2d.
+
+PyQT5, wrapper a las librerias Qt5, con toda su documentación y su control multiplataforma.
+
+TkInter, la libreria ``casi'' standard de python.
+
+
+Tkinter tiene el problemas que para hacer las animaciones se debería programar todo el control de tiempo sobre ellas, al mismo tiempo que se esta teniendo el control del sonido, por lo que se deshecha por demasiado simple.
+
+PyGame tiene la ventaja que al estar pensada para videojuegos tiene un buen control sobre los tiempos, pero tiene dos grandes inconvenientes para este proyecto, el primero y más sencillo es que debido a su bajo nivel, el programador tiene que empezar casi de cero para crear toda una interfaz gráfica, el segundo punto es que no tiene una fácil escalabilidad si la plataforma soporta OpenGL.
+
+PyQT5, tiene una muy buena documentación y escala bien con el OpenGL, por lo que se puede programar de tal manera que si las librerías Qt5 detectan que la plataforma soporta OpenGL automáticamente acelerar toda la interfaz gráfica.
+
+Una gran ventaja de las librerías Qt5 es que en su integración con Python, las llamadas para animar gráficos o reproducir sonidos no bloquean el interprete de python, se puede entender que son llamadas en paralelo, aunque que por el GIL (Global Interpreter Lock) de python esto no es del todo cierto.
+
  
- Python3 es un lenguaje que depende mucho de las librerías a usar.
+Aunque se podría usar unas librerías gráficas para los menús y otras librerías gráficas para la parte mientras se esta reproduciendo la canción en sí, es mejor evitarlo para no tener problemas de que librerías recogen los eventos de teclado, ratón, foco de la pantalla.
+
+Para el proyecto se ha decidido usar las librerías Qt5.
  
- En este proyecto se usaran qt5 para sonidos y animaciones, ya que comparando con pygame esta segunda librería al ser de más bajo nivel para implementar menús, botones, el programador lo tiene que hacer todo él.
- 
- Entonces se tendrá que usar otra librería para juntar el MIDI con python, viendo las posibilidades se ha optado por rtmidi2 que mediante Cython, dejar usar los comandos de la librería rtmidi de C dentro de python.
+
+\subsection{Configuraciones en disco duro: configparser}
+Como en este proyecto no hay necesidad de usar unas configuraciones muy complicadas se ha optado por usar la librería de python configparser, para cargarlas y guardarlas en el disco duro. Ya que són las librerias aconsejadas por la comunidad de python para estos casos.
 
 
-Se empleara como IDE el Ninja-IDE principalmente por un motivo, que ya comprueba casi todos los PEP de python por lo que si el código no tiene ningún warning seguramente se acerca bastante a la idea del zen de python.
-
-Se escogerá la versión de python 3.4 debido a que es la soportada en las principales distribuciones en la raspberry.
-
-\subsection{Configuraciones en disco duro}
-Como en este proyecto no hay necesidad de unas guardar unas configuraciones muy complicadas se ha optado por usar la librería de python configparser.
-
-\subsection{Cython y rtmidi2}
+\subsection{MIDI: pygame / Cython y rtmidi2}
 Observando las librerías disponibles para tratar el MIDI en python3 se observo que existen solamente dos grandes librerias en python, pygame y rtmidi
 
-El problema con pygame es que si creamos ventanas iniciales y elementos gráficos en qt5 se tendría el problema de que gestor de ventanas tendría prioridad a la hora de coger los eventos del teclado o ratón, para evitar estos problemas y además tener un entorno gráfico acelerado si en la plataforma existe la compatibilidad con OpenGL, se ha optado por usar la librería rtmidi2.
+El problema con pygame es el comentado anteriormente de usar unas librerias para los menús y otras para la parte de la reproducción de la canción en sí.
 
-Es una librería basada en Cython (que es la manera que tiene python de llamar a posibles librerías en C) el detalle es que esta librería es muy poco usada por lo que habitualmente se tendrá que descargar, tanto la librería en C, como compilar para el python instalado en el sistema las librerias Cython y rtmidi2.
+Las librerias rtmidi2 es una librería basada en Cython (que es la manera que tiene python de llamar a posibles librerías en C) el detalle es que esta librería es muy poco usada por lo que habitualmente se tendrá que descargar, tanto la librería en C, como compilar para el python instalado en el sistema las librerias Cython y rtmidi2.
  
 La gran ventaja de usar este estilo de librerías es que al estar a tan bajo nivel son muy rápidas y se consume poca memoria ya que casi no hay aumento de memoria comparado con las librerías en C.
 
--------
-tkinter pygame y qt5
+ 
+Viendo las posibilidades se ha optado por rtmidi2 que mediante Cython, se podrán usar los comandos de la librería rtmidi de C dentro de python.
+
 
 \section{Gráficos en qt5}
-Una de las grandes ventajas de emplear Qt5 como la base para los gráficos es que en todos los menús, podemos separar la parte gráfica de la parte funcional, para ello tenemos los archivos .ui, que mediante el creador que da Qt, podemos definir de manera gráfica todos los elementos que tendrán nuestras ventanas, botones , imágenes, y luego mediante un sistema de eventos y señales podremos darlos una funcionalidad.
+
+Una de las grandes ventajas de emplear Qt5 como la base para los gráficos es que en todos los menús, se tiene separado la parte gráfica de la parte funcional, para ello se tienen los archivos .ui, que mediante el creador que da Qt, se puede crear de manera gráfica todos los elementos estilo ventanas, botones , imágenes, y luego mediante un sistema de eventos y señales les podremos dotar una cierta funcionalidad.
 
 Los ficheros .ui estarán en una carpeta llamada ui, dentro del código fuente.
 
-Cada vez que se quiera hacer un cambio gráfico en el proyecto se tendrá que generar los .py asociados a estos .ui mediante pyuic5 de esta manera en entornos de poco recursos se optimizara ya que estos python ya estarán generados, como buena practica de programación se aconseja no tocar estos ficheros generados por Qt, por lo que se tendrá que tener clases que se deriven de estos python generados.
+Cada vez que se quiera hacer un cambio gráfico en el proyecto se tendrá que generar los .py asociados a estos .ui mediante pyuic5, de esta manera en entornos de poco recursos se optimizara ya que estos python ya estarán generados, como buena practica de programación se aconseja no tocar estos ficheros generados por Qt, por lo que se tendrá que tener clases que se deriven de estos python generados.
 
 \section{Animaciones en qt5}
-Qt tiene un motor para hacer sus animaciones, dentro de los widgets gráficos, tanto pueden ser animaciones secuenciales como paralelas entre ellas, nosotros siempre emplearemos las animaciones en paralelo.
+Qt5 tiene un motor para hacer sus animaciones, dentro de los widgets gráficos, estan animaciones tanto pueden ser animaciones secuenciales como paralelas entre ellas.
 
 
-Recordar que el lenguaje python es interpretado y tiene un garbaje collector por lo que tendremos que tener especial cuidado en no dejar de apuntar a los objetos a los que todavía tenemos que hacer referencia, aunque sea de las librerías de Qt, ya que si el garbage collector de python elimina esos objetos podemos tener problemas gráficos.
+Recordar que el lenguaje python es interpretado y tiene un garbaje collector por lo que tendremos que tener especial cuidado en no dejar de apuntar a los objetos a los que todavía tenemos que hacer referencia, aunque sea de las librerías de Qt, ya que si el garbage collector de python elimina esos objetos se podrán observar fallos gráficos.
 
-El mismo Qt5 indica que sus timers y animaciones son aproximadas, en el aspecto que depende de la CPU su buen funcionamiento, siempre entendiendo que el refresco gráfico tiene que tener la CPU libre, para ello el mismo QT indica lo mejor es dejar que seasu maquina de estados la encargada de actualizar todos los elementos gráficos. 
+El mismo Qt5 indica que sus timers y animaciones son aproximadas, en el aspecto que depende de la CPU su buen funcionamiento, siempre entendiendo que el refresco gráfico tiene que tener la CPU libre, para ello el mismo QT indica que lo mejor es dejar que sea su maquina de estados la encargada de actualizar todos los elementos gráficos, si se han de animar estos elementos gŕaficos Qt da la manera de ir agrupandolos en animaciones tanto paralelas como secuenciales, y la maquina de estados de Qt, animara de una manera o de otra dependiendo de si están en pantalla estos elementos o no.
 
-Como python3 tiene el GIL, Global Interpreter Lock, se entiende que aunque hay llamadas a otras librerías que si que podrían estar en otros threads, no es así, si no que para evitar fallos de concurrencia solo hay 1 thread vivo y se va cambiando. Si queremos tener un python realmente paralelo se debería cambiar de interprete y no usar el interprete por defecto.
+Como python3 tiene el GIL, Global Interpreter Lock, se entiende que aunque hay llamadas a otras librerías que si que podrían estar ejecutándose en paralelo, no es del todo así, si no que para evitar fallos de concurrencia solo hay 1 thread vivo al mismo tiempo y solo se emplea una cpu. Si queremos tener un python realmente paralelo se debería cambiar de interprete y no usar el interprete por defecto.
 
-Por lo que entonces hay que entender que cuando indicamos a Qt para que python deje la CPU cierto tiempo libre, este tiempo puede no ser exacto, esto se puede notar que en el algunas canciones con muchas notas y mucha velocidad, se ven pequeñas diferencias visuales entre notas. A nivel de sonido y de comprobación de sincronización esto no afecta ya que esta lógica se hará mediante python por lo que al tener más prioridad el tiempo sera correcto.
+En referencia a los timers de Qt5 en la documentacion de Qt indican que estos tiempos no son exactos y que su exactitud depende de la plataforma y como se hayan compilado las librerias Qt, para que se pinte la pantalla se tiene que parar el interprete de python y que este deje la CPU cierto tiempo libre.
 
-Esto nos obliga a dejar la CPU libre para que Qt pueda tratar las animaciones ya que sino nunca se dibujarían ya que se entiende que se esta haciendo algo más importante.
+Esto puede derivar que en el algunas canciones con muchas notas y mucha velocidad, dependiendo de la cpu se pueden observar pequeñas diferencias visuales entre notas. A nivel de sonido y de comprobación de sincronización esto no afecta ya que esta lógica se hará mediante python por lo que al tener más prioridad el tiempo sera correcto.
 
-Ahora entendiendo esto podemos plantear la animación de una canción de cuatro maneras distintas:
+Ahora entendiendo esto se puede plantear la animación de una canción de cuatro maneras distintas:
 
 \subsection{Ningún timer, una gran animación}
 
-Una posible implementación, de una canción y una velocidad de sincronización en concreto, es pensar analizar la canción y crear todas las notas visuales en su lane correspondiente y en su tiempo asignado creando una animación para cada nota y que cada nota llegue al punto cero en el momento que debería ser tocada, evidentemente esto tiene el gran inconveniente de que tenemos que tener todos estos elementos gráficos en memoria aunque no estén en pantalla.
+Una posible implementación, de una canción y dada una velocidad de sincronización en concreto, es pensar en analizar la canción y crear todas las notas visuales en su lane correspondiente y en su tiempo asignado creando una animación para cada nota y que cada nota llegue al punto cero en el momento que debería ser tocada, evidentemente esto tiene el gran inconveniente de que tenemos que tener todos estos elementos gráficos en memoria aunque no estén en pantalla.
 
-Ya que no tiene que tener la canción durante toda su duración el mismo tempo, esto junto a que se entiende como tiempo de sincronización el tiempo que tarda una nota en recorrer la pantalla visible, complica el colocar las notas en su tiempo correspondiente, ya que no todos los compases tienen la misma longitud.
+Ya que no tiene que tener la canción durante toda su duración el mismo tempo, esto junto a que se entiende como tiempo de sincronización el tiempo que tarda una nota en recorrer la pantalla visible, complica el colocar las notas en su tiempo correspondiente, ya que no todos los compases tienen la misma longitud (Dependiendo que en la canción haya cambios de tempo).
 
 Esto en la raspberry al tener una cpu lenta, se observo que no era viable. 
 
@@ -2601,69 +2636,71 @@ Esto en la raspberry al tener una cpu lenta, se observo que no era viable.
 
 Otra posible implementación es hacer que cada nota tuviera un timer asociado de cuando debería aparecer en pantalla, de esta manera una vez creado todos los timers, el reproductor solo tendría que crear una animación para esa nota, cuando el timer se disparase.
 
-El problema en esta implementación es que los timers no son lo suficientemente precisos, ya que se les puede indicar con precisión de milisegundos cuando se han de disparar, pero es una aproximación, esto en la raspberry se nota mucho sobretodo en notas dobles, que han de sonar en el mismo tiempo viendo que mientras se crea la animación y la cpu puede estar en otras tareas no llega a crear las notas visuales de tal manera que cuando llegan al punto cero están lo suficientemente cerca de donde se tendría que escuchar.
-
-Recordar que en música se indica que un instrumento musical se puede tocar si tiene menos de diez milisegundos de retardo entre la acción y que suene.
+El problema de esta implementación es que los timers no son lo suficientemente precisos, ya que aunque se puede indicar una precisión menor a  milisegundos cuando se han de disparar se nota que es una aproximación, esto sobretodo se observa en la raspberry ya que en notas dobles, que deberían sonar al mismo tiempo pero visualmente se observaban como notas separadas.
 
 
 \subsection{Un timer para el siguiente compás}
 
 Como se han comprobado con los dos casos anteriores, tener mucha información gráfica que no estamos viendo o tener muchos timers nos puede llevar a tener retardos tanto gráficos como a nivel sonoro.
 
-Para ello vamos a reducir en lo posible estos dos elementos.
+Para ello se va a reducir en lo posible estos dos elementos.
 
-Entendiendo las animaciones como bloques se puede juntar como una animación para cada compás, de esta manera si creamos un timer para el siguiente compas, se puede entender la reproducción como animar el compás, y esperar al siguiente.
+Entendiendo las animaciones como bloques se puede juntar como una animación para cada compás, creando un timer para el siguiente compás, se puede entender la reproducción como animar el compás, y esperar a este timer del siguiente compás.
 
-El problema de esta implementación es que aunque solo tengamos un timer este va acumulando retrasos en tiempo de ejecución, y eran distinguibles en una canción un poco larga ya en un ordenador en la plataforma x86 por lo que no merece la pena comentar los retrasos que cuando se probaba este código en una Raspberry.
+El problema de esta implementación es que aunque solo tengamos un timer este va acumulando retrasos en tiempo de ejecución, y eran distinguibles en una canción un poco larga ya en un ordenador en la plataforma x86 por lo que no merece la pena comentar los retrasos que se producían al probar el código en una raspberry.
 
 \subsection{Un timer único para el control del tiempo}
-Viendo que los timers proporcionados por Qt, no tienen los requerimientos de tiempo real, que si que tenemos en este proyecto, vamos a implementar las animaciones y el control del tiempo usando un solo timer que sera nuestro control de tiempo, de esta manera si que podemos saber cuando tiempo llevamos reproduciendo la canción.
+Viendo que los timers proporcionados por Qt, no tienen los requerimientos de tiempo real, que si que se tienen en este proyecto, se van a implementar las animaciones y el control del tiempo usando un solo timer que sera el control de tiempo, de esta manera si que se puede saber cuando tiempo llevamos reproduciendo la canción.
 
-Por tanto pasamos a tener un programa que en muchas partes dependerá del tiempo actual que llevamos reproduciendo.
+Por tanto se pasa a tener un programa que en muchas partes de su código dependerá del tiempo actual que llevamos reproduciendo.
 
-Pasamos a tener una lista de compases por analizar, un compas analizandose en el momento actual, y una lista de chips que se están animando o se ha de reproducir sin lane visual.
+Se codificara una lista de compases por analizar, un compás analizandose en el momento actual, y una lista de chips separadas en lanes que se están animando o se ha de reproducir sin lane visual.
 
-Por tanto crearemos los chips visuales en el momento que han de ser creados.
+Por tanto se crearan los chips visuales lo más cercano posible al momento que se han de comenzar a ver.
 
-Comentar que siempre trataremos con dos posibles tiempos, el tiempo según el .dtx original y el tiempo real que sera el tiempo original más el tiempo de sincronización. 
+Comentar que siempre se tratara con dos tiempos, el tiempo según el .dtx original y el tiempo donde realmente tiene sonar la nota, que sera el tiempo original más el tiempo de sincronización.
+Una vez realizado un análisis del .dtx, se obtiene todas las notas en sus compases y se calcula el tiempo en el que debería sonar cada 
+nota, y los tiempos de inicio de estos compases. 
+Por tanto el bucle principal a la hora de reproducir, es comprobar el tiempo que llevamos de canción reproducida, si hemos alcanzado el tiempo del primer compás de la lista de compases analizar, quitar este compás y pasar a estar analizando este.
+En el compás que se esta analizando tiene notas con los tiempos originales en el .dtx, cuando se llega al tiempo de una nota, se tiene que pasar esta nota a su lane correspondiente aumentado el tiempo correspondiente con el tiempo de sincronización.
+ 
 
-Por tanto mirando el compas actual en cada nota tenemos que comprobar el tiempo indicado por el dtx, con el tiempo actual y si estamos en el momento adecuado para esa nota crearla en su correspondiente lane, aumentando su tiempo con el tiempo de sincronización.
-
-Gracias a esta implementación tenemos solamente como memoria gráfica lo que tiene que estar en pantalla o que en breve tiene que desaparecer, recordar que sera el garbage collector el encargado de liberar esta memoria, lo que si que hay que indicar es que tenemos a la cpu muy activa para tener un control de sonido muy preciso y cuando se ha acabo de comprobar todo si que podemos hacer la pausa para que el qt, pinte la pantalla.
-
+Gracias a esta implementación se tiene solamente como memoria gráfica lo que tiene que estar en pantalla o que en breve tiene que desaparecer, recordar que sera el garbage collector el encargado de liberar esta memoria, lo que si que hay que indicar es que tenemos la cpu muy activa para tener un control de sonido muy preciso y cuando se ha acabo de comprobar las tareas de sonido y de control del reproductor se puede hacer la pausa para que el qt, pinte la pantalla.
 
 
 \section{Sonidos en qt5}
-Comentar que qt5, nos da la facilidad de reproducir sonidos, pero tendremos que tener en cuenta si son .ogg o .wav ya que Qt5, no los trata igual,
-ya que uno tiene que descomprimir el archivo y reproducir mientras que el otro es más rápido.
+Qt5, ya da la facilidad de reproducir sonidos, pero se tendrá que tener en cuenta si son .ogg o .wav ya que Qt5, no los trata igual, ya que uno tiene que descomprimir el archivo y reproducirlo mientras que en el otro solo tiene que reproducirlo.
 
-Para un mejor funcionamiento del programa todos los sonidos los pondremos en un banco de memoria, para de esta manera una vez ya comenzada la reproducción del .dtx solo tener que reproducir el sonido sin tener que hacer la carga a memoria.
+Para un mejor funcionamiento del programa todos los sonidos los pondremos en un banco de memoria, de esta manera una vez ya comenzada la reproducción del .dtx solo tener que reproducir el sonido sin tener que hacer la carga a memoria.
 
+Por definición de los sonidos en los dtx, los lanes visuales tendrán sonidos asociados estilo .wav, ya que los sonidos de la batería tienen que tener la menor latencia posible.
+Lo que no se puede asegurar de los sonidos asociados a los lanes no visuales, ya que se suelen poner los .ogg en canciones donde hay más música aparte de la batería, pero en las canciones de practica se suele poner los sonidos de un metrónomo con el formato .wav.
 
 \chapter{pyDTX}
 \section{Ideas generales}
-Ahora que tenemos definido el lenguaje a usar, las librerías que emplearemos y el formato .dtx podemos pasar a comentar las ideas generales, para efectuar el proyecto.
+Ahora que se esta definido el lenguaje a usar, las librerías que se emplearan y el formato .dtx se detallaran las ideas generales, para efectuar el proyecto.
 \section{Pantalla principal}
-Se trabaja con un Main Aplication dentro de Qt5, pondremos un MainWindow ya que usaremos entorno gráfico, en este MainWindow crearemos un stackedwidget, dentro del cual ya crearemos unos widgets independientes, de esta manera aumentamos el tiempo inicial pero luego como ya esta los menús creados ahorramos en tiempo de computación. Como todos los widgets son bastante independientes seria muy fácil coger este código y modificarlo para otros proyectos de estilo musical, o modificar los gráficos manteniendo la estructura y lógica de python.
+Se trabaja con un Main Aplication dentro de Qt5, se pondrá un MainWindow ya que usaremos entorno gráfico, en este MainWindow se creara un stackedwidget, dentro del cual se tendra unos widgets independientes, de esta manera se aumenta el tiempo inicial pero luego como ya están todos los menús creados ahorramos en tiempo de computación. Como todos los widgets son bastante independientes seria muy fácil coger este código y modificarlo para otros proyectos de estilo musical, o modificar los gráficos manteniendo la estructura y lógica de python.
 
-Dentro de este stackwidget creamos los siguientes widgets:
+Dentro de este stackwidget se crearan los siguientes widgets:
 
  \begin{itemize}
    \item Widget Inicial
    \item Widget para configurar bateria-MIDI
    \item Widget para configurar pyDTX
    \item Widget Pantalla Navegación
+   \item Widget Reproducción
  \end{itemize}
 
 
  
 \section{Pantalla Inicial}
-Aquí este es un widget muy básico donde se pondran cuatro botones centrados, estos botones activaran el widget correspondiente de esta manera podemos cambiar de widgets.
+Para la pantalla incial se empleara un widget muy básico donde se pondrán cuatro botones centrados, y estos botones activaran el widget correspondiente de esta manera podemos cambiar de widgets.
 
 
 Qt5 se encargara automáticamente de que solo el widget actual reciba los eventos de teclado y ratón.
 
-Este widget tiene una imagen de fondo dependiendo de la configuración del pydtx, aquí decir que se hará mediante .css ya que es lo más independiente del sistema y es lo que aconseja Qt5 actualmente, para imágenes que se conocen en tiempo de desarrollo, ya que se deja que los usuarios puedan crear sus propios temas.
+El widget de la pantalla inicial tendrá una imagen de fondo dependiendo de la configuración del pydtx, aquí decir que se hará mediante .css ya que es lo más independiente del sistema y es lo que aconseja Qt5 actualmente.
 
 \begin{figure}[H]
 % Centramos la figura
@@ -2678,15 +2715,15 @@ Este widget tiene una imagen de fondo dependiendo de la configuración del pydtx
 
 
 \section{Pantalla configuración batería-MIDI}
-Esta pantalla como idea básica seria definir las posibles teclas, para cada lane de este pyDTX.
+El widget que se usara para configurar la batería-MIDI tiene que poder dejar al usuario definir las posibles teclas, para cada lane visual de este pyDTX.
 
-Como pantalla de configuración se tiene que leer el fichero de configuración, poner los elementos gráficos en concordancia y un posible de botón para guardar para todos estos valores gráficos transformarlos en un fichero de configuración.
+Como pantalla de configuración se tiene que leer el fichero de configuración, poner los elementos gráficos en concordancia y un posible de botón para guardar para que todos estos valores gráficos transformarlos en un fichero de configuración.
 
 Además se podrá definir los lanes que configuraremos en Auto para que el mismo pyDTX, haga sonar todos los chips asociados a este lane pero continúen siendo visuales.
 
-En esta pantalla ya ponemos dos cosas relacionadas con la batería-MIDI, la primera un botón para poder ver cuantos instrumentos-MIDI esta viendo el sistema operativo para poder configurar el que queremos usar para tocar los .dtx
+En esta pantalla ya hay dos cosas relacionadas con la batería-MIDI, la primera un botón para poder ver cuantos instrumentos-MIDI esta viendo el sistema operativo y de esta manera poder configurar el que queremos usar para tocar los .dtx.
 
-Y para que sea más cómodo un botón para pulsarlo y poder tocar la bateria-MIDI y que en la pantalla se pueda ver que nota asociada esta emitiendo la bateria-MIDI.
+Para que sea más cómodo para el usuario se pondrá un botón, para poder tocar la batería-MIDI y que en la pantalla se pueda ver que nota asociada esta emitiendo la bateria-MIDI. De esta manera el usuario podrá configurar los lanes visuales con los eventos que emite su batería-MIDI.
 
 \begin{figure}[H]
 % Centramos la figura
@@ -2701,7 +2738,7 @@ Y para que sea más cómodo un botón para pulsarlo y poder tocar la bateria-MID
 
 
 \subsection{MIDI} 
-Ahora haremos una pequeña introducción a la comunicación MIDI enfocada a instrumentos-MIDI puros.
+Antes de continuar se tiene que hacer una pequeña introducción a la comunicación MIDI enfocada a instrumentos-MIDI puros.
 
 En la comunicación MIDI de un instrumento, hay mensajes diferenciados en 3 tipos:
 
@@ -2711,31 +2748,30 @@ En la comunicación MIDI de un instrumento, hay mensajes diferenciados en 3 tipo
    \item Nota-off
  \end{itemize}
  
- 
 y en cada mensaje hay la nota en sí, y su volumen.
  
-Lo habitual es una Nota-on, y luego al cabo de X tiempo dependiendo del instrumento un Nota-off, ya dependiendo del instrumento se puede meter una variación de la nota.
+Lo habitual es una Nota-on, y luego al cabo de X tiempo dependiendo del instrumento un Nota-off, dependiendo del instrumento se puede meter una o varias variaciónes de la nota antes de emitir el Nota-off.
 
 Estos mensajes según el instrumento puede ser múltiples, ya que ese instrumento esta pensado para estar sonando varias notas al mismo tiempo, esto se suele determinar por el instrumento en sí  o por limitaciones del sintetizador MIDI que normalmente tienen un limite de notas al mismo tiempo.
 
-En el proyecto por rapidez y por como suele funcionar una batería, solo miraremos los mensajes tipo Nota-on.
+En el proyecto por simplicidad y por como suele funcionar una batería, solo miraremos los mensajes tipo Nota-on.
 
-Cada Intrumento-MIDI no emite sonidos, emite estos mensajes y es el sintetizador MIDI que teniendo sus bancos de sonidos configurados, puertos y notas es el encargado de crear los sonidos.
+Cada Intrumento-MIDI no emite sonidos, emite estos mensajes y es el sintetizador MIDI que teniendo sus bancos de sonidos configurados, puertos y notas es el encargado de reproducir los sonidos.
 
-Pensar que este pyDTX, es un sintetizador enfocado a estos instrumentos-MIDI más estilo baterías y a estos ficheros .dtx como partitura.
+Pensar que este pyDTX, es la mezcla de un sintetizador enfocado a estos instrumentos-MIDI y a estos ficheros .dtx como partitura.
 
 \subsection{Configuración MIDI en pyDTX}
-Aquí uno de los primeros problemas con el MIDI y su tratamiento.
+Se tiene que exponer uno de los primeros problemas con el MIDI y su tratamiento.
 
-Gracias a usar las librerías Qt, estas mismas librerías se encargan de que los eventos del teclado y ratón solo disparen los objetos gráficos visibles, pero si queremos implementar eventos MIDI, el programa tiene que saber que widget esta activo o solo implementar la escucha de los mensajes MIDI en el reproductor.
+Gracias a usar las librerías Qt, estas mismas librerías se encargan de que los eventos del teclado y ratón solo disparen los objetos gráficos visibles, pero si queremos implementar eventos MIDI, el programa tiene que saber que widget esta activo o solo implementar la escucha de los mensajes MIDI en parte de reproductor.
 
-La manera que se ha resuelto es que cada vez que estamos en un widget que tiene que escuchar los mensajes MIDI, se tiene que tener una función que se llame al entrar en el widget como seria el caso del reproductor de los .dtx, pensar que los widgets están creados todos al inicio para mejorar la fluidez del programa. En este widget se ha resuelto esta problemática con un botón que es el que activa el escuchar los mensajes-MIDI y lo tenemos que desactivar siempre cuando volvemos al menú principal.
+La manera que se ha resuelto es la siguiente, cada vez que estamos en un widget que tiene que escuchar los mensajes MIDI, se tiene una función que se llama al entrar en el widget (recordar que los widgets están creados todos al inicio para mejorar la fluidez del programa). En este widget de configuración de la batería-MIDI se ha resuelto esta problemática con un botón que es el que activa el escuchar los mensajes-MIDI y lo tenemos que desactivar siempre cuando volvemos al menú principal.
 
 
 \subsection{Baterías-MIDI y Lanes}
-Aunque lo mejor seria que el número de Lanes visuales de los .dtx a tratar fueran los mismos que el número de Notas MIDI a configurar. ya que se podría hacer una relación uno a uno. Se tiene que tratar varios casos distintos bastantes comunes.
+Aunque lo mejor seria que el número de lanes visuales de los .dtx a tratar fueran los mismos que el número de Notas MIDI a configurar, ya que se podría hacer una relación uno a uno. Se tiene que tratar varios casos distintos bastantes comunes.
 
-El número de lanes que se trata como lanes visuales son 12. Aunque visualmente solo tenemos 9 columnas visuales ya que hay lanes que comparten columna visual para saber que instrumento exacto se debería tocar en una batería concreta se diferencia los chips por color.
+El número de lanes que se trata como lanes visuales son 12. Aunque visualmente solo tenemos 9 columnas visuales ya que hay lanes que comparten columna visual y los chips de estos lanes visualmente son de colores distintos para diferenciarlos.
 
 La lista completa de los lanes visuales tratados es la siguiente:
 
@@ -2754,51 +2790,61 @@ La lista completa de los lanes visuales tratados es la siguiente:
    \item 19 Ride Cymbal
  \end{itemize}
 
-Ahora convendría hacer un pequeño repaso de como se fue ampliando los 6 lanes iniciales del .dtx hasta los 12 actuales.
-
-Ya que incluso la maquina actual del gitadora solo tiene 9 pads, (7 pads y doble pedal)
+Conviene hacer un pequeño repaso de como se fue ampliando los 6 lanes visuales del inicio del formato .dtx hasta los 12 actuales (recordar que la maquina actual del gitadora solo tiene 7 pads y doble pedal).
 
 Los primeros cambios ya fue separa el Hi-hat en posición abierto o cerrado, dependiendo del número de pads de la batería-MIDI y su capacidad, se necesitaría tocar de manera distinta o solo era una marca visual de que son notas distintas, como nunca se puede tocar el hi-hat al mismo tiempo en abierto y en cerrado se puso en la misma columna visual.
 
-El siguiente cambio fue añadir el lane 1A y ya se quedo que el lane antiguo de platillo lane 16 seria el platillo derecho y este nuevo lane 1A se utiliza para el platillo izquierdo. Muy parecido a lo que se hizo en el HiHat, gente que tenia pads con varias zonas de golpeo para que se les indicara cuando se tenia que tocar el platillo en la zona alta o en la zona más cercana al borde pidieron en el platillo derecho mantener el antiguo y este nuevo lane. Como esto no es muy común tener baterías-MIDI con esta prestación, se dejo puesto solo para el platillo derecho para el izquierdo no se diferencia, y seran los creadores de los .dtx los que decidirán si implementar esta diferencias para saber más exactamente como tocar la batería.
- En otros .dtx se emplea para tener sonidos de 3 platillos. Se ha decidido que los lanes 16 y 19 compartan columna pero se indique con dos colores distintos que lane se debería tocar. (No esta contemplado el caso de que haya al mismo tiempo dos notas simultaneas para estos dos lanes)
 
- 
-Cuando salio el gitadora se amplio la máquina árcade con pie izquierdo y pie derecho para ello se insertaron los Lane 1B y el 1C que serian los dos para el pie izquierdo, tanto para el hi-hat como para el doble bombo, como no es habitual tener una batería-MIDI con triple pedal y ya que lo más común es tocar canciones con doble bombo o usar el pie izquierdo para el Hi-hat, aunque a nivel visual comparten la misma posición y en el gitadora comparten color, se ha decidido igual que en el caso anterior hacer que las notas visualmente serán de colores distintos para las canciones donde si que hay tanto doble bombo como hi hat, saber visualmente que son notas distintas y si se tiene una batería-MIDI tocar igual que en una batería acústica con estas características.
- 
-\subsubsection{Pocos Pads para muchos lanes} 
+El siguiente cambio fue en los platillos, originalmente solo existía el lane 16 colocado a la derecha, se añadieron los lane 1A y 19 se definió el lane 1A como el platillo izquierdo y el 19 Como el platillo derecho.
+Para no perder la compatibilidad con los .dtx anteriores a este cambio, se dejo el lane 16 a la derecha de todo. Aunque la maquina de Gitadora solo tiene 1 pad simple para el platillo izquierdo y otro pad simple para el platillo derecho. 
 
+Si se reproduce un .dtx, anterior a este cambio se observaran el sonido de los platillos siempre a la derecha, pero el usuario no vera ninguna diferencia.
+
+Como este lane no se ha desactivado, son los autores de los .dtx quienes tiene que escoger como usar este lane 16. 
+
+Hay tres principales maneras de entender este lane antiguo en canciones más complicadas, la primera y mas sencilla es ignorarlo y emplear solamente los lanes de platillo izquierdo o derecho, la segunda opción es usar este lane antiguo como un tercer platillo adicional y la tercera opción es como este lane esta a la derecha junto al platillo derecho, emplearlo para tener dos notaciones en este lane de esta manera se puede simular y mostrar con una marca visual el tocar arriba del platillo o el tocar más al borde. 
+
+
+En este proyecto por simplicidad se han juntado en la misma columna el lane 16 y 19, se marcan con notas de colores distintos pero no esta contemplado el caso de que haya al mismo tiempo dos notas simultaneas para estos dos lanes.
+
+Cuando salio el gitadora se amplio la máquina árcade un doble pedal para ello se insertaron los Lane 1B y el 1C que serian los dos para el pie izquierdo, tanto para el hi-hat como para el doble bombo, como no es habitual tener una batería-MIDI con triple pedal y ya que lo más común es tocar canciones con doble bombo o usar el pie izquierdo para el Hi-hat, aunque a nivel visual comparten la misma posición y en el gitadora comparten color, se ha decidido igual que en el caso anterior hacer que las notas visualmente serán de colores distintos para las canciones donde si que hay tanto doble bombo como hi hat,y de esta manera saber visualmente que son notas distintas y si se tiene una batería-MIDI más cercana a una batería acústica con estas características poder tocar exactamente como en la batería acústica.
+ 
 Ya que hay multitud de baterías-MIDI en el mercado se ha de tratar dos principales problemas:
 
-Cuando hay menos pads que lanes o al revés y los dos casos tienen sus complicaciones.
-
-El primer caso se solventa dejando que se pueda configurar una Nota-MIDI en múltiples lanes, esto complica saber la sincronización de cuando se nota esta nota-MIDI con los lanes asociados. Ya que esta configuración obliga a que no se pueda saber si se pulsa una nota-MIDI a que lane concreta se tendría que comprobar, para ello se tendrá que comprobar en todos los lanes asociados, y como suponemos la mejor sincronización posible solo se pondrá a hit el mejor tiempo de todos los lanes asociados, también hay que tener cuidado ya que hay canciones donde puede ser que se tengan que tocar estos dos lanes simultáneamente, y si hemos configurado estas dos lanes en la misma nota-MIDI cuando pulsamos serán dos hits.
+Cuando hay menos pads que lanes o al revés y los dos casos tienen sus complicaciones, que ahora se expondrán.
+ 
+\subsubsection{Pocos Pads para muchos lanes} 
+El primer caso se solventa dejando que se pueda configurar una nota-MIDI en múltiples lanes, esto complica saber la sincronización de cuando se activa esta nota-MIDI con los lanes asociados.
+Ya que esta configuración obliga a cuando se dispara la nota-MIDI comprobar en varios lanes si hay notas, para ello se tendrá que comprobar en todos los lanes asociados, y como suponemos la mejor sincronización posible solo se pondrá a hit el mejor tiempo de todos los lanes asociados, también hay que tener cuidado ya que hay canciones donde puede ser que se tengan que tocar estos dos lanes simultáneamente, y si hemos configurado estas dos lanes en la misma nota-MIDI serán dos hits.
 
 \subsubsection{Muchos Pads para pocos lanes}
 
-El otro caso es tener una batería-MIDI muy completa, y querer usarla para tocar los .dtx, si solo se puede configurar una nota-MIDI para varios lanes, esto obliga al batería a tener que ser muy exacto ya que todos los pads con zonas múltiples, solamente se deberían tocar en una zona concreta, la solución más simple es dejar que en cada lane, se puedan configurar dos notas-MIDI al mismo tiempo.
+El otro caso es tener una batería-MIDI muy completa, y querer usarla para tocar los .dtx, si solo se puede configurar una nota-MIDI para cada lane, esto obliga al batería a tener que ser muy exacto ya que todos los pads con zonas múltiples, solamente se deberían tocar en una zona concreta, la solución más simple es dejar que en cada lane, se puedan configurar dos notas-MIDI al mismo tiempo.
 
 \subsubsection{Casos especiales por respetar los dos al mismo tiempo}
 
-Estos casos independientemente tienen su sentido pero el tener que respetar los dos al mismo tiene una serie de ventajas y de desventajas.
+Estos casos independientemente tienen su sentido pero el tener que respetar los dos al mismo se tiene una serie de ventajas y desventajas.
 
 La desventaja clara es que nos complican el comprobar la sincronización entre tocar notas-MIDI y su relación con los chips de la partitura.
 
-La ventaja de tener estas opciones además de las comentadas es que con el mismo programa no tendremos problemas a la hora de poner canciones del dtxmania original, dtxmaniaHD o del gitadora, ya que el principal inconveniente era el doble bombo, si se tiene una batería-MIDI con el doble bombo. 
+La ventaja de tener estas opciones además de las comentadas es que con el mismo programa no tendremos problemas a la hora de poner canciones del dtxmania original, dtxmaniaHD o del gitadora.
+
+Ya que el principal inconveniente era el doble bombo, si se tiene una batería-MIDI con el doble bombo. 
 Se puede configurar de la siguiente manera: el hihat y el bombo izquierdo se configuran en el pie izquierdo, pero además este pie izquierdo se puede poner también en el bombo derecho, con esto se ha conseguido que en la misma configuración poder llamar a canciones antiguas del dtxmania original, con doble bombo y se puede tocar con los dos pies, aunque no se respeta izquierda o derecha ya que esta asociado al mismo lane y debe ser el que toca saber que pie debería ser tocado. 
 
-Con la misma configuración si la usamos para un dtx del dtxmaniaHD o del gitadora como estos ya diferencia pie izquierdo y derecho, la podemos usar y el pydtx indicara visualmente que pie se debería tocar, aunque con esta configuración en concreto se puede tocar el lane del bombo derecho correctamente o usar el pie izquierdo. Por lo que se observa que no hay manera de respetar todos los casos y obligar al mismo tiempo que la pulsaciones en los pads sean las que tendrían que ser en una batería acústica.
+Con la misma configuración si la usamos para un dtx del dtxmaniaHD o del gitadora como estos ya diferencia pie izquierdo y derecho, la podemos usar y el pydtx indicara visualmente que pie se debería tocar, aunque con esta configuración en concreto se puede tocar el lane del bombo derecho correctamente o usar el pie izquierdo. Por lo que se observa que no hay manera de respetar todos los casos posibles y con una sola configuración obligar al mismo tiempo que la pulsaciones en los pads sean las que tendrían que ser en una batería acústica.
 
 \section{Pantalla configuración pyDTX}
-En este widget se configura los valores por defectos del pyDTX.
+En este widget se dejara las opciones para que usuario configure los valores por defectos del pyDTX.
 
-Ya se tienen en cuenta el directorio de los temas gráficos.
+El usuario puede configurar el directorio donde se buscara el tema gráfico del pyDTX.
 
-El directorio inicial donde se comprobaran los subdirectorios para seleccionar las canciones de dtx, detallar que por comodidad si queremos ir a un directorio superior de este directorio inicial volveremos a ir al menú principal.
+También se puede configurar el directorio inicial donde se buscaran los subdirectorios que interiormente tienen las canciones de dtx, detallar que por comodidad a la hora de navegar si queremos ir a un directorio superior de este directorio inicial se volvera a ir al menú principal.
 
-Aunque se dejara cambiar la velocidad de sincronización antes de reproducir cualquier canción, aquí se podrá tener una velocidad por defecto para ya tenerla configurada cada vez que se arranque el pyDTX. Para tener claro que relación hay entre esta velocidad, que es el tiempo que tardara un chip en recorrer la pantalla desde el punto más alto a la parte inferior, y los tiempos de sincronización se pondrán unas indicaciones en pantalla para saber los margenes que es aplicaran para las posibles sincronizaciones Perfect, Great, Good y Poor.
+Aunque se dejara cambiar la velocidad de sincronización antes de reproducir cualquier canción, se tiene una velocidad por defecto para ya tenerla configurada cada vez que se arranque el pyDTX.
+Para tener claro que relación hay entre esta velocidad, que es el tiempo que tardara un chip en recorrer la pantalla desde el punto más alto a la parte inferior, y los tiempos de sincronización se pondrán unas indicaciones en pantalla para saber los margenes que se aplicaran para las posibles sincronizaciones Perfect, Great, Good y Poor.
 
-También se podrá seleccionar si para las animaciones de los chips gráficos durante la reproducción de la canción usaremos OpenGL, ya que esto es una asignatura pendiente en muchas plataformas arm y si obligamos a usar OpenGL, como se crean todas los widgets al inicio para mejorar los tiempos, el programa fallaría sin ni siquiera ver la pantalla de inicio (de todas maneras se puede cambiar el fichero de configuración ya que es un fichero de texto con extensión .ini)
+Se creara la opción para seleccionar si para las animaciones de los chips gráficos durante la reproducción de la canción usaremos OpenGL, ya que esto es una asignatura pendiente en muchas plataformas arm y si obligamos a usar OpenGL, como se crean todas los widgets al inicio para mejorar los tiempos, el programa fallaría sin ni siquiera ver la pantalla de inicio (de todas maneras se puede cambiar el fichero de configuración ya que es un fichero de texto con extensión .ini)
  
 \begin{figure}[H]
 % Centramos la figura
@@ -2812,9 +2858,7 @@ También se podrá seleccionar si para las animaciones de los chips gráficos du
 \end{figure}
  
 \section{Pantalla Navegación}
-El widget que se empleare para seleccionar la canción a reproducir.
-
-Se dividirá en tres grandes partes, información de la canción actualmente seleccionada, una botonera para cambiar entre canciones o directorios, y una lista de los directorios y canciones del directorio seleccionado actualmente.
+Se tiene que definir el  widget que el usuario empleara para seleccionar la canción a reproducir. Se copiara en medida de lo posible la navegación que se usaba en el dtxmania original, para ello este widget se dividirá en tres grandes partes, información de la canción actualmente seleccionada, una botonera para cambiar entre canciones o directorios, y una lista de los directorios y canciones del directorio seleccionado actualmente.
 
 \begin{figure}[H]
 % Centramos la figura
@@ -2827,136 +2871,141 @@ Se dividirá en tres grandes partes, información de la canción actualmente sel
 \end{center}
 \end{figure}
 
-\subsubsection{Información de la canción}
-Sera una columna a la izquierda donde se pondrá la información de la canción seleccionada, hay espacio para una imagen de visualización y varias textos (etiquetas gráficas en Qt5) para indicar autor de la canción, dificultad y una de información extra.
+Tenemos que definir más en detalles estas tres partes:
 
-Se tendrá en cuenta cada vez que se cambie el directorio o la canción seleccionada actualizar estos cuatro elementos gráficos automáticamente.
+\subsubsection{Información de la canción}
+Sera una columna a la izquierda donde se pondrá la información de la canción seleccionada, hay espacio para una imagen y varios textos (etiquetas gráficas en Qt5) para indicar autor de la canción, dificultad y uno de información extra.
+
+Se tendrá en cuenta cada vez que se cambie el directorio o la canción seleccionada actualizar estos cuatro elementos gráficos.
 
 \subsubsection{Lista de las canciones y directorios actuales}
-Se obtendra la información de todos los subdirectorios que estén dentro del directorio actual de canciones, cuando se crea el widget sera del directorio indicado en la configuración.
+A la derecha de la información gráfica y abajo de la botonera.
 
-Aquí para una mayor comodidad en la navegación se entenderá que un directorio que tenga un set.def o un único .dtx ya podemos entender que este directorio contiene al menos una canción.
+Se obtendrá la información de todos los subdirectorios que estén dentro del directorio actual de canciones, cuando se crea el widget sera del directorio indicado en la configuración.
+
+Para una mayor comodidad en la navegación se entenderá que un directorio que tenga un set.def o un único .dtx contiene al menos una canción (esto se indica por el posible caso de varios .dtx pero ningún set.def).
 
 Si solo hay un .dtx es tan sencillo como obtener la información del .dtx y ponerlo en la lista de selección, y si tiene un set.def obtener la información de los posibles cinco labels y de sus cinco posibles .dtx asociados.
 
-Esta parte por lo que se ha comentado sera la encargada de tener una lista de las posibles selecciones, cada ítem de esta lista sera uno de los siguientes:
-
+Esta parte sera la encargada de tener una lista de los directorios actuales, cada ítem de esta lista sera uno de los siguientes casos:
 
 \begin{itemize}
-   \item Si dentro del directorio hay un set.def, obtendremos en una lista de 5 elementos, las 5 posibles etiquetas de estos elementos y la información de los .dtx asociados.
-   \item Si no tiene un set.def buscaremos .dtx dentro del directorio y el primero que encontremos obtenemos la información de esta canción (la información para los 4 elementos gráficos)
+   \item Si dentro del directorio hay un set.def, se obtendrá una lista de 5 elementos, las 5 posibles etiquetas de estos elementos y la información de los .dtx asociados.
+   \item Si no tiene un set.def se buscara un .dtx dentro del directorio y el primero que se encuentre se pondra la información de esta canción (la información para los 4 elementos gráficos).
    \item Si es un directorio sin set.def o .dtx, guardaremos su path.
  \end{itemize}
  
  
-De esta manera tendremos una lista con toda la información del directorio actual ya guardada en memoria para no tener que estar pidiendo la información al sistema operativo, mientras que no nos movamos de directorio.
+De esta manera tendremos una lista con toda la información del directorio actual ya guardada en memoria para no tener que estar pidiendo la información al sistema operativo, mientras que el usuario no se mueva de este directorio.
 
 \subsubsection{Botonera para cambio de directorios o seleccionar canciones}
-En esta parte tendremos los botones para realizar acciones sobre la canción seleccionada , velocidad de sincronización o sobre los directorios.
+A lar derecha de la información gráfica y en la parte superior se colocaran los botones para poder navegar en la estructura de directorios.
 
-Comentar que no siempre veremos todos los botones ya que es más intuitivo si los botones que no tienen sentido, los escondemos y solo mostramos los que si que pueden realizar acciones sobre el directorio o canción seleccionada.
+En esta parte se colocaran los botones para realizar acciones sobre la canción seleccionada, velocidad de sincronización o sobre los directorios.
 
-El primero y más sencillo es el de ir a un nivel de directorio superior, si lo usamos y estamos en directorio configurado como directorio de las canciones volveremos al menú principal, si no subiremos un nivel el path de directorio y volveremos a crear toda la lista de directorios y canciones del directorio actual.
+Comentar que no siempre veremos todos los botones ya que es más intuitivo si los botones que no tienen sentido, se esconden y solo se muestran los botones que si pueden realizar acciones sobre el directorio o canción seleccionada.
 
-Ponemos dos botones para subir o bajar en la lista de directorios/canciones, ya que de esta manera se deja abierto la manera de seleccionar estos directorios, se dejara seleccionar vía ratón pero también se puede seleccionar vía teclado, mediante la tabulación entre botones, recordar que de esta manera sera sencillo hacer que una batería-MIDI simule estas ordenes si solo dejáramos la vía del ratón, se debería cambiar mucho código para que funcionara mediante la batería-MIDI.
+El primero y más sencillo es el botón de ir a un nivel de directorio superior, si lo usamos y ya se esta en el directorio configurado como directorio de las canciones volveremos al menú principal, si no subiremos un nivel el path de directorio y volveremos a crear toda la lista de directorios y canciones del directorio actual.
 
-Abajo también existen dos botones y un elemento gráfico para variar la velocidad de sincronización actual. De esta manera no tenemos que ir hasta al menú de configuración para cambiar el valor de la sincronización.
+Se crearan dos botones para subir o bajar en la lista de directorios/canciones, ya que de esta manera se deja abierto la manera de seleccionar estos directorios, se dejara seleccionar vía ratón pero también se puede seleccionar vía teclado, mediante la tabulación entre botones, recordar que de esta manera sera sencillo hacer que una batería-MIDI simule estas ordenes si solo dejáramos la vía del ratón, se debería cambiar mucho código para que funcionara mediante la batería-MIDI.
+
+Abajo se crearan dos botones para variar la velocidad de sincronización actual y un elemento gráfico para ver la sincronización actual. De esta manera el usuario no tiene que ir hasta al menú de configuración para cambiar el valor de la sincronización.
 
 Se creara un botón para reproducir la canción actual, este botón solo se mostrara en el caso de que estemos seleccionando un directorio que no tiene un set.def y al menos tiene un .dtx, cuando se pulsa empezaremos a reproducir la canción con la velocidad de sincronización actual.
 
 Se creara un botón para cambio de directorio, solo se mostrara si estamos seleccionado un directorio sin set.def o .dtx, si se pulsa cambiaremos de directorio y se tendrá que rehacer toda la lista de posibles directorios/canciones
 
-También tenemos cinco posibles botones para los directorios que tienen un set.def, como el programa original no indicaba nada en las canciones que hay por internet estos cinco posibles .dtx tienen un orden pero dependía del creador de los .dtx y del set.def cuantos y como se empleaban estas cinco posibilidades, en cada una de estas posibilidades se puede apuntar a un .dtx y poner un texto para información, además de la información que tiene el .dtx.
+También se tiene cinco posibles botones para los directorios que tienen un set.def, como el programa original no indicaba nada en las canciones que hay por internet estos cinco posibles .dtx no tienen un orden ya que dependía del creador de los .dtx y del set.def cuantos y como se empleaban estas cinco posibilidades (hay canciones en internet que solo definen el segundo label y el tercero por ejemplo), en cada una de estas posibilidades se puede apuntar a un .dtx y poner un texto para información, además de la información que tiene el .dtx.
+Para ello cuando se crea la información de un directorio con un set.def se obtendrá toda la información disponible y también indicar donde no se ha  podido obtener, para mostrar solamente los botones que tienen asociada información.
 
-Para ello cuando se crea la información de un directorio con un set.def se obtendrá toda la información disponible e indicar también la información que no hemos podido obtener, para mostrar los botones que tienen asociada información.
-
-Se actualiza la información mostrada de la canción con el primer botón que tiene asociada información.
+Se actualizara la información mostrada de la canción con el primer botón que tiene asociada información.
  
-Aquí se ha tenido que usar una opción del Qt5 para cuando hay focus en uno de estos botones ya que se tiene que hacer acciones extras, que es actualizar toda la información mostrada de la canción seleccionada.
+Se ha tenido que usar una opción del Qt5 para cuando hay focus en uno de estos botones ya que se tiene que actualizar toda la información mostrada de la canción seleccionada.
 
 Esto se ha realizado de esta manera para integrar el uso del ratón y del teclado o posible batería-MIDI ya que si solo se tiene en cuenta el ratón siempre se pulsaba directamente los botones y no se podía ver la información de los .dtx, o se tendría que haber puesto dos botones más para poder navegar entre los posibles .dtx de un set.def, se ha preferido para simplificar el menú mediante esta reprogramación de los eventos si hay focus en uno de estos botones, poner la información del .dtx relacionado.
 
 \section{Reproducción de la canción}
 
 \subsection{Inicialización básica y detalles de Qt5}
-El widget donde reproduciremos la canción seleccionada, sera un widget gráfico ya que sera el encargado de tener los lanes visuales y dentro de ellos los chips visuales, además del widget de puntuación.
+El widget donde se reproducirá la canción seleccionada, sera un widget gráfico ya que sera el encargado de tener los lanes visuales y dentro de ellos los chips visuales, además del widget de puntuación.
 
-Este widget gráfico ya estará creado, y según la configuración usaremos OpenGl o no, lo seguro es que desactivamos las opciones del qt5 de las barras de scroll de un QgraphicsView, ya que por defecto si se añaden elementos gráficos en los limites de la visión, aparecerían barras de scroll para poder ver todo.
+Este widget gráfico ya estará creado, y según la configuración se usara OpenGl o no, se tiene que desactivar las opciones del qt5 de las barras de scroll del QgraphicsView, ya que por defecto si se añaden elementos gráficos en los limites de la visión, aparecerían barras de scroll para poder ver todo.
 
 Otra cosa a evitar es el evento resiseEvent, ya que si se redimensiona la pantalla, se ha pensado que siempre estaremos usando la misma resolución interna, de esta manera sera el Qt5 el encargado de mantener la relación de aspecto.
 
-No podemos inicializar nada más ya que dependemos de la canción seleccionada y del tiempo de sincronización.
+No se puede inicializar nada más ya que se depende de la canción seleccionada y del tiempo de sincronización.
 
 \subsection{Inicialización con una canción}
-Llamamos al reproductor con un .dtx concreto y una velocidad de sincronización.
+Cuando se llama a este widget con un .dtx concreto y una velocidad de sincronización. Es cuando se tiene que reproducir el dtx, para ello se tiene que hacer varias tareas que paso a describir.
 
-Leemos los ficheros de configuración, para ya tenerlos en memoria.
+Se tiene que leer los ficheros de configuración, para tenerlos en memoria.
 
-Como toda la parte gŕafica sera mediante Qt5, creamos una scene e iremos añadiendo todos los elementos gráficos a esta scene para que Qt5 los pueda tratar.
+Como toda la parte gŕafica sera mediante Qt5, se crea una scene y se ira añadiendo los elementos gráficos a esta scene para que Qt5 sea quien los pinte.
 
-Ahora pasamos a configurar el teclado y el instrumento MIDI.
+Se tiene que configurar el teclado y el instrumento MIDI.
 
 \subsection{Teclado}
 \subsubsection{Configurar teclado}
-Creamos un diccionario donde guardaremos la relación de teclas con su lane correspondiente.
+Se crea un diccionario donde se guardara la relación de teclas con su lane correspondiente.
 
-
-Recorriendo todas las lanes visuales, miramos si la lane esta configurada sin automático, si fuera de esta manera miramos su tecla asociada y entonces la añadimos a este diccionario de teclas. 
+Recorriendo todas las lanes visuales, se comprueba si la lane esta configurada sin automático, si fuera de esta manera se inserta su tecla asociada a su lane en este diccionario de teclas. 
 
 \subsubsection{Evento de teclado}
-Configurando el evento keyPressEvent de Qt5, cuando se pulse una tecla lanzara este evento.
+Se configura el evento keyPressEvent de Qt5, para que cuando se pulse una tecla lancé este evento.
 
-Se comprueba si es la tecla especial Escape, si fuera esta se tiene que dejar de reproducir sonidos y volver a el menú de selección de canciones.
+Se comprueba si es la tecla especial Escape, si fuera esta se tiene que parar la reproducción actual y volver a el menú de selección de canciones.
 
-Si no fuera así, comprobamos que tecla se ha pulsado y si esta en el diccionario de teclado que hemos configurado, deberemos coger el tiempo actual y comprobar la puntuación en el lane asociado, esto se explicara más concretamente cuando definamos los lanes visuales que funciones tienen.
+Si no fuera así, se comprueba que tecla se ha pulsado y si esta en el diccionario de teclas que se ha configurado, se tiene que comprobar el tiempo actual y comprobar la puntuación en el lane asociado, esto se explicara más concretamente cuando definamos los lanes visuales y que funciones tienen.
 
 \subsection{MIDI}
 \subsubsection{Configurar MIDI}
-Creamos un diccionario donde guardaremos las notas midis y la lista de sus lanes correspondientes.
+Se crea un diccionario donde se guarda las notas midis y la lista de sus lanes correspondientes.
 
-Recorriendo todas las lanes visuales, si la lane esta configurada sin automático, si fuera de esta manera miramos su dos posibles MIDI y entonces los añadimos a este diccionario de MIDI, cuidado ya que una nota MIDI puede activar múltiples lanes, por eso son listas dentro de un diccionario y no un diccionario simple.
+Recorriendo todas las lanes visuales, si la lane esta configurada sin automático, se comprueba su dos posibles MIDI y entonces se añaden a este diccionario de MIDI, con cuidado ya que una nota MIDI puede activar múltiples lanes, por eso en este caso son listas dentro de un diccionario y no un diccionario simple.
+
 \subsubsection{Evento MIDI}
-Mediante rtmidi2 definimos una función que se dispara cada vez que vea un evento MIDI, del instrumento MIDI que esta en la configuración.
+Mediante rtmidi2 se define una función que se dispara cada vez que vea un evento MIDI, del instrumento MIDI que esta en la configuración.
 
-Cuando se dispara este evento es comprobar el tipo de mensaje MIDI que tiene, los eventos tipo '153' Note-On serán los que se traten.
+Cuando se dispara este función es comprobar el tipo de mensaje MIDI que tiene, los eventos tipo '153' Note-On serán los que se traten.
 
-Si fuera de esta manera, miramos si esta nota esta definida dentro de nuestro diccionario.
+Si fuera de esta manera, se comprueba si la nota de este evento esta definida dentro de nuestro diccionario.
 
 Aquí hay que tener mucho más cuidado que con el teclado ya que hay dos posibles casos:
 Que haya solamente un lane asociado a esta nota-midi por lo que es lo mismo que el caso con el teclado o, puede ser que haya varios lanes asociados a esta nota-midi por lo que se tendrá que hacer una doble pasada sobre los lanes asociados: una primera para obtener el tiempo menor comparando con el tiempo actual, para saber a que lanes iría esta nota, y luego ya ir a los lanes y marcarlos como hit, recordar que pueden existir notas en varios lanes en el mismo tiempo. 
+
 \subsection{Lanes}
- Una vez configurados los métodos de entrada teclado y midi. Pasamos a crear los lanes automáticos y visuales.
+ Una vez configurados los métodos de entrada teclado y midi. Se tiene que crear los lanes tanto automáticos como visuales.
 
 \subsection{Ideas básicas de los lanes}
-Entendemos un lane como una lista de chips, los lanes los separaremos en dos grandes grupos lanes auto y lanes visuales, los cuales tendran asociados chips auto y chips visuales, pasamos a describir los chips por que son más sencillos y luego describimos los lanes.
+Se entiende un lane como una lista de chips, los lanes se separan en dos grandes grupos lanes automáticos y lanes visuales, los cuales tendrán a su vez asociados chips auto y chips visuales, pasamos a describir los chips ya que son más sencillos y luego se describirán con más exactitud los lanes.
 
 \subsubsection{Chips Auto}
-Creamos una clase Chip Auto.
+Se tiene que crear una clase Chip Auto.
 
-Los chips auto son los chips que tendrán los lanes automáticos puros, que son los que se emplean para o poner la música de fondo o para ir añadiendo sonidos en la canción, ejemplo clásico metrónomo para canciones de practica.
+Los chips auto son los chips que tendrán los lanes automáticos puros, que son los que se emplean para o poner la música de fondo o para ir añadiendo sonidos simples en la canción, ejemplo clásico metrónomo para canciones de practica.
 
-Un chip auto se puede entender como una nota (un sonido que estará en un banco de sonidos definido en el dtx) y un tiempo donde debería ser tocada.
+Un chip auto es una nota (un sonido que estará en un banco de sonidos definido en el dtx) y un tiempo donde debería ser tocada.
 
-Crearemos dos funciones en esta clase para leer el tiempo y su nota en sí.
+Se crearan dos funciones en esta clase para leer el tiempo y su nota en sí.
 
 \subsubsection{Chips Visuales}
-Creamos una clase que se extiende de QGrapchicsWidget, para que Qt5 pueda manejar toda la parte gráfica y le pondremos los mismos datos y funciones que la clase Chip Auto.
+Se crea una clase que se extiende de QGrapchicsWidget, para que Qt5 pueda manejar toda la parte gráfica y se pondrán los mismos datos y funciones que la clase Chip Auto.
 
-Esta clase es un tipo de Chip pero visual, donde además de la información anterior tenemos que poner si el chip ya ha sido pulsado, una animación, un color de chip, una posición en pantalla.
+Esta clase es un tipo de Chip pero visual, donde además de la información anterior si tiene que tener la información de si el chip ya ha sido pulsado, una animación, un color de chip y una posición horizontal en pantalla.
 
-Los datos de color y posición son dependientes del lane donde esta este chip.
+Los datos de color y posición son dependientes del lane donde estará este chip.
 
-Las funciones que tendremos que definir además de las de un chip auto son:
+Las funciones que se definen además de las de un chip auto son:
 
 
-paint: función que usara Qt5 para pintar este chip en concreto donde indicamos que pinta un rectangulo, con un color.
+paint: función que usara Qt5 para pintar este chip en concreto donde se indica que pinta un rectangulo, con un color.
 
-animar: función donde creamos una propiedades de animación para que qt5 lo trate, básicamente es poner un chip, arriba de la pantalla y posición horizontal de la lane donde estamos e indicamos que tiene que acabar esta animación en la misma posición horizontal pero abajo de la pantalla, indicando que tiene que tardar el tiempo de sincronización.
+animar: función donde se tienen que crear una propiedades de animación para que qt5 lo trate, básicamente es poner un chip, arriba de la pantalla con su posición horizontal de la lane donde está e indicar que tiene que acabar esta animación en la misma posición horizontal pero al final de la pantalla, indicando que tiene que tardar el tiempo de sincronización.
 
-Esta función tiene que devolver la animación en si ya que sera la scene de Qt5 donde se tiene que tratar.
+Esta función tiene que devolver la animación en sí, ya que sera la scene de Qt5 donde se tiene que tratar.
 
 \subsubsection{Lanes Auto}
-Creamos un clase lane Auto donde tiene dos datos una lista de chips, y un banco de sonidos.
+Se creara una clase lane Auto donde se tendrán dos datos una lista de chips, y un banco de sonidos.
 
 Las funciones asociadas a esta clase son las siguientes:
 
@@ -2964,17 +3013,17 @@ insertar\_chip: Para poder insertar chips en la lista de chips.
 
 insertar\_sonidos: Para poder insertar el banco de sonidos en la lane auto.
 
-reproducir: Donde se buscara el primer chip de la lista y mirando su tiempo si es igual o menor al tiempo actual, se tiene que reproducir su nota asociada y eliminar este chip.
+reproducir: Donde se buscara el primer chip de la lista y si su tiempo es igual o menor al tiempo actual, se tendrá que reproducir su nota asociada y eliminar este chip.
 
 \subsubsection{Lanes visuales}
-Extendiendo la clase de Lane Auto definimos la clase Lane visual la idea es tener un lane donde tendremos una lista de chips y una función para reproducir los sonidos por si esta configurado como automático, pero tendremos que añadir toda la información gráfica y funciones para comprobar la puntuación según el sincronismo.
+Extendiendo la clase de Lane Auto se definirá la clase Lane visual estos lanes, tendrán una lista de chips y una función para reproducir los sonidos por si estuvieran configurados como automático, se tendrá que añadir toda la información gráfica y funciones para comprobar la puntuación obtenida según el sincronismo.
 
-Los datos de un lane visual son los de un lane automático y además color, posición horizontal y el tiempo de sincronización, de este calculamos el tiempo máximo a mantener una nota en memoria, ya que una nota que ya ha pasado su tiempo donde tendría que haber sido tocada y el margen de puntuación poor, esa nota es un miss y la podemos olvidar ya que no tiene que ser tratada.
+Los datos de un lane visual son los de un lane automático y además color, posición horizontal y el tiempo de sincronización, de este último se calcula el tiempo máximo a mantener una nota en memoria, ya que una nota que ya ha pasado su tiempo donde tendría que haber sido tocada y el margen de puntuación en ``poor'', esa nota es un  ``miss'' y se puede borrar de memoria.
 
 
 Además de funciones para leer datos del estilo leer\_color y leer\_pos.
 
-Hay tres funciones para estos lanes visuales.
+Hay tres funciones adicionales para estos lanes visuales:
 
 comprobar\_y\_poner\_hit:
 
@@ -2982,34 +3031,35 @@ Función para buscar la nota más cercana al tiempo actual, y ponerla a hit, se 
 
 comprobar\_tiempo:
 
-Función que se usara para cuando una nota-midi esta en varios lanes visuales, comprobamos en la lista la nota más cercana al tiempo actual y se devolverá el tiempo de diferencia de esta manera podremos saber el lane donde esta la nota más cercana.
+Función que se usara para cuando una nota-midi esta en varios lanes visuales, se comprueba en la lista la nota más cercana al tiempo actual y se devolverá el tiempo de diferencia; de esta manera se podra saber el lane donde esta la nota más cercana.
 
 
 eliminar\_nota\_antigua:
 
-Con el tiempo actual se comprueba si la primera de la lista ya ha superado su tiempo y el tiempo de margen de hasta una nota en calificación poor, quitamos esta nota si ha superado este tiempo. Y devolvemos true si se ha eliminado una nota que no haya sido pulsada, esto es para poder indicar a la puntuación que hay una nota más en miss.
+Con el tiempo actual se comprueba si la primera de la lista ya ha superado su tiempo y el tiempo de margen de hasta una nota en calificación ``poor'', se borra esta nota de las lista de notas si ha superado este tiempo. Y se devuelve true si se ha eliminado una nota que no haya sido pulsada, esto es para poder indicar a la puntuación que hay una nota más en miss.
 
 \subsubsection{Reproducir una canción}
-Ahora que ya los hemos definido podemos indicar tranquilamente que creamos los lanes automáticos, 01, 61 y 62, que son los lanes automáticos más comunes en los .dtx. y los ponemos en un diccionario de lanes automáticos.
+Ahora que se han definido tanto los chips como los lanes, se puede indicar tranquilamente que se tienen que crear los lanes automáticos, 01, 61 y 62, que son los lanes automáticos más comunes en los .dtx. y los se ponen en un diccionario de lanes automáticos.
 
-Creamos los lanes visuales 11, 12 , 13, 14, 15,16,17,18,19 ,1A, 1B y 1C con sus colores y posiciones, siempre mirando si en la configuración esta puesto como lane automático, si fuera de esta manera además de en el diccionario de lanes visuales, se tendría que añadir también al diccionario de lanes automáticos.
+Se crean los lanes visuales 11, 12 , 13, 14, 15,16,17,18,19 ,1A, 1B y 1C con sus colores y posiciones, siempre mirando si en la configuración esta puesto como lane automático, si fuera de esta manera además de en el diccionario de lanes visuales, se tendría que añadir también al diccionario de lanes automáticos.
 
 
-Ponemos el número de compases a cero, y vamos a obtener la información básica del .dtx
+Se pone el número de compases a cero, y se tiene que obtener la información básica del .dtx, para ello se tendrá que hacer varias pasos.
 
-En esta primera pasada obtenemos los siguientes datos:
 
-Todos los bancos de sonidos que están definidos como ordenes WAVxx, si el sonido es un .ogg o un .wav se creara un banco de sonido con un reproductor asociado al tipo del sonido de esta manera cuando se tenga que reproducir el sonido ya estará cargado en memoria y preparado.
+En el primer paso se obtendrán los siguientes datos:
+
+Todos los bancos de sonidos que están definidos como ordenes WAVxx, si el sonido es un .ogg o un .wav se creara un banco de sonido con un reproductor asociado al tipo del sonido; de esta manera cuando se tenga que reproducir el sonido ya estará cargado en memoria y preparado.
 
 Toda la información de los posibles cambios de BPM en la canción y de los BPM por defecto.
 
-Obtenemos la información del nombre de la canción que lo ponemos en el widget de la puntuación.
+Se obtendrá la información del nombre de la canción para ponerlo en el widget de la puntuación.
 
 Se ira tratando la información de los compases poco a poco para ello, primero obtendremos sus notaciones, en que lane son estas notas y en que compás.
 
-Como todas las notaciones deberían estar colocadas por compás y no hace falta que estén ordenadas por lane, lo que haremos mientras recorremos todas las notaciones en el archivo .dtx es lo siguiente, si es un compás mayor que el actual ponemos en esta lista en el sitio del compás un diccionario con la key 'lanes' vaciá, y luego insertamos los datos en el compás, y en este diccionario ya ponemos usando la lane como key, las notaciones u ordenes sin tratar todavía, también recordar que en los ficheros .dtx se pueden saltar compases ya que no hay ninguna nota en esos compases, pero nosotros ya creamos en esta lista de compases, en esos compases vacíos un compás vacío, que internamente tendrá una key 'lanes' pero no llegara a tener notaciones internas.
+Como todas las notaciones deberían estar colocadas por compás y no hace falta que estén ordenadas por lane, lo que se hará mientras se recorren todas las notaciones en el archivo .dtx es lo siguiente, si es un compás mayor que el actual se pondrá en esta lista de compases en el sitio del compás un diccionario con la key 'lanes' vacía, y luego se insertara los datos en el compás, y en este diccionario ya se pone usando la lane como key, las notaciones u ordenes sin tratar todavía(tal y como están en el archivo .dtx), también recordar que en los ficheros .dtx se pueden saltar compases si no hay ninguna nota en esos compases, pero para el proyecto ya se crea en esta lista de compases, compases que internamente tendrá una key 'lanes' pero no llegaran a tener notaciones internas.
 
-Ahora ya tenemos una lista de compases y en cada compás un diccionario con una key 'lanes' que es un diccionario con las notaciones separadas por lanes.
+Ahora ya se tiene una lista de compases y en cada compás un diccionario con una key 'lanes', y con las notaciones separadas por lanes.
 
 
 Ahora creamos la puntuación.
@@ -3044,58 +3094,58 @@ Los tiempos de margenes calculados a partir del tiempo de sincronización.
 Con las siguientes funciones:
 
 comprobar\_puntuacion:
-Con el tiempo de margen que nos pasan, miramos los tiempos de sincronización y actualizamos los datos en consecuencia.
+Con el tiempo de margen que nos pasan, se miran los tiempos de sincronización y se actualizan los datos en consecuencia.
 
 actualizar\_puntuacion:
 
-Actualizaremos los elementos gráficos.
+Función para actualizar los elementos gráficos de la puntuación.
 
 aumentar\_miss: 
-Función que se empleara cuando hay una nota que eliminamos por tiempo, ya directamente sabemos que es un miss.
-
+Función que se empleara cuando hay una nota que se tiene que eliminar por tiempo, ya directamente se sabe que es un miss.
 
 
 \subsubsection{Continuamos actualizando los compases}
-Insertamos los bancos de sonidos en sus lanes.
 
-Ahora se tiene que poner en todos los compases sus tiempos, para ello iremos recorriendo la lista y con cuidado si hay una nota en los lanes 03 o 08 ya que estos modifican los BPM de la canción; lo más habitual es que se cambie al inicio del compás o justo en la última nota del compás para el compás siguiente, se ha implementado tanto el lane 03 como el 08, ya que aunque parece que se quiere dirigir el formato hacia cambios absolutos, para tener retrocompatibilidad se ha implementado los cambios de BPM con sumas o restas al BPM actual, para ello en el diccionario que es el compás actual ahora añadimos dos keys, que son la key 'bmp' asociada al bmp del compás actual y la key 'tiempo' que es el tiempo donde se debería iniciar el compás.
+Insertamos los bancos de sonidos en todos los lanes.
 
-Ahora tenemos que recorrer otra vez la lista de compases y ahora podemos coger todas las notaciones de los lanes y compases, y separarlos en notas con un tiempo, quitando las notas 00 que son silencios en los .dtx.
+Ahora se tiene que poner en todos los compases los tiempos, para ello se ira recorriendo la lista de compases y si hay una nota en los lanes 03 o 08 ya que estos modifican los BPM de la canción; lo más habitual es que se cambie al inicio del compás o justo en la última nota del compás para el compás siguiente, se ha implementado tanto el lane 03 como el 08, ya que aunque parece que se quiere dirigir el formato hacia cambios absolutos, para tener retrocompatibilidad se ha implementado los cambios de BPM con sumas o restas al BPM actual, para ello en el diccionario que es el compás actual ahora añadimos dos keys, que son la key 'bpm' asociada al bpm del compás actual y la key 'tiempo' que es el tiempo donde se debería iniciar el compás según el .dtx.
 
-Creamos un evento para salir del reproductor cuando se acabe el tiempo de la canción más el doble tiempo de sincronización, para tener un poco de margen extra.
+Ahora se tiene que recorrer otra vez la lista de compases y ahora se puede coger todas las notaciones de los lanes y compases, y separarlos en notas con un tiempo, quitando las notas 00 que son silencios en los .dtx.
 
-Iniciamos el control del tiempo, ya que se tiene todos los datos ya tratados para comenzar la canción reproducción del .dtx.
+Se crea un evento para salir del reproductor cuando se acabe el tiempo de la canción más el doble tiempo de sincronización, para tener un margen extra.
 
-Animamos el primer compás, lo quitamos de la lista de compases, y pasamos al bucle principal de la reproducción, usando un timer de Qt5.
+Se inicia el control del tiempo, ya que se tiene todos los datos ya tratados para comenzar la reproducción del .dtx.
+
+Se anima el primer compás, ahora se explicara que se considera animar un compás, se quita de la lista de compases pasándolo a ser el compas que se esta comprobando actualmente, y se pasa al bucle principal de la reproducción, usando un timer de Qt5 para cada milisegundo volver al bucle principal.
 
 
 \subsubsection{Animar un compás}
-Para animar un compás en la reproducción de un .dtx, se cogera a animar, y el tiempo actual.
+Para animar un compás en la reproducción de un .dtx, se necesita un compás, y el tiempo actual.
 
-Para animar el compás actual lo que se tiene que hacer es repasar todos sus lanes, mirar la primera nota para cada uno de esos lanes y si su tiempo es menor que el tiempo actual, la quitamos del compás a animar y lo pasamos a su lane correspondiente modificando el tiempo de esta nota, sumando el tiempo de sincronización, pensar que se estará animando este compás mientras no se pase de su tiempo.
+Para animar el compás actual lo que se tiene que hacer es repasar todos sus lanes, mirar la primera nota de cada uno de esos lanes y si su tiempo es menor que el tiempo actual, quitarla del compás a animar y pasar esta nota a su lane correspondiente modificando el tiempo de esta nota (sumando el tiempo de sincronización), pensar que se estará animando este compás mientras no se llege al tiempo del siguiente compás.
 
 Hay que separar las notas en dos grandes grupos:
 
-Las que  están en lanes puros automáticos (01,61 y 62).
+Las que están en lanes puros automáticos (01,61 y 62).
 
 Y las notas para los lanes visuales, en este caso se tendrá que crear una nota visual con sus propiedades gráficas dependiendo del lane y añadirla a la scene asociada al Qt5.
 
-Si fuera una nota no asociada a ningún lane implementado sacamos esta información en el terminal.
+Si fuera una nota no asociada a ningún lane implementado se pondrá esta información en el terminal.
 
 \subsubsection{Bucle principal de la reproducción}
 En el bucle principal de la reproducción se tiene que hacer varias cosas:
 
 Coger el tiempo actual, continuar animando el compás actual, ya que puede tener todavía notas a animar.
 
-Comprobamos que no estamos en el tiempo del siguiente compás. Si fuera de esta manera actualizamos el compás actual y lo quitamos de la lista de compases.
+Comprobar que no se esta en el tiempo del siguiente compás. Si fuera de esta manera se actualiza el compás actual y se quita de la lista de compases.
 
 Se da la orden de reproducción en todos los lanes auto, tanto los puramente auto como los configurados por el usuario.
 
-Se comprueba que no tenemos que eliminar ninguna nota por tiempo, en los lanes visuales.
+Se comprueba que no se tiene que eliminar ninguna nota por tiempo, en los lanes visuales.
 
-Y volvemos a usar un timer de Qt5 para hacer una parada en la CPU y que Qt5 pueda actualizar todos los elementos gráficos y después se volverá a llamar a este bucle principal.
+Y se vuelve a usar un timer de Qt5 para hacer una parada en la CPU y que Qt5 pueda actualizar todos los elementos gráficos y después se volverá a llamar a este bucle principal.
 
-\chapter{Detalles de implementación}
+\chapter{Detalles de la implementación}
 \section{Transformar .dtx a .dtx libre}
 
 La idea es bajarse canciones de internet y ejecutando alguno de los dos scripts de transformar a .dtx libre estos se encargaran de varias tareas:
@@ -3109,30 +3159,28 @@ La idea es bajarse canciones de internet y ejecutando alguno de los dos scripts 
 
 Se dan dos posibles scripts ya que hay .dtx que tienen los sonidos .xa o .wav dentro de una subcarpeta para mejorar la estructura de ficheros.
 
-Las canciones tendrian que estar dentro de la carpeta que contiene estos scripts ya que el wine necesita tener los path relativos para encontrar tanto los ficheros a transformar como el xa.exe para poder transformar de .xa a .wav.
+Las canciones tendrían que estar dentro de la carpeta que contiene estos scripts ya que el wine necesita tener los path relativos para encontrar tanto los ficheros a transformar como el xa.exe para poder transformar de .xa a .wav.
 
 \section{DRUM-HAT MIDI}
 
-Se ha conseguido un código independiente que si esta en cpu al mismo tiempo, que el pyDTX, el Drum-HAT emite señales MIDI que se pueden tratar.
+Se ha conseguido un código independiente que si esta en cpu al mismo tiempo, que el pyDTX, el Drum-HAT emite señales MIDI que se pueden tratar en este o otros programas que reciban información MIDI.
 
 \section{pyDTX}
 
-Se ha configurado un script de python con la opción de optimización, para que se mejore en lo posible la ejecución, viendo las ideas generales, el mayor problema de este proyecto es el buen uso de los timers y de la capacidad de la cpu para reproducir los simultáneamente todos sonidos en los lanes, de esto se encargara las librerías Qt5, en segundo plane queda el tema gráfico que también se encarga el Qt5 y puede limitar el uso del proyecto.
+Se ha configurado un script de python con la opción de optimización, para que se mejore en lo posible la ejecución, viendo las ideas generales, el mayor problema de este proyecto es el buen uso de los timers y de la capacidad de la cpu para reproducir simultáneamente todos sonidos en los lanes, de esto se encargara las librerías Qt5, en segundo plano queda el tema gráfico que también se encarga el Qt5.
 
-Son las librerias Qt5 que según su código y sistema operativo donde se esta ejecutando y daran acceso a la pantalla y al sonido. 
+Son las librerías Qt5 que según su código y sistema operativo donde se esta ejecutando, según los recursos disponibles obtendrán acceso a la pantalla y al sonido. 
 
 Se ha implementado el control MIDI vía Cython por lo que esta bastante optimizado.
 
 La programación se ha realizado de tal manera que siempre el sonido tiene prioridad, sobre los gráficos.
 
-Debido al poco uso de dobles lineas en un .dtx para un mismo compás y lane no se ha implementado.
+Debido al poco uso de dobles lineas en un .dtx para un mismo compás y lane en concreto, no se ha implementado, aunque este descrito en el formato, la descripción no indica que hacer si por error se crean dos notas al mismo tiempo en el mismo lane.
 
 \section{Instalación}
 
 \subsection{Fedora 25 - x86 64bits}
-En una distribución fedora 25 se ha probado con las siguientes instrucciones:
-
-Librerías necesarias que no están en una instalación básica.
+En una distribución fedora 25, las librerías necesarias y sus instrucciones para instalarlas son las siguientes:
 
 \begin{Verbatim}[frame=single]
     sudo dnf install alsa-lib-devel  
@@ -3144,7 +3192,7 @@ Librerías necesarias que no están en una instalación básica.
     sudo pip3 install rtmidi2
 \end{Verbatim}
 
-En un linux mint se tuvo que añadir las siguientes librerías para poder compilar el Cython
+En un linux mint se tuvo que añadir las siguientes librerías para poder compilar el Cython:
 
 \begin{Verbatim}[frame=single]
 sudo apt-get install python3-setuptools
@@ -3155,7 +3203,7 @@ sudo apt-get install python3-dev
 
 \subsection{Raspberry3 - armv7}
 
-En la raspberry3 en la distribución Raspbian y ubuntu
+En la raspberry3 en la distribución Raspbian y ubuntu, están son las librerías a instalar para este proyecto:
 
 \begin{Verbatim}[frame=single]
   sudo apt-get install librtaudio-dev
@@ -3170,14 +3218,14 @@ En la raspberry3 en la distribución Raspbian y ubuntu
   sudo apt-get install python3-pyqt5.qtopengl  
 \end{Verbatim}
 
-La instalación de las librerias Cython dura unos 20 minutos.
+Indicar que la instalación de las librerias Cython dura unos 20 minutos.
 
 En la distribución Raspbian la instrucción:
 \begin{Verbatim}[frame=single]
   sudo apt-get install librtmidi2   
 \end{Verbatim}
 
-No es necesaria ya que la instrucción anterior por dependencias la instala pero se ha dejado para tener las instrucciones tanto en raspbian como en ubuntu en el mismo lugar.
+No es necesaria ya que en la instrucción anterior por dependencias ya se la instala pero se ha dejado para tener las instrucciones tanto en raspbian como en ubuntu en el mismo lugar.
 
 \subsection{Conseguir el código fuente}
 
@@ -3200,7 +3248,7 @@ Si se quiere conseguir la utilidad para que el DrumHat genere señales MIDI, se 
 \end{Verbatim}
 
 \subsection{Problemas encontrados con .dtx de internet}
-Se ha de comentar que además de no tener toda la documentación en ingles, ya que el autor ha ido ampliando el formato según queria adaptarlo a las nuevas versiones del dtxmania hd o del gitadora, ha ido añadiendo posibles comandos de los que no hay ninguna documentación.
+Se ha de comentar que además de no tener toda la documentación en ingles, ya que el autor ha ido ampliando el formato según quería adaptarlo a las nuevas versiones del dtxmania hd o del gitadora, el autor también ha ido añadiendo posibles comandos de los que no hay ninguna documentación.
 
 Un claro ejemplo es el comando:
 
@@ -3209,46 +3257,43 @@ Un claro ejemplo es el comando:
 \end{Verbatim}
 
 
-Hay .dtx en internet donde no se cumple la documentación con errores del estilo:
+Hay .dtx en internet donde no se cumple la documentación de los .dtx con errores del estilo:
 
-No poner el caracter ``:'' cuando se ha de definir según que comando ejemplo : \#L1LABEL en vez de \#L1LABEL:
+No poner el caracter ``:'' cuando esta definido en la documentación ejemplo : \#L1LABEL en vez de \#L1LABEL:
 
 Apuntar a canales de sonido no definidos en el mismo .dtx.
 
-Todos estos errores no son tratados por el script que pasa de .dtx a .dtx libres, por lo que según que errores hacen que nuestro reproductor tenga fallos, se ha dejado la salida del terminal activa para poder tener controlados estos fallos y modificar el .dtx en consecuencia.
+Todos estos errores no son tratados por el script que pasa de .dtx a .dtx libres, por lo que según que errores pueden hacer que este reproductor tenga fallos, se ha dejado la salida del terminal activa para poder tener controlados estos fallos y modificar el .dtx en consecuencia.
 
 \subsection{Comentarios finales en la Raspberry}
 
-Detalle que para que funcione en raspbian tenemos que llamar al demonio pulseaudio, y si queremos usar el drumHat al mismo tiempo, también tendremos que llamar a nuestro programa MIDI-out-DrumHat, si queremos emplear el DrumHat como instrumento MIDI.
+Para que funcione en raspbian se tiene que llamar al demonio pulseaudio, y si además se quiere usar el drumHat al mismo tiempo, también se tendrá que llamar al programa MIDI-out-DrumHat.
 
-En la raspberry3 funciona pero el sonido se entrecorta, ya que no tiene suficiente potencia, se puede usar como lector de partituras pero no se aconseja estar pendiente del sonido que saca la rapsberry.
+En la raspberry3 este proyecto funciona pero el sonido se entrecorta, se puede usar como lector de partituras pero no se aconseja estar pendiente del sonido que saca la rapsberry.
 
 Como se puede observar el código esta funcionando por lo que solo es cuestión de tiempo o de alguna de las siguientes opciones:
 \begin{itemize}
-  \item El interprete de python pypy3 tenga soporte para las librerias qt5
-  \item Raspbian tenga un kernel en arm64 (La raspberry3 tiene una cpu capaz pero por no tener que mantener doble código por ahora solo dan la opción de armv7)
-  \item Se obtenga la aceleración OpenGL completa, de esta manera liberaremos la cpu para mejorar el sonido.
-  \item Se mejore el pulseaudio en la distribución Raspbian (Raspbian por ahora soporta ALSA de base ya que consume menos recursos)
-  \item Si sale una raspberry más potente
+  \item El interprete de python pypy3 tenga soporte para las librerias qt5.
+  \item Raspbian tenga un kernel en arm64 (La raspberry3 tiene una cpu capaz pero por no tener que mantener doble código por ahora la comunidad oficial solo dan la opción de armv7).
+  \item Se obtenga la aceleración OpenGL completa, de esta manera se liberara la cpu y se podrá mejorar los tiempos de latencia que afectan al sonido.
+  \item Se mejore el pulseaudio en la distribución Raspbian (Raspbian por ahora soporta ALSA de base ya que consume menos recursos).
+  \item Si sale una raspberry más potente.
 \end{itemize}
 
 También se podría probar en otros microordenadores como los ODROID, ya que estos tienen una cpu más potente que la Raspberry, aunque también se tendría que mirar su compatibilidad con OpenGL y las librerías Qt5.
 
 \subsection{Comentarios finales al proyecto}
-Ahora que se ha tenido que implementar un reproductor de .dtx en entornos libres, se han observado carencias en el formato o puntos flojos ya que se nota como se han ido añadiendo comandos a medida que pasaba el tiempo que no estaban pensados.
+Ahora que se ha tenido que implementar un reproductor de .dtx en entornos libres, se han observado carencias en el formato o puntos flojos ya que se han ido añadiendo comandos a medida que pasaba el tiempo que no estaban pensados en un origen.
 
 Aquí se expone una lista de posibles mejoras para un futuro formato.
 
-Un detalle que poco a poco se han dado cuenta es evitar los formatos con DRM, aunque eso muchas canciones continúan usando los .xa o .mp3.
-
-Referente a esto en los lanes visuales se suele usar sonidos del estilo rápido ya que es donde se colocan los sonidos de la batería, pero estaría bien tener un lane o varios que fueran específicamente para la música de fondo, de esta manera se simplificaría la parte de control de sonidos por si son .wav o .ogg.
-
-Simplificar el cambio de tempo dejando solo cambiar con valores absolutos, ya que es mucho más simple para el ordenador de programar.
-
-Se podría mejorar el tratamiento de los .dtx generando un fichero intermedio, ya que cada vez que queremos reproducir un .dtx, tenemos que repasar todo el .dtx para generar todos los compases, todas sus notas y asignar tiempos a estas notas, como todo esto no depende del tiempo de sincronización se podría crear un fichero que mientras no se modifique el .dtx asociado, y quitarnos tiempo de computación.
-
-Definir bien los lanes asociados a los platillos izquierdo y derecho, como ya se hizo con los pies, el problema de esto es que hay que rehacer canciones para tenerlas en el formato correcto.
-
+\begin{itemize}
+  \item Un detalle que poco a poco se han dado cuenta es evitar los formatos con DRM, aunque eso muchas canciones continúan usando los .xa o .mp3. 
+  \item Referente a esto en los lanes visuales se suele usar sonidos del estilo rápido ya que es donde se colocan los sonidos de la batería, pero estaría bien tener un lane o varios que fueran específicamente para la música de fondo, de esta manera se simplificaría la parte de control de sonidos por si son .wav o .ogg.
+  \item Simplificar el cambio de tempo dejando solo cambiar con valores absolutos, ya que es mucho más simple para el ordenador de programar.
+  \item Se podría mejorar el tratamiento de los .dtx generando un fichero intermedio, ya que cada vez que queremos reproducir un .dtx, tenemos que repasar todo el .dtx para generar todos los compases, todas sus notas y asignar tiempos a estas notas, como todo esto no depende del tiempo de sincronización se podría crear un fichero que mientras no se modifique el .dtx asociado, y quitarnos tiempo de computación.
+  \item Definir bien los lanes asociados a los platillos izquierdo y derecho, como ya se hizo con los pies, el problema de esto es que hay que rehacer canciones para tenerlas en el formato correcto.
+\end{itemize}
 
 \chapter{Posibles mejoras en el futuro}
 
@@ -3260,15 +3305,15 @@ Ampliar las ordenes del .dtx y los lanes implementados para tener un mayor porce
 
 Una opción que seria muy interesante y no esta implementada es conseguir que también en el menú de navegación de las canciones poder usar el instrumento-MIDI configurado como entrada para de esta manera poder arrancar el pyDTX y si esta la batería-MIDI bien configurada, poder usar todo el pyDTX sin dejar las baquetas.
 
-Aunque se muestra la puntuación no se guarda en ningún sitio ni hay una pantalla de final canción para comprobar tranquilamente que bien se ha tocado una canción, aquí según como se quiera entender el aprendizaje de la batería se debería implementar de distintas maneras ya que la básica de solo guardar la puntuación máxima, y no poder ver que parte de la canción ha sido donde se ha fallado, más para un entrenador de baterías seria muy interesante.
+Aunque se muestra la puntuación no se guarda en ningún sitio ni hay una pantalla de final canción para comprobar tranquilamente lo bien o mal, que se ha tocado una canción, aquí según como se quiera entender el aprendizaje de la batería se debería implementar de distintas maneras ya que la básica de solo guardar la puntuación máxima, y no poder ver que parte de la canción ha sido donde se ha fallado no es del todo correcta.
 
 Actualmente no hay ninguna animación para cuando se toca un Pad, esto es bueno en el aspecto que minimiza todo el uso de cpu para carga gráfica pero estaría bien tener una animación para cada lane para poder comprobar que nivel de sincronización tenemos en cada nota, ya que en las notas dobles es difícil saber que nota es la que no se ha tocado bien.
 
 No se analizan los box.def que pueden existir en las carpetas superiores de las canciones para tener o una imagen (de todo el álbum) o más información que solo el nombre de la carpeta.
 
-Para dejar todo más elegante estaría bien poner también unos fondos de pantalla en las pantallas de configuraciones, configurables según el tema que este escogido.
+Para dejar todo más elegante estaría bien poner también unos fondos de pantalla en las pantallas de configuraciones, dependientes del tema.
 
-Un detalle para acostumbrar a los baterías, para contar compases es que se pueda seleccionar si el número de compas y una linea horizontal de manera visual marcara el tiempo inicial de cada compás. 
+Un detalle para los baterías seria indicar al reproductor, que haga marcas visuales de en que compás esta la canción y marcar visualmente el inicio de cada compás.
 
 Seria interesante implementar este proyecto usando QtQuick2 ya que Qt5 se esta enfocando en su lenguaje QML, más que en los widgets, de esta manera logran todavía más una independencia mayor del sistema operativo y en teoría una mejor optimización de los recursos empleados.
 

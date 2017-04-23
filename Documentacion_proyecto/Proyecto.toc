@@ -85,7 +85,7 @@
 \contentsline {subsubsection}{C\IeC {\'o}digo de pydance}{64}{section*.76}
 \contentsline {subsection}{\numberline {2.1.3}DTXMania}{65}{subsection.2.1.3}
 \contentsline {subsubsection}{Configuraciones}{65}{section*.77}
-\contentsline {subsubsection}{Men\IeC {\'u}s fuera de la parte de tocar la bater\IeC {\'\i }a}{67}{section*.78}
+\contentsline {subsubsection}{Men\IeC {\'u}s fuera de la reproducci\IeC {\'o}n de las canciones}{67}{section*.78}
 \contentsline {section}{\numberline {2.2}Formatos a nivel b\IeC {\'a}sico de las canciones en juegos musicales}{68}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}FoFiX / PhaseShift}{68}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}MIDI}{70}{subsection.2.2.2}
@@ -218,105 +218,106 @@
 \contentsline {section}{\numberline {5.11}Comentarios sobre el proyecto}{111}{section.5.11}
 \contentsline {chapter}{\numberline {6}Especificaciones generales de dise\IeC {\~n}o}{112}{chapter.6}
 \contentsline {section}{\numberline {6.1}Consideraciones generales a python3}{112}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Configuraciones en disco duro}{113}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Cython y rtmidi2}{113}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}Gr\IeC {\'a}ficos en qt5}{114}{section.6.2}
-\contentsline {section}{\numberline {6.3}Animaciones en qt5}{114}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Ning\IeC {\'u}n timer, una gran animaci\IeC {\'o}n}{115}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Todas las notas con su timer}{115}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Un timer para el siguiente comp\IeC {\'a}s}{116}{subsection.6.3.3}
-\contentsline {subsection}{\numberline {6.3.4}Un timer \IeC {\'u}nico para el control del tiempo}{116}{subsection.6.3.4}
-\contentsline {section}{\numberline {6.4}Sonidos en qt5}{117}{section.6.4}
-\contentsline {chapter}{\numberline {7}pyDTX}{118}{chapter.7}
-\contentsline {section}{\numberline {7.1}Ideas generales}{118}{section.7.1}
-\contentsline {section}{\numberline {7.2}Pantalla principal}{118}{section.7.2}
-\contentsline {section}{\numberline {7.3}Pantalla Inicial}{119}{section.7.3}
-\contentsline {section}{\numberline {7.4}Pantalla configuraci\IeC {\'o}n bater\IeC {\'\i }a-MIDI}{119}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}MIDI}{121}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Configuraci\IeC {\'o}n MIDI en pyDTX}{121}{subsection.7.4.2}
-\contentsline {subsection}{\numberline {7.4.3}Bater\IeC {\'\i }as-MIDI y Lanes}{122}{subsection.7.4.3}
-\contentsline {subsubsection}{Pocos Pads para muchos lanes}{123}{section*.116}
-\contentsline {subsubsection}{Muchos Pads para pocos lanes}{124}{section*.117}
-\contentsline {subsubsection}{Casos especiales por respetar los dos al mismo tiempo}{124}{section*.118}
-\contentsline {section}{\numberline {7.5}Pantalla configuraci\IeC {\'o}n pyDTX}{125}{section.7.5}
-\contentsline {section}{\numberline {7.6}Pantalla Navegaci\IeC {\'o}n}{126}{section.7.6}
-\contentsline {subsubsection}{Informaci\IeC {\'o}n de la canci\IeC {\'o}n}{126}{section*.119}
-\contentsline {subsubsection}{Lista de las canciones y directorios actuales}{127}{section*.120}
-\contentsline {subsubsection}{Botonera para cambio de directorios o seleccionar canciones}{127}{section*.121}
-\contentsline {section}{\numberline {7.7}Reproducci\IeC {\'o}n de la canci\IeC {\'o}n}{129}{section.7.7}
-\contentsline {subsection}{\numberline {7.7.1}Inicializaci\IeC {\'o}n b\IeC {\'a}sica y detalles de Qt5}{129}{subsection.7.7.1}
-\contentsline {subsection}{\numberline {7.7.2}Inicializaci\IeC {\'o}n con una canci\IeC {\'o}n}{129}{subsection.7.7.2}
-\contentsline {subsection}{\numberline {7.7.3}Teclado}{129}{subsection.7.7.3}
-\contentsline {subsubsection}{Configurar teclado}{129}{section*.122}
-\contentsline {subsubsection}{Evento de teclado}{130}{section*.123}
-\contentsline {subsection}{\numberline {7.7.4}MIDI}{130}{subsection.7.7.4}
-\contentsline {subsubsection}{Configurar MIDI}{130}{section*.124}
-\contentsline {subsubsection}{Evento MIDI}{130}{section*.125}
-\contentsline {subsection}{\numberline {7.7.5}Lanes}{131}{subsection.7.7.5}
-\contentsline {subsection}{\numberline {7.7.6}Ideas b\IeC {\'a}sicas de los lanes}{131}{subsection.7.7.6}
-\contentsline {subsubsection}{Chips Auto}{131}{section*.126}
-\contentsline {subsubsection}{Chips Visuales}{131}{section*.127}
-\contentsline {subsubsection}{Lanes Auto}{132}{section*.128}
-\contentsline {subsubsection}{Lanes visuales}{132}{section*.129}
-\contentsline {subsubsection}{Reproducir una canci\IeC {\'o}n}{133}{section*.130}
-\contentsline {subsubsection}{Puntuaci\IeC {\'o}n}{134}{section*.131}
-\contentsline {subsubsection}{Continuamos actualizando los compases}{135}{section*.132}
-\contentsline {subsubsection}{Animar un comp\IeC {\'a}s}{136}{section*.133}
-\contentsline {subsubsection}{Bucle principal de la reproducci\IeC {\'o}n}{136}{section*.134}
-\contentsline {chapter}{\numberline {8}Detalles de implementaci\IeC {\'o}n}{138}{chapter.8}
-\contentsline {section}{\numberline {8.1}Transformar .dtx a .dtx libre}{138}{section.8.1}
-\contentsline {section}{\numberline {8.2}DRUM-HAT MIDI}{138}{section.8.2}
-\contentsline {section}{\numberline {8.3}pyDTX}{139}{section.8.3}
-\contentsline {section}{\numberline {8.4}Instalaci\IeC {\'o}n}{139}{section.8.4}
-\contentsline {subsection}{\numberline {8.4.1}Fedora 25 - x86 64bits}{139}{subsection.8.4.1}
-\contentsline {subsection}{\numberline {8.4.2}Raspberry3 - armv7}{140}{subsection.8.4.2}
-\contentsline {subsection}{\numberline {8.4.3}Conseguir el c\IeC {\'o}digo fuente}{140}{subsection.8.4.3}
-\contentsline {subsection}{\numberline {8.4.4}Problemas encontrados con .dtx de internet}{141}{subsection.8.4.4}
-\contentsline {subsection}{\numberline {8.4.5}Comentarios finales en la Raspberry}{141}{subsection.8.4.5}
-\contentsline {subsection}{\numberline {8.4.6}Comentarios finales al proyecto}{142}{subsection.8.4.6}
-\contentsline {chapter}{\numberline {9}Posibles mejoras en el futuro}{144}{chapter.9}
-\contentsline {chapter}{\numberline {A}C\IeC {\'o}digo fuente}{146}{appendix.Alph1}
-\contentsline {section}{\numberline {A.1}Transformar .dtx a .dtx libre}{146}{section.Alph1.1}
-\contentsline {section}{\numberline {A.2}DRUMHAT en instrumento midi}{146}{section.Alph1.2}
-\contentsline {section}{\numberline {A.3}pyDTX}{148}{section.Alph1.3}
-\contentsline {subsection}{\numberline {A.3.1}ChipAuto.py}{148}{subsection.Alph1.3.1}
-\contentsline {subsection}{\numberline {A.3.2}Chip.py}{148}{subsection.Alph1.3.2}
-\contentsline {subsection}{\numberline {A.3.3}LaneAuto.py}{150}{subsection.Alph1.3.3}
-\contentsline {subsection}{\numberline {A.3.4}LaneVisual.py}{151}{subsection.Alph1.3.4}
-\contentsline {subsection}{\numberline {A.3.5}main.py}{153}{subsection.Alph1.3.5}
-\contentsline {subsection}{\numberline {A.3.6}UtilidadesDTX.py}{154}{subsection.Alph1.3.6}
-\contentsline {subsection}{\numberline {A.3.7}MyMainWindowQt5.py}{158}{subsection.Alph1.3.7}
-\contentsline {subsection}{\numberline {A.3.8}MyWidgetConfigurarDrum.py}{160}{subsection.Alph1.3.8}
-\contentsline {subsection}{\numberline {A.3.9}MyWidgetConfigurarDTX.py}{165}{subsection.Alph1.3.9}
-\contentsline {subsection}{\numberline {A.3.10}MyWidgetNavegacion.py}{167}{subsection.Alph1.3.10}
-\contentsline {subsection}{\numberline {A.3.11}MyWidgetPuntuacion.py}{173}{subsection.Alph1.3.11}
-\contentsline {subsection}{\numberline {A.3.12}ReproductorDTX.py}{176}{subsection.Alph1.3.12}
-\contentsline {chapter}{\numberline {B}Gu\IeC {\'\i }a de estilo python}{188}{appendix.Alph2}
-\contentsline {section}{\numberline {B.1}Formateo del c\IeC {\'o}digo}{189}{section.Alph2.1}
-\contentsline {subsection}{\numberline {B.1.1}Indentaci\IeC {\'o}n}{189}{subsection.Alph2.1.1}
-\contentsline {subsection}{\numberline {B.1.2}Tama\IeC {\~n}o m\IeC {\'a}ximo de l\IeC {\'\i }nea}{189}{subsection.Alph2.1.2}
-\contentsline {subsection}{\numberline {B.1.3}L\IeC {\'\i }neas en blanco}{189}{subsection.Alph2.1.3}
-\contentsline {subsection}{\numberline {B.1.4}Codificaci\IeC {\'o}n de caracteres}{189}{subsection.Alph2.1.4}
-\contentsline {subsection}{\numberline {B.1.5}Imports}{189}{subsection.Alph2.1.5}
-\contentsline {subsection}{\numberline {B.1.6}Espacios en blanco en expresiones y sentencias}{190}{subsection.Alph2.1.6}
-\contentsline {subsection}{\numberline {B.1.7}Otras Recomendaciones}{191}{subsection.Alph2.1.7}
-\contentsline {section}{\numberline {B.2}Comentarios}{193}{section.Alph2.2}
-\contentsline {subsection}{\numberline {B.2.1}Comentarios de bloque}{193}{subsection.Alph2.2.1}
-\contentsline {subsection}{\numberline {B.2.2}Comentarios en l\IeC {\'\i }nea}{193}{subsection.Alph2.2.2}
-\contentsline {section}{\numberline {B.3}Cadenas de Documentaci\IeC {\'o}n}{194}{section.Alph2.3}
-\contentsline {section}{\numberline {B.4}Convenciones de nombres}{194}{section.Alph2.4}
-\contentsline {subsection}{\numberline {B.4.1}Descriptivo: Estilos de Nombrado}{194}{subsection.Alph2.4.1}
-\contentsline {subsection}{\numberline {B.4.2}Prescriptivo: Convenciones de Nombrado}{196}{subsection.Alph2.4.2}
-\contentsline {subsubsection}{Nombres a Evitar}{196}{section*.135}
-\contentsline {subsubsection}{Nombres de Paquetes y M\IeC {\'o}dulos}{196}{section*.136}
-\contentsline {subsubsection}{Nombres de Clases}{196}{section*.137}
-\contentsline {subsubsection}{Nombres de Excepciones}{197}{section*.138}
-\contentsline {subsubsection}{Nombres de Variables Globales}{197}{section*.139}
-\contentsline {subsubsection}{Nombres de Funciones}{197}{section*.140}
-\contentsline {subsubsection}{Argumentos de funciones y m\IeC {\'e}todos}{197}{section*.141}
-\contentsline {subsubsection}{Nombres de m\IeC {\'e}todos y variables de instancia}{198}{section*.142}
-\contentsline {subsubsection}{Dise\IeC {\~n}ar para la herencia}{198}{section*.143}
-\contentsline {section}{\numberline {B.5}Recomendaciones para la programaci\IeC {\'o}n}{199}{section.Alph2.5}
-\contentsline {chapter}{\numberline {C}GNU GENERAL PUBLIC LICENSE}{203}{appendix.Alph3}
-\contentsline {chapter}{Glosario}{204}{section*.144}
-\contentsline {chapter}{\numberline {D}Bibliograf\IeC {\'\i }a}{205}{appendix.Alph4}
+\contentsline {subsection}{\numberline {6.1.1}Posibles librer\IeC {\'\i }as gr\IeC {\'a}ficas y de sonido: pygame / tkinter / Qt5}{113}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Configuraciones en disco duro: configparser}{114}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}MIDI: pygame / Cython y rtmidi2}{114}{subsection.6.1.3}
+\contentsline {section}{\numberline {6.2}Gr\IeC {\'a}ficos en qt5}{115}{section.6.2}
+\contentsline {section}{\numberline {6.3}Animaciones en qt5}{115}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Ning\IeC {\'u}n timer, una gran animaci\IeC {\'o}n}{116}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Todas las notas con su timer}{116}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Un timer para el siguiente comp\IeC {\'a}s}{117}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}Un timer \IeC {\'u}nico para el control del tiempo}{117}{subsection.6.3.4}
+\contentsline {section}{\numberline {6.4}Sonidos en qt5}{118}{section.6.4}
+\contentsline {chapter}{\numberline {7}pyDTX}{119}{chapter.7}
+\contentsline {section}{\numberline {7.1}Ideas generales}{119}{section.7.1}
+\contentsline {section}{\numberline {7.2}Pantalla principal}{119}{section.7.2}
+\contentsline {section}{\numberline {7.3}Pantalla Inicial}{120}{section.7.3}
+\contentsline {section}{\numberline {7.4}Pantalla configuraci\IeC {\'o}n bater\IeC {\'\i }a-MIDI}{120}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}MIDI}{122}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Configuraci\IeC {\'o}n MIDI en pyDTX}{122}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.3}Bater\IeC {\'\i }as-MIDI y Lanes}{123}{subsection.7.4.3}
+\contentsline {subsubsection}{Pocos Pads para muchos lanes}{125}{section*.116}
+\contentsline {subsubsection}{Muchos Pads para pocos lanes}{125}{section*.117}
+\contentsline {subsubsection}{Casos especiales por respetar los dos al mismo tiempo}{125}{section*.118}
+\contentsline {section}{\numberline {7.5}Pantalla configuraci\IeC {\'o}n pyDTX}{126}{section.7.5}
+\contentsline {section}{\numberline {7.6}Pantalla Navegaci\IeC {\'o}n}{127}{section.7.6}
+\contentsline {subsubsection}{Informaci\IeC {\'o}n de la canci\IeC {\'o}n}{128}{section*.119}
+\contentsline {subsubsection}{Lista de las canciones y directorios actuales}{128}{section*.120}
+\contentsline {subsubsection}{Botonera para cambio de directorios o seleccionar canciones}{129}{section*.121}
+\contentsline {section}{\numberline {7.7}Reproducci\IeC {\'o}n de la canci\IeC {\'o}n}{131}{section.7.7}
+\contentsline {subsection}{\numberline {7.7.1}Inicializaci\IeC {\'o}n b\IeC {\'a}sica y detalles de Qt5}{131}{subsection.7.7.1}
+\contentsline {subsection}{\numberline {7.7.2}Inicializaci\IeC {\'o}n con una canci\IeC {\'o}n}{131}{subsection.7.7.2}
+\contentsline {subsection}{\numberline {7.7.3}Teclado}{131}{subsection.7.7.3}
+\contentsline {subsubsection}{Configurar teclado}{131}{section*.122}
+\contentsline {subsubsection}{Evento de teclado}{132}{section*.123}
+\contentsline {subsection}{\numberline {7.7.4}MIDI}{132}{subsection.7.7.4}
+\contentsline {subsubsection}{Configurar MIDI}{132}{section*.124}
+\contentsline {subsubsection}{Evento MIDI}{132}{section*.125}
+\contentsline {subsection}{\numberline {7.7.5}Lanes}{133}{subsection.7.7.5}
+\contentsline {subsection}{\numberline {7.7.6}Ideas b\IeC {\'a}sicas de los lanes}{133}{subsection.7.7.6}
+\contentsline {subsubsection}{Chips Auto}{133}{section*.126}
+\contentsline {subsubsection}{Chips Visuales}{133}{section*.127}
+\contentsline {subsubsection}{Lanes Auto}{134}{section*.128}
+\contentsline {subsubsection}{Lanes visuales}{134}{section*.129}
+\contentsline {subsubsection}{Reproducir una canci\IeC {\'o}n}{135}{section*.130}
+\contentsline {subsubsection}{Puntuaci\IeC {\'o}n}{136}{section*.131}
+\contentsline {subsubsection}{Continuamos actualizando los compases}{137}{section*.132}
+\contentsline {subsubsection}{Animar un comp\IeC {\'a}s}{138}{section*.133}
+\contentsline {subsubsection}{Bucle principal de la reproducci\IeC {\'o}n}{138}{section*.134}
+\contentsline {chapter}{\numberline {8}Detalles de la implementaci\IeC {\'o}n}{140}{chapter.8}
+\contentsline {section}{\numberline {8.1}Transformar .dtx a .dtx libre}{140}{section.8.1}
+\contentsline {section}{\numberline {8.2}DRUM-HAT MIDI}{140}{section.8.2}
+\contentsline {section}{\numberline {8.3}pyDTX}{141}{section.8.3}
+\contentsline {section}{\numberline {8.4}Instalaci\IeC {\'o}n}{141}{section.8.4}
+\contentsline {subsection}{\numberline {8.4.1}Fedora 25 - x86 64bits}{141}{subsection.8.4.1}
+\contentsline {subsection}{\numberline {8.4.2}Raspberry3 - armv7}{142}{subsection.8.4.2}
+\contentsline {subsection}{\numberline {8.4.3}Conseguir el c\IeC {\'o}digo fuente}{142}{subsection.8.4.3}
+\contentsline {subsection}{\numberline {8.4.4}Problemas encontrados con .dtx de internet}{143}{subsection.8.4.4}
+\contentsline {subsection}{\numberline {8.4.5}Comentarios finales en la Raspberry}{144}{subsection.8.4.5}
+\contentsline {subsection}{\numberline {8.4.6}Comentarios finales al proyecto}{144}{subsection.8.4.6}
+\contentsline {chapter}{\numberline {9}Posibles mejoras en el futuro}{146}{chapter.9}
+\contentsline {chapter}{\numberline {A}C\IeC {\'o}digo fuente}{148}{appendix.Alph1}
+\contentsline {section}{\numberline {A.1}Transformar .dtx a .dtx libre}{148}{section.Alph1.1}
+\contentsline {section}{\numberline {A.2}DRUMHAT en instrumento midi}{148}{section.Alph1.2}
+\contentsline {section}{\numberline {A.3}pyDTX}{150}{section.Alph1.3}
+\contentsline {subsection}{\numberline {A.3.1}ChipAuto.py}{150}{subsection.Alph1.3.1}
+\contentsline {subsection}{\numberline {A.3.2}Chip.py}{150}{subsection.Alph1.3.2}
+\contentsline {subsection}{\numberline {A.3.3}LaneAuto.py}{152}{subsection.Alph1.3.3}
+\contentsline {subsection}{\numberline {A.3.4}LaneVisual.py}{153}{subsection.Alph1.3.4}
+\contentsline {subsection}{\numberline {A.3.5}main.py}{155}{subsection.Alph1.3.5}
+\contentsline {subsection}{\numberline {A.3.6}UtilidadesDTX.py}{156}{subsection.Alph1.3.6}
+\contentsline {subsection}{\numberline {A.3.7}MyMainWindowQt5.py}{160}{subsection.Alph1.3.7}
+\contentsline {subsection}{\numberline {A.3.8}MyWidgetConfigurarDrum.py}{162}{subsection.Alph1.3.8}
+\contentsline {subsection}{\numberline {A.3.9}MyWidgetConfigurarDTX.py}{167}{subsection.Alph1.3.9}
+\contentsline {subsection}{\numberline {A.3.10}MyWidgetNavegacion.py}{169}{subsection.Alph1.3.10}
+\contentsline {subsection}{\numberline {A.3.11}MyWidgetPuntuacion.py}{175}{subsection.Alph1.3.11}
+\contentsline {subsection}{\numberline {A.3.12}ReproductorDTX.py}{178}{subsection.Alph1.3.12}
+\contentsline {chapter}{\numberline {B}Gu\IeC {\'\i }a de estilo python}{190}{appendix.Alph2}
+\contentsline {section}{\numberline {B.1}Formateo del c\IeC {\'o}digo}{191}{section.Alph2.1}
+\contentsline {subsection}{\numberline {B.1.1}Indentaci\IeC {\'o}n}{191}{subsection.Alph2.1.1}
+\contentsline {subsection}{\numberline {B.1.2}Tama\IeC {\~n}o m\IeC {\'a}ximo de l\IeC {\'\i }nea}{191}{subsection.Alph2.1.2}
+\contentsline {subsection}{\numberline {B.1.3}L\IeC {\'\i }neas en blanco}{191}{subsection.Alph2.1.3}
+\contentsline {subsection}{\numberline {B.1.4}Codificaci\IeC {\'o}n de caracteres}{191}{subsection.Alph2.1.4}
+\contentsline {subsection}{\numberline {B.1.5}Imports}{191}{subsection.Alph2.1.5}
+\contentsline {subsection}{\numberline {B.1.6}Espacios en blanco en expresiones y sentencias}{192}{subsection.Alph2.1.6}
+\contentsline {subsection}{\numberline {B.1.7}Otras Recomendaciones}{193}{subsection.Alph2.1.7}
+\contentsline {section}{\numberline {B.2}Comentarios}{195}{section.Alph2.2}
+\contentsline {subsection}{\numberline {B.2.1}Comentarios de bloque}{195}{subsection.Alph2.2.1}
+\contentsline {subsection}{\numberline {B.2.2}Comentarios en l\IeC {\'\i }nea}{195}{subsection.Alph2.2.2}
+\contentsline {section}{\numberline {B.3}Cadenas de Documentaci\IeC {\'o}n}{196}{section.Alph2.3}
+\contentsline {section}{\numberline {B.4}Convenciones de nombres}{196}{section.Alph2.4}
+\contentsline {subsection}{\numberline {B.4.1}Descriptivo: Estilos de Nombrado}{196}{subsection.Alph2.4.1}
+\contentsline {subsection}{\numberline {B.4.2}Prescriptivo: Convenciones de Nombrado}{198}{subsection.Alph2.4.2}
+\contentsline {subsubsection}{Nombres a Evitar}{198}{section*.135}
+\contentsline {subsubsection}{Nombres de Paquetes y M\IeC {\'o}dulos}{198}{section*.136}
+\contentsline {subsubsection}{Nombres de Clases}{198}{section*.137}
+\contentsline {subsubsection}{Nombres de Excepciones}{199}{section*.138}
+\contentsline {subsubsection}{Nombres de Variables Globales}{199}{section*.139}
+\contentsline {subsubsection}{Nombres de Funciones}{199}{section*.140}
+\contentsline {subsubsection}{Argumentos de funciones y m\IeC {\'e}todos}{199}{section*.141}
+\contentsline {subsubsection}{Nombres de m\IeC {\'e}todos y variables de instancia}{200}{section*.142}
+\contentsline {subsubsection}{Dise\IeC {\~n}ar para la herencia}{200}{section*.143}
+\contentsline {section}{\numberline {B.5}Recomendaciones para la programaci\IeC {\'o}n}{201}{section.Alph2.5}
+\contentsline {chapter}{\numberline {C}GNU GENERAL PUBLIC LICENSE}{205}{appendix.Alph3}
+\contentsline {chapter}{Glosario}{206}{section*.144}
+\contentsline {chapter}{\numberline {D}Bibliograf\IeC {\'\i }a}{207}{appendix.Alph4}
