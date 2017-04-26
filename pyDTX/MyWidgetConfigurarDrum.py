@@ -32,6 +32,8 @@ class MyWidgetConfigurarDrum(QtWidgets.QWidget):
         self.ui.portsConnectedButton.pressed.connect(self.view_ports)
         self.ui.viewNotesButton.pressed.connect(self.view_note)
 
+        self.midi_in = None
+
     def view_ports(self):
         """
             Mostramos en el text asociado, que puertos (instrumentos) MIDI
@@ -77,6 +79,7 @@ class MyWidgetConfigurarDrum(QtWidgets.QWidget):
             al widget principal y desactivamos el MIDI
         """
         self.midi_in = None
+        self.ui.viewNotesLineEdit.setText("")
         self.parentWidget().setCurrentIndex(0)
 
     def leer_lane_drum(self, lane, auto, midi1, midi2, key):
