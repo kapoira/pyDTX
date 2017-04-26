@@ -63,6 +63,7 @@ class LaneVisual(LaneAuto):
                     nota_mas_cercana = nota
         if nota_mas_cercana:
             nota_mas_cercana.set_hit()
+            self.banco_sonidos[nota_mas_cercana.leer_nota()].play()
         return tiempo_menor
 
     def comprobar_tiempo(self, tiempo_actual):
