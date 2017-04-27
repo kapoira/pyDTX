@@ -206,7 +206,7 @@ class ReproductorDTX(QtWidgets.QGraphicsView):
             fichero: fichero .dtx a reproducir
             tiempo_pantalla: tiempo que tardara un chip en recorrer la pantalla
         """
-        #Leemos la configuración ya que puede cambiar entre canciones
+        #Leer la configuración ya que puede cambiar entre canciones
         self.leer_config_dtx()
         self.leer_config_drum()
 
@@ -215,6 +215,9 @@ class ReproductorDTX(QtWidgets.QGraphicsView):
         #Quitamos 6 pixeles de margen de Qt
         self.scene.setSceneRect(QtCore.QRectF(0, 0, 1264, 714))
         self.setScene(self.scene)
+        #En el widget actual se indica la resolución interna, por si se hubiera
+        #reescalado en otros widgets
+        self.fitInView(QtCore.QRectF(0, 0, 1264, 714))
 
         self.tiempo_pantalla = tiempo_pantalla
 
