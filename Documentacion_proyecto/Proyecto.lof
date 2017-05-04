@@ -1,38 +1,38 @@
 \select@language {spanish}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Controlador del Guitar Hero}}{14}{figure.1.1}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Interfaz del Guitar Hero}}{15}{figure.1.2}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Bater\IeC {\'\i }a de Rock Band}}{16}{figure.1.3}
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Bater\IeC {\'\i }a de Rock Band Pro}}{16}{figure.1.4}
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Interfaz del DDR}}{19}{figure.1.5}
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Interfaz del Drum Mania}}{21}{figure.1.6}
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Mueble arcade del Drum Mania}}{21}{figure.1.7}
-\contentsline {figure}{\numberline {1.8}{\ignorespaces Mueble arcade del Gitadora}}{22}{figure.1.8}
-\contentsline {figure}{\numberline {1.9}{\ignorespaces Conector cl\IeC {\'a}sico MIDI}}{34}{figure.1.9}
-\contentsline {figure}{\numberline {1.10}{\ignorespaces Ejemplo de bater\IeC {\'\i }a electr\IeC {\'o}nica de 4 pads basada en Arduino}}{41}{figure.1.10}
-\contentsline {figure}{\numberline {1.11}{\ignorespaces Yamaha DD-65}}{42}{figure.1.11}
-\contentsline {figure}{\numberline {1.12}{\ignorespaces Roland V-Drums Lite HD-3}}{43}{figure.1.12}
-\contentsline {figure}{\numberline {1.13}{\ignorespaces Roland TD-30}}{44}{figure.1.13}
-\contentsline {figure}{\numberline {1.14}{\ignorespaces Raspberry Pi 3 B}}{51}{figure.1.14}
-\contentsline {figure}{\numberline {1.15}{\ignorespaces Piano HAT}}{54}{figure.1.15}
-\contentsline {figure}{\numberline {1.16}{\ignorespaces Drum HAT}}{55}{figure.1.16}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Controlador del Guitar Hero}}{15}{figure.1.1}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Interfaz del Guitar Hero}}{16}{figure.1.2}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Bater\IeC {\'\i }a de Rock Band}}{17}{figure.1.3}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Bater\IeC {\'\i }a de Rock Band Pro}}{17}{figure.1.4}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Interfaz del DDR}}{20}{figure.1.5}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Interfaz del Drum Mania}}{22}{figure.1.6}
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Mueble arcade del Drum Mania}}{22}{figure.1.7}
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Mueble arcade del Gitadora}}{23}{figure.1.8}
+\contentsline {figure}{\numberline {1.9}{\ignorespaces Conector cl\IeC {\'a}sico MIDI}}{35}{figure.1.9}
+\contentsline {figure}{\numberline {1.10}{\ignorespaces Ejemplo de bater\IeC {\'\i }a electr\IeC {\'o}nica de 4 pads basada en Arduino}}{42}{figure.1.10}
+\contentsline {figure}{\numberline {1.11}{\ignorespaces Yamaha DD-65}}{43}{figure.1.11}
+\contentsline {figure}{\numberline {1.12}{\ignorespaces Roland V-Drums Lite HD-3}}{44}{figure.1.12}
+\contentsline {figure}{\numberline {1.13}{\ignorespaces Roland TD-30}}{45}{figure.1.13}
+\contentsline {figure}{\numberline {1.14}{\ignorespaces Raspberry Pi 3 B}}{52}{figure.1.14}
+\contentsline {figure}{\numberline {1.15}{\ignorespaces Piano HAT}}{55}{figure.1.15}
+\contentsline {figure}{\numberline {1.16}{\ignorespaces Drum HAT}}{56}{figure.1.16}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Grupo HH}}{82}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Grupo FT}}{83}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Grupo CY}}{84}{figure.3.3}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Grupo HH}}{83}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Grupo FT}}{84}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Grupo CY}}{85}{figure.3.3}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Explicaci\IeC {\'o}n lista objetos}}{101}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Explicaci\IeC {\'o}n varias lista objetos }}{102}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Explicaci\IeC {\'o}n barra reducida}}{106}{figure.5.3}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Explicaci\IeC {\'o}n lista objetos}}{102}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Explicaci\IeC {\'o}n varias lista objetos }}{103}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Explicaci\IeC {\'o}n barra reducida}}{107}{figure.5.3}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Pantalla Inicial}}{120}{figure.7.1}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Widget Configurar Drum}}{121}{figure.7.2}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Widget Configurar DTX}}{127}{figure.7.3}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Widget Navegacion}}{128}{figure.7.4}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Widget Puntuaci\IeC {\'o}n}}{137}{figure.7.5}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Pantalla Inicial}}{121}{figure.7.1}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Widget Configurar Drum}}{122}{figure.7.2}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Widget Configurar DTX}}{128}{figure.7.3}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Widget Navegacion}}{129}{figure.7.4}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Widget Puntuaci\IeC {\'o}n}}{138}{figure.7.5}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

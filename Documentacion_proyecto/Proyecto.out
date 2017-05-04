@@ -143,40 +143,42 @@
 \BOOKMARK [2][-]{subsection.8.4.4}{Problemas encontrados con .dtx de internet}{section.8.4}% 143
 \BOOKMARK [2][-]{subsection.8.4.5}{Comentarios finales en la Raspberry}{section.8.4}% 144
 \BOOKMARK [2][-]{subsection.8.4.6}{Comentarios finales al proyecto}{section.8.4}% 145
-\BOOKMARK [0][-]{chapter.9}{Posibles mejoras en el futuro}{}% 146
-\BOOKMARK [0][-]{appendix.Alph1}{C\363digo fuente}{}% 147
-\BOOKMARK [1][-]{section.Alph1.1}{Transformar .dtx a .dtx libre}{appendix.Alph1}% 148
-\BOOKMARK [1][-]{section.Alph1.2}{DRUMHAT en instrumento midi}{appendix.Alph1}% 149
-\BOOKMARK [1][-]{section.Alph1.3}{pyDTX}{appendix.Alph1}% 150
-\BOOKMARK [2][-]{subsection.Alph1.3.1}{ChipAuto.py}{section.Alph1.3}% 151
-\BOOKMARK [2][-]{subsection.Alph1.3.2}{Chip.py}{section.Alph1.3}% 152
-\BOOKMARK [2][-]{subsection.Alph1.3.3}{LaneAuto.py}{section.Alph1.3}% 153
-\BOOKMARK [2][-]{subsection.Alph1.3.4}{LaneVisual.py}{section.Alph1.3}% 154
-\BOOKMARK [2][-]{subsection.Alph1.3.5}{main.py}{section.Alph1.3}% 155
-\BOOKMARK [2][-]{subsection.Alph1.3.6}{UtilidadesDTX.py}{section.Alph1.3}% 156
-\BOOKMARK [2][-]{subsection.Alph1.3.7}{MyMainWindowQt5.py}{section.Alph1.3}% 157
-\BOOKMARK [2][-]{subsection.Alph1.3.8}{MyWidgetConfigurarDrum.py}{section.Alph1.3}% 158
-\BOOKMARK [2][-]{subsection.Alph1.3.9}{MyWidgetConfigurarDTX.py}{section.Alph1.3}% 159
-\BOOKMARK [2][-]{subsection.Alph1.3.10}{MyWidgetNavegacion.py}{section.Alph1.3}% 160
-\BOOKMARK [2][-]{subsection.Alph1.3.11}{MyWidgetPuntuacion.py}{section.Alph1.3}% 161
-\BOOKMARK [2][-]{subsection.Alph1.3.12}{ReproductorDTX.py}{section.Alph1.3}% 162
-\BOOKMARK [0][-]{appendix.Alph2}{Gu\355a de estilo python}{}% 163
-\BOOKMARK [1][-]{section.Alph2.1}{Formateo del c\363digo}{appendix.Alph2}% 164
-\BOOKMARK [2][-]{subsection.Alph2.1.1}{Indentaci\363n}{section.Alph2.1}% 165
-\BOOKMARK [2][-]{subsection.Alph2.1.2}{Tama\361o m\341ximo de l\355nea}{section.Alph2.1}% 166
-\BOOKMARK [2][-]{subsection.Alph2.1.3}{L\355neas en blanco}{section.Alph2.1}% 167
-\BOOKMARK [2][-]{subsection.Alph2.1.4}{Codificaci\363n de caracteres}{section.Alph2.1}% 168
-\BOOKMARK [2][-]{subsection.Alph2.1.5}{Imports}{section.Alph2.1}% 169
-\BOOKMARK [2][-]{subsection.Alph2.1.6}{Espacios en blanco en expresiones y sentencias}{section.Alph2.1}% 170
-\BOOKMARK [2][-]{subsection.Alph2.1.7}{Otras Recomendaciones}{section.Alph2.1}% 171
-\BOOKMARK [1][-]{section.Alph2.2}{Comentarios}{appendix.Alph2}% 172
-\BOOKMARK [2][-]{subsection.Alph2.2.1}{Comentarios de bloque}{section.Alph2.2}% 173
-\BOOKMARK [2][-]{subsection.Alph2.2.2}{Comentarios en l\355nea}{section.Alph2.2}% 174
-\BOOKMARK [1][-]{section.Alph2.3}{Cadenas de Documentaci\363n}{appendix.Alph2}% 175
-\BOOKMARK [1][-]{section.Alph2.4}{Convenciones de nombres}{appendix.Alph2}% 176
-\BOOKMARK [2][-]{subsection.Alph2.4.1}{Descriptivo: Estilos de Nombrado}{section.Alph2.4}% 177
-\BOOKMARK [2][-]{subsection.Alph2.4.2}{Prescriptivo: Convenciones de Nombrado}{section.Alph2.4}% 178
-\BOOKMARK [1][-]{section.Alph2.5}{Recomendaciones para la programaci\363n}{appendix.Alph2}% 179
-\BOOKMARK [0][-]{appendix.Alph3}{GNU GENERAL PUBLIC LICENSE}{}% 180
-\BOOKMARK [0][-]{section*.144}{Glosario}{}% 181
-\BOOKMARK [0][-]{appendix.Alph4}{Bibliograf\355a}{}% 182
+\BOOKMARK [0][-]{chapter.9}{Consideraciones finales del proyecto, posibles mejoras y futuras ampliaciones}{}% 146
+\BOOKMARK [1][-]{section.9.1}{Consideraciones finales}{chapter.9}% 147
+\BOOKMARK [1][-]{section.9.2}{Posibles mejoras y futuras ampliaciones}{chapter.9}% 148
+\BOOKMARK [0][-]{appendix.Alph1}{C\363digo fuente}{}% 149
+\BOOKMARK [1][-]{section.Alph1.1}{Transformar .dtx a .dtx libre}{appendix.Alph1}% 150
+\BOOKMARK [1][-]{section.Alph1.2}{DRUMHAT en instrumento midi}{appendix.Alph1}% 151
+\BOOKMARK [1][-]{section.Alph1.3}{pyDTX}{appendix.Alph1}% 152
+\BOOKMARK [2][-]{subsection.Alph1.3.1}{ChipAuto.py}{section.Alph1.3}% 153
+\BOOKMARK [2][-]{subsection.Alph1.3.2}{Chip.py}{section.Alph1.3}% 154
+\BOOKMARK [2][-]{subsection.Alph1.3.3}{LaneAuto.py}{section.Alph1.3}% 155
+\BOOKMARK [2][-]{subsection.Alph1.3.4}{LaneVisual.py}{section.Alph1.3}% 156
+\BOOKMARK [2][-]{subsection.Alph1.3.5}{main.py}{section.Alph1.3}% 157
+\BOOKMARK [2][-]{subsection.Alph1.3.6}{UtilidadesDTX.py}{section.Alph1.3}% 158
+\BOOKMARK [2][-]{subsection.Alph1.3.7}{MyMainWindowQt5.py}{section.Alph1.3}% 159
+\BOOKMARK [2][-]{subsection.Alph1.3.8}{MyWidgetConfigurarDrum.py}{section.Alph1.3}% 160
+\BOOKMARK [2][-]{subsection.Alph1.3.9}{MyWidgetConfigurarDTX.py}{section.Alph1.3}% 161
+\BOOKMARK [2][-]{subsection.Alph1.3.10}{MyWidgetNavegacion.py}{section.Alph1.3}% 162
+\BOOKMARK [2][-]{subsection.Alph1.3.11}{MyWidgetPuntuacion.py}{section.Alph1.3}% 163
+\BOOKMARK [2][-]{subsection.Alph1.3.12}{ReproductorDTX.py}{section.Alph1.3}% 164
+\BOOKMARK [0][-]{appendix.Alph2}{Gu\355a de estilo python}{}% 165
+\BOOKMARK [1][-]{section.Alph2.1}{Formateo del c\363digo}{appendix.Alph2}% 166
+\BOOKMARK [2][-]{subsection.Alph2.1.1}{Indentaci\363n}{section.Alph2.1}% 167
+\BOOKMARK [2][-]{subsection.Alph2.1.2}{Tama\361o m\341ximo de l\355nea}{section.Alph2.1}% 168
+\BOOKMARK [2][-]{subsection.Alph2.1.3}{L\355neas en blanco}{section.Alph2.1}% 169
+\BOOKMARK [2][-]{subsection.Alph2.1.4}{Codificaci\363n de caracteres}{section.Alph2.1}% 170
+\BOOKMARK [2][-]{subsection.Alph2.1.5}{Imports}{section.Alph2.1}% 171
+\BOOKMARK [2][-]{subsection.Alph2.1.6}{Espacios en blanco en expresiones y sentencias}{section.Alph2.1}% 172
+\BOOKMARK [2][-]{subsection.Alph2.1.7}{Otras Recomendaciones}{section.Alph2.1}% 173
+\BOOKMARK [1][-]{section.Alph2.2}{Comentarios}{appendix.Alph2}% 174
+\BOOKMARK [2][-]{subsection.Alph2.2.1}{Comentarios de bloque}{section.Alph2.2}% 175
+\BOOKMARK [2][-]{subsection.Alph2.2.2}{Comentarios en l\355nea}{section.Alph2.2}% 176
+\BOOKMARK [1][-]{section.Alph2.3}{Cadenas de Documentaci\363n}{appendix.Alph2}% 177
+\BOOKMARK [1][-]{section.Alph2.4}{Convenciones de nombres}{appendix.Alph2}% 178
+\BOOKMARK [2][-]{subsection.Alph2.4.1}{Descriptivo: Estilos de Nombrado}{section.Alph2.4}% 179
+\BOOKMARK [2][-]{subsection.Alph2.4.2}{Prescriptivo: Convenciones de Nombrado}{section.Alph2.4}% 180
+\BOOKMARK [1][-]{section.Alph2.5}{Recomendaciones para la programaci\363n}{appendix.Alph2}% 181
+\BOOKMARK [0][-]{appendix.Alph3}{GNU GENERAL PUBLIC LICENSE}{}% 182
+\BOOKMARK [0][-]{section*.144}{Glosario}{}% 183
+\BOOKMARK [0][-]{appendix.Alph4}{Bibliograf\355a}{}% 184

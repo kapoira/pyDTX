@@ -71,7 +71,7 @@ mi familia}
 
 \chapter{Introducción}
 
-	 El objetivo de este proyecto es un reproductor de canciones DTXMANIA, en entornos de código abierto. Para ello se tendrá que implementar la idea de como es este formato, y que es necesario hacer para poder reproducirlo con algunos de sus añadidos.
+	 El objetivo de este proyecto es un reproductor de canciones DTXMANIA, en entornos de código abierto. Para ello se tendrá que entender y trabajar la idea de como es este formato, y que es necesario hacer para poder reproducirlo con algunos de sus añadidos.
 
 
 \par
@@ -312,7 +312,7 @@ Esto genera un problema en las canciones del DTXMania (si se quieren usar en el 
 El programador del DTXMania tomo la decisión de mantener los dos programas al mismo tiempo, y que fuera el usuario que escogiera según el tipo de canción que reproductor usar, o usando el DTXManiaHD saber que si usaba una canción del DTXMania podría tener conflictos con como manejar el doble bombo. Esto se explicara con más detalle más adelante del proyecto.
 
 \subsection{Historia. Composición musical mediante ordenador}
-Ahora que tenemos una visión de los simuladores y juegos musicales principales que hay actualmente, se tiene que hacer un pequeño resumen sobre la historia de la composición musical mediante ordenador para poder entender mejor las relaciones que tendremos entre baterías musicales MIDI y el reproductor de DTXMania.
+Ahora que tenemos una visión de los simuladores y juegos musicales principales que hay actualmente, se hace preciso efectuar un pequeño resumen sobre la historia de la composición musical mediante ordenador para poder entender mejor las relaciones que tendremos entre baterías musicales MIDI y el reproductor de DTXMania.
 
 En 1878, Thomas A. Edison patentó el fonógrafo, que utilizaba cilindros para grabar sonidos y poder reproducirlos de nuevos. Aunque se siguieron utilizando los cilindros durante algún tiempo, este invento revoluciono el concepto de la música.
 
@@ -3295,9 +3295,23 @@ Aquí se expone una lista de posibles mejoras para un futuro formato.
   \item Definir bien los lanes asociados a los platillos izquierdo y derecho, como ya se hizo con los pies, el problema de esto es que hay que rehacer canciones para tenerlas en el formato correcto.
 \end{itemize}
 
-\chapter{Posibles mejoras en el futuro}
+\chapter{Consideraciones finales del proyecto, posibles mejoras y futuras ampliaciones}
 
-Cuando se actualice la versión de python en las distribuciones de la raspberry, se podría actualizar la manera de revisar los ficheros existentes en los directorios de las canciones, fue un gran cambio en el paso a pyhton 3.5 pero no se ha usado en este proyecto para no dejar a las grandes distribuciones de raspberry colgadas.
+\section{Consideraciones finales}
+El mayor problema de este proyecto es juntar en una persona, el saber programación, estar preocupado por la filosofía de sistemas operativos libres y tener conocimientos de batería.
+
+Este proyecto además de ayudar a aprender más sobre python, MIDI y formatos de sonidos, ya que se ha realizado manteniendo las libertades del código libre. Por fin se puede reproducir canciones .dtx en sistemas libres sin tener que recurrir a maquinas virtuales o entornos basados en WINE.
+
+Ayudara a cualquiera que quiera hacer un reproductor de canciones .dtx, en lenguajes compilados o en otros lenguajes, ya tiene una base, comentada, documentada, y con un código limpio y fácil de entender al estar escrito en un lenguaje interpretado.
+
+Se ha llegado a todos los principales objetivos que nos habíamos marcado al inicio del proyecto.
+
+Siendo un proyecto del cual me siento orgulloso de poder mostrarlo y darlo a la comunidad, para que sirva tanto para aprender como para continuar mejorando.
+
+\section{Posibles mejoras y futuras ampliaciones}
+
+
+Cuando se actualice la versión de python en las distribuciones de la raspberry, se podría actualizar la manera de revisar los ficheros existentes en los directorios de las canciones, fue un gran cambio en el paso a python 3.5 pero no se ha usado en este proyecto para no dejar a las grandes distribuciones de raspberry colgadas.
 
 El siguiente gran cambio en python 3.6 seria actualizar la manera de ver las notas ya que se actualizo la manera de entender los números ya que se contempla a partir de esa versión poner el carácter guión bajo para una mejor lectura de los números: 1\_000\_000 ahora se acepta como número y esta característica se podría emplear para limpiar la parte de coger objetos y notas de un .dtx.
 
@@ -3316,6 +3330,8 @@ Para dejar todo más elegante estaría bien poner también unos fondos de pantal
 Un detalle para los baterías seria indicar al reproductor, que haga marcas visuales de en que compás esta la canción y marcar visualmente el inicio de cada compás.
 
 Seria interesante implementar este proyecto usando QtQuick2 ya que Qt5 se esta enfocando en su lenguaje QML, más que en los widgets, de esta manera logran todavía más una mayor independencia del sistema operativo y en teoría una mejor optimización de los recursos empleados.
+
+Un gran detalle seria paralelizar todavía más para que el funcionamiento fuera más fluido cosa que en la raspberry, para que se pudiera emplear tanto como lector de partituras como simulador y reproductor completo de archivos .dtx, ademas de aprovechar mejor los recursos de la maquina donde se ejecute.
 
 \appendix
 
@@ -3862,7 +3878,10 @@ Version 3, 29 June 2007
 \begin{thebibliography}{99}
 \bibitem{Not so short Latex} The Not So Short Introduction to LATEX: \url{tobi.oetiker.ch/lshort/lshort.pdf}
 \bibitem{Wikipedia} Wikipedia: \url{www.wikipedia.es}
+\bibitem{Raspberry Pi} Raspberry Pi  : \url{https://www.raspberrypi.org}
+\bibitem{Documentación Qt5} Documentación Qt5  : \url{http://doc.qt.io/qt-5/index.html}
 \bibitem{Guias de estilo python} Guia estilo python : \url{http://mundogeek.net/traducciones/guia-estilo-python.htm}
+\bibitem{Documentación Python 3} Documentación Python3  : \url{https://docs.python.org/3/}
 \bibitem{Proyecto DTXMANIA} Proyecto DTXMania: \url{https://osdn.jp/projects/dtxmania/}
 \bibitem{Pineado Drum HAT} Pineado Drum HAT : \url{https://pinout.xyz/pinout/drum_hat}
 \end{thebibliography}
