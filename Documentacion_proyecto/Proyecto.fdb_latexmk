@@ -1,10 +1,10 @@
 # Fdb version 3
-["makeindex Proyecto.idx"] 1493921894 "Proyecto.idx" "Proyecto.ind" "Proyecto" 1494182381
-  "Proyecto.idx" 1493921800 0 d41d8cd98f00b204e9800998ecf8427e ""
+["makeindex Proyecto.idx"] 1494348881 "Proyecto.idx" "Proyecto.ind" "Proyecto" 1494349043
+  "Proyecto.idx" 1494348827 0 d41d8cd98f00b204e9800998ecf8427e ""
   (generated)
-  "Proyecto.ilg"
   "Proyecto.ind"
-["pdflatex"] 1494182306 "Proyecto.tex" "Proyecto.pdf" "Proyecto" 1494182381
+  "Proyecto.ilg"
+["pdflatex"] 1494348960 "Proyecto.tex" "Proyecto.pdf" "Proyecto" 1494349043
   "../MIDI-out-DrumHat/MIDI-out-DrumHat.py" 1488478492 1156 9a3341073691cbfa9524d6c665c607f2 ""
   "../Transformar-DTX-a-DTX-libre/Transformar-dtx-a-dtxlibre.sh" 1486338985 600 d8d6a2e278595f9c624414ac2b5833f7 ""
   "../src/pyDTX/Chip.py" 1489347676 2891 8d4d57da6d175e418197491e3b9ce8ba ""
@@ -211,17 +211,17 @@
   "Imagenes/particion_varias_listas.jpg" 1462724656 5195 0cd5717439f3adcc2fc30c02b55171e9 ""
   "Imagenes/rb3-drums.jpg" 1457892304 75675 6eb5527a636da8cdd2a1e379bcf56959 ""
   "Imagenes/td-30.jpg" 1459892996 9115 18736c1ef2fbdb51a785fc20f6c924a7 ""
-  "Proyecto.aux" 1494182374 47827 f5a96f00468a78b40722445a9e296918 ""
-  "Proyecto.ind" 1493921894 0 d41d8cd98f00b204e9800998ecf8427e "makeindex Proyecto.idx"
-  "Proyecto.lof" 1494182375 2943 3e45d6d16e55697eb4f130e32294bebd ""
-  "Proyecto.out" 1494182374 13961 09476d2b83b61979263e5a570e97ba0d ""
-  "Proyecto.tex" 1494182305 279405 ae7eca07086ba7b1873a2eacd229d139 ""
-  "Proyecto.toc" 1494182375 26438 b1b4cd99d3c391b249d7bfd876fe6f8d ""
+  "Proyecto.aux" 1494349038 47786 79ba28296705396cce58f41c3c2531f7 ""
+  "Proyecto.ind" 1494348881 0 d41d8cd98f00b204e9800998ecf8427e "makeindex Proyecto.idx"
+  "Proyecto.lof" 1494349038 2943 3e45d6d16e55697eb4f130e32294bebd ""
+  "Proyecto.out" 1494349038 13920 05647a8fa3446c497d8efe1605e293ef ""
+  "Proyecto.tex" 1494348662 279376 f2bfb4291235130c113cc9430e63cf8f ""
+  "Proyecto.toc" 1494349038 26397 1ac266b7bc44f11948f9b25f0c419370 ""
   (generated)
+  "Proyecto.toc"
   "Proyecto.log"
   "Proyecto.out"
-  "Proyecto.aux"
   "Proyecto.idx"
-  "Proyecto.toc"
-  "Proyecto.lof"
   "Proyecto.pdf"
+  "Proyecto.aux"
+  "Proyecto.lof"

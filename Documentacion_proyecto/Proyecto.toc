@@ -275,9 +275,9 @@
 \contentsline {subsection}{\numberline {8.4.4}Problemas encontrados con .dtx de internet}{144}{subsection.8.4.4}
 \contentsline {subsection}{\numberline {8.4.5}Comentarios finales en la Raspberry}{145}{subsection.8.4.5}
 \contentsline {subsection}{\numberline {8.4.6}Comentarios finales al proyecto}{145}{subsection.8.4.6}
-\contentsline {chapter}{\numberline {9}Consideraciones finales del proyecto, posibles mejoras y futuras ampliaciones}{147}{chapter.9}
+\contentsline {chapter}{\numberline {9}Consideraciones finales del proyecto}{147}{chapter.9}
 \contentsline {section}{\numberline {9.1}Consideraciones finales}{147}{section.9.1}
-\contentsline {section}{\numberline {9.2}Posibles mejoras y futuras ampliaciones}{148}{section.9.2}
+\contentsline {section}{\numberline {9.2}Posibles mejoras y futuras ampliaciones}{147}{section.9.2}
 \contentsline {chapter}{\numberline {A}C\IeC {\'o}digo fuente}{150}{appendix.Alph1}
 \contentsline {section}{\numberline {A.1}Transformar .dtx a .dtx libre}{150}{section.Alph1.1}
 \contentsline {section}{\numberline {A.2}DRUMHAT en instrumento midi}{150}{section.Alph1.2}
