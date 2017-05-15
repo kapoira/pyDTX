@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.6)  9 MAY 2017 18:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.6)  15 MAY 2017 19:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -9412,50 +9412,55 @@ Package babel Info: Redefining spanish shorthand "?
 [209
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3890.
+Underfull \hbox (badness 10000) in paragraph at lines 3884--3886
+[]\T1/lmr/m/n/10.95 Guia es-ti-lo pyt-hon: []$\T1/lmtt/m/n/10.95 http : / / mun
+dogeek . net / traducciones / guia-[]estilo-[]python . htm$[]
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3892.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 3890.
+(babel)             in language  on input line 3892.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 3890.
+(babel)             in language  on input line 3892.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 3890.
+(babel)             in language  on input line 3892.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 3890.
+(babel)             in language  on input line 3892.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 3890.
+(babel)             in language  on input line 3892.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 3890.
+(babel)             in language  on input line 3892.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 3890.
+(babel)             in language  on input line 3892.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 3890.
+(babel)             in language  on input line 3892.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 3890.
+(babel)             in language  on input line 3892.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 3890.
+(babel)             in language  on input line 3892.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 3890.
+(babel)             in language  on input line 3892.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 3890.
- [210
+(babel)             in language  on input line 3892.
+[210
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3890.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3892.
  (./Proyecto.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3890.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3890.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3892.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3892.
 
 Package rerunfilecheck Info: File `Proyecto.out' has not changed.
 (rerunfilecheck)             Checksum: 05647A8FA3446C497D8EFE1605E293EF;13920.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3890.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3892.
  ) 
 Here is how much of TeX's memory you used:
  19767 strings out of 494884
- 292393 string characters out of 6179043
- 546923 words of memory out of 5000000
+ 292391 string characters out of 6179043
+ 546922 words of memory out of 5000000
  19755 multiletter control sequences out of 15000+600000
  82987 words of font info for 66 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
@@ -9474,7 +9479,7 @@ dist/fonts/type1/public/lm/lmri9.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/lm/lmro10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy
 10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Proyecto.pdf (211 pages, 2684931 bytes).
+Output written on Proyecto.pdf (211 pages, 2685119 bytes).
 PDF statistics:
  5188 PDF objects out of 6186 (max. 8388607)
  4878 compressed objects within 49 object streams
