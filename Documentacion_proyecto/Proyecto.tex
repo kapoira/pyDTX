@@ -1786,9 +1786,7 @@ El DTXMania se podía configurar de tal manera que no había música de fondo y 
 
 
 \section{Otras configuraciones}
-También existía la opción de crear un archivo con unas características especiales en los directorios de las canciones para conseguir los siguientes beneficios.
-
-Estructura de un archivo box.def de ejemplo:
+También existía la opción de crear un archivo box.def con unas características especiales, ejemplo:
 
 \begin{Verbatim}[frame=single]
 #TITLE: FROM DTX Collection
@@ -1804,7 +1802,7 @@ Estructura de un archivo box.def de ejemplo:
 #POORRANGE: 117          (Release 068 (080427) or later)
 \end{Verbatim}
 
-Se podía obtener varios beneficios:
+Con esto se podía obtener varios beneficios:
 
 \begin{itemize}
 \item Tener una imagen y información para el directorio de algunas canciones.
@@ -3306,10 +3304,9 @@ Ayudara a cualquiera que quiera hacer un reproductor de canciones .dtx, en lengu
 
 Se ha llegado a todos los principales objetivos que nos habíamos marcado al inicio del proyecto.
 
-Siendo un proyecto del cual me siento orgulloso de poder mostrarlo y darlo a la comunidad, para que sirva tanto para aprender como para continuar mejorando.
+Es un proyecto del cual me siento orgulloso de poder mostrarlo y darlo a la comunidad, para que sirva tanto para aprender como para continuar mejorando.
 
 \section{Posibles mejoras y futuras ampliaciones}
-
 
 Cuando se actualice la versión de python en las distribuciones de la raspberry, se podría actualizar la manera de revisar los ficheros existentes en los directorios de las canciones, fue un gran cambio en el paso a python 3.5 pero no se ha usado en este proyecto para no dejar a las grandes distribuciones de raspberry colgadas.
 
@@ -3317,11 +3314,11 @@ El siguiente gran cambio en python 3.6 seria actualizar la manera de ver las not
 
 Ampliar las ordenes del .dtx y los lanes implementados para tener un mayor porcentaje de compatibilidad con los .dtx que hay en internet.
 
-Una opción que seria muy interesante y no esta implementada es conseguir que también en el menú de navegación de las canciones poder usar el instrumento-MIDI configurado como entrada para de esta manera poder arrancar el pyDTX y si esta la batería-MIDI bien configurada, poder usar todo el pyDTX sin dejar las baquetas.
+Una opción que seria muy interesante y no esta implementada es conseguir que también en el menú de navegación poder usar el instrumento-MIDI configurado como entrada para de esta manera poder arrancar el pyDTX y si esta la batería-MIDI bien configurada, poder usar todo el pyDTX sin dejar las baquetas.
 
 Aunque se muestra la puntuación no se guarda en ningún sitio ni hay una pantalla de final canción para comprobar tranquilamente lo bien o mal, que se ha tocado una canción, aquí según como se quiera entender el aprendizaje de la batería se debería implementar de distintas maneras ya que la básica de solo guardar la puntuación máxima, y no poder ver que parte de la canción ha sido donde se ha fallado no es del todo correcta.
 
-Actualmente no hay ninguna animación para cuando se toca un Pad, esto es bueno en el aspecto que minimiza todo el uso de cpu para carga gráfica pero estaría bien tener una animación para cada lane para poder comprobar que nivel de sincronización tenemos en cada nota, ya que en las notas dobles es difícil saber que nota es la que no se ha tocado bien.
+Actualmente no hay ninguna animación para cuando se toca un Pad, esto es bueno en el aspecto que minimiza todo el uso de cpu para carga gráfica pero es difícil saber el nivel de sincronización en cada nota, sobretodo en las notas que se tiene que tocar al mismo tiempo en varios lanes.
 
 No se analizan los box.def que pueden existir en las carpetas superiores de las canciones para tener o una imagen (de todo el álbum) o más información que solo el nombre de la carpeta.
 
@@ -3329,9 +3326,9 @@ Para dejar todo más elegante estaría bien poner también unos fondos de pantal
 
 Un detalle para los baterías seria indicar al reproductor, que haga marcas visuales de en que compás esta la canción y marcar visualmente el inicio de cada compás.
 
-Seria interesante implementar este proyecto usando QtQuick2 ya que Qt5 se esta enfocando en su lenguaje QML, más que en los widgets, de esta manera logran todavía más una mayor independencia del sistema operativo y en teoría una mejor optimización de los recursos empleados.
+Seria interesante implementar este proyecto usando QtQuick2 ya que Qt5 se esta enfocando en su lenguaje QML, más que en los widgets, de esta manera se logra todavía más una mayor independencia del sistema operativo y una mejor optimización de los recursos empleados.
 
-Un gran detalle seria paralelizar todavía más para que el funcionamiento fuera más fluido, para que en la raspberry se pudiera emplear tanto como lector de partituras como simulador y reproductor completo de archivos .dtx, ademas de aprovechar mejor los recursos de la maquina donde se ejecute.
+Un gran detalle seria paralelizar todavía más para que el funcionamiento fuera más fluido, para que en la raspberry fuera tanto un lector de partituras, como un simulador y reproductor completo de archivos .dtx, ademas de aprovechar mejor los recursos de la maquina donde se ejecute.
 
 \appendix
 
@@ -3881,7 +3878,7 @@ Version 3, 29 June 2007
 \bibitem{Wikipedia} Wikipedia: \url{www.wikipedia.es} (2017-05-01)
 \bibitem{Raspberry Pi} Raspberry Pi: \url{https://www.raspberrypi.org} (2017-05-01)
 \bibitem{Documentación Qt5} Documentación Qt5: \url{http://doc.qt.io/qt-5/index.html} (2017-05-01)
-\bibitem{Guia de estilo python} Guia estilo python: \url{http://mundogeek.net/traducciones/guia-estilo-python.htm} 
+\bibitem{Guía de estilo python} Guía estilo python: \url{http://mundogeek.net/traducciones/guia-estilo-python.htm} 
 (2017-05-01)
 \bibitem{Documentación Python 3} Documentación Python3: \url{https://docs.python.org/3/} (2017-05-01)
 \bibitem{Proyecto DTXMANIA} Proyecto DTXMania: \url{https://osdn.jp/projects/dtxmania/} (2017-05-01)
